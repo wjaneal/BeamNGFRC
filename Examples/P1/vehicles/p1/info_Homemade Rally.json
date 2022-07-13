@@ -1,0 +1,14 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"Homemade Rally (M)",
+  "Description":"When you want to make a rally car, but you have not too much of money.",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":925,
+  "defaultPaintName1":"Electric Blue"
+}

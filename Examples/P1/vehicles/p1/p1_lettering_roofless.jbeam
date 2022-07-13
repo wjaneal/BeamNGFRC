@@ -1,0 +1,193 @@
+{
+"p1_lettering_dx_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"CM Tailgate Lettering",
+        "value":30,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_dx", ["p1_body"]],
+    ],
+},
+"p1_lettering_dxi_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SM Tailgate Lettering",
+        "value":50,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_dxi", ["p1_body"]],
+    ],
+},
+"p1_lettering_lxi_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SM+ Tailgate Lettering",
+        "value":70,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_lxi", ["p1_body"]],
+    ],
+},
+"p1_lettering_zxi_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"LXM Tailgate Lettering",
+        "value":90,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_zxi", ["p1_body"]],
+    ],
+},
+"p1_lettering_gtz_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_gtz", ["p1_body"]],
+    ],
+},
+"p1_lettering_diesel_roofless": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Diesel Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_engine_diesel_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_engine_diesel", ["p1_body"]],
+    ],
+},
+"p1_lettering_engine_1.3_roofless": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"1.3L Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_engine_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_engine_1.3", ["p1_body"]],
+    ],
+},
+"p1_lettering_engine_1.4_roofless": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"1.4L Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_engine_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_engine_1.4", ["p1_body"]],
+    ],
+},
+"p1_lettering_engine_1.5_roofless": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"1.5L Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_engine_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_engine_1.5", ["p1_body"]],
+    ],
+},
+"p1_lettering_sport_c_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SportC Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_sport_c", ["p1_body"]],
+    ],
+},
+"p1_lettering_sport_s_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SportS Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_sport_s", ["p1_body"]],
+    ],
+},
+"p1_lettering_sport_l_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SportL Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_sport_l", ["p1_body"]],
+    ],
+},
+"p1_lettering_sport_l_turbo_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SportL Turbo Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_sport_l_turbo", ["p1_body"]],
+    ],
+},
+"p1_lettering_rlm_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"RLM Tailgate Lettering",
+        "value":40,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_rlm", ["p1_body"]],
+    ],
+},
+"p1_lettering_rlm_plus_roofless": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"RLM+ Tailgate Lettering",
+        "value":55,
+    },
+    "slotType" : "p1_lettering_roofless",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_body"]],
+         ["p1_lettering_rlm_plus", ["p1_body"]],
+    ],
+},
+}

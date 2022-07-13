@@ -1,0 +1,16 @@
+{
+  "Config Type":"Race",
+  "Configuration":"Race (M)",
+  "Description":"Race version of Petitron, made by the Autron Race Team (A.R.T. for short)",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":5600,
+  "defaultPaintName1":"Silver"
+  "defaultPaintName2":"Lava Red"
+  "defaultPaintName3":"Silver"
+}

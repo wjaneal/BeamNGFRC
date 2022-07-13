@@ -1,0 +1,15 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"1.5 SportL Cabriolet (M)",
+  "Description":"Fuel injected 1.5 liter roofless premium sport model with alloy wheels",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":2000,
+  "defaultPaintName1":"Sport Red"
+  "defaultPaintName2":"Metallic White"
+}

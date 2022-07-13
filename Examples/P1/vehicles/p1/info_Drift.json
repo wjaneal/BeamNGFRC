@@ -1,0 +1,16 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"Drift (M)",
+  "Description":"Petitron, that now has RWD, and now can literally drift, like his Japanese cousins",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":13500,
+  "defaultPaintName1":"Metallic White"
+  "defaultPaintName2":"Metallic White"
+  "defaultPaintName3":"Metallic White"
+}

@@ -1,0 +1,536 @@
+{
+"p1_lettering_dx": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"CM Tailgate Lettering",
+        "value":30,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_dx", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_dxi": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SM Tailgate Lettering",
+        "value":50,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_dxi", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_lxi": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SM+ Tailgate Lettering",
+        "value":70,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_lxi", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_zxi": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"LXM Tailgate Lettering",
+        "value":90,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_zxi", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_gtz": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_gtz", ["p1_tailgate"]],
+    ],
+},
+"p1_logo_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Autron Badge",
+        "value":50,
+    },
+    "slotType" : "p1_logo_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_logo_F", ["p1_hood"]],
+    ],
+},
+"p1_logo_F_grille": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Autron Badge",
+        "value":50,
+    },
+    "slotType" : "p1_logo_F_grille",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_logo_F_grille", ["p1_fascia"]],
+    ],
+},
+"p1_logo_F_fascia": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Autron Badge",
+        "value":50,
+    },
+    "slotType" : "p1_logo_F_fascia",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_logo_F_fascia", ["p1_fascia"]],
+    ],
+},
+"p1_coupe_lettering_dx": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"CM Tailgate Lettering",
+        "value":30,
+    },
+    "slotType" : "p1_coupe_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_coupe_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_coupe_lettering_dx", ["p1_tailgate"]],
+    ],
+},
+"p1_coupe_lettering_dxi": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SM Tailgate Lettering",
+        "value":50,
+    },
+    "slotType" : "p1_coupe_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_coupe_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_coupe_lettering_dxi", ["p1_tailgate"]],
+    ],
+},
+"p1_coupe_lettering_lxi": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SM+ Tailgate Lettering",
+        "value":70,
+    },
+    "slotType" : "p1_coupe_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_coupe_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_coupe_lettering_lxi", ["p1_tailgate"]],
+    ],
+},
+"p1_coupe_lettering_zxi": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"LXM Tailgate Lettering",
+        "value":90,
+    },
+    "slotType" : "p1_coupe_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_coupe_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_coupe_lettering_zxi", ["p1_tailgate"]],
+    ],
+},
+"p1_coupe_lettering_gtz": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_coupe_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_coupe_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_coupe_lettering_gtz", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_R_fascia": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Petitron Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_R_fascia",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_covet", ["p1_rearpanel"]],
+    ],
+},
+"p1_lettering_R_fascia_p1": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"P1 Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_R_fascia",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_p1", ["p1_rearpanel"]],
+    ],
+},
+"p1_lettering_diesel": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Diesel Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_engine_diesel",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_engine_diesel", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_engine_1.3": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"1.3L Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_engine",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_engine_1.3", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_engine_1.4": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"1.4L Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_engine",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_engine_1.4", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_engine_1.5": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"1.5L Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_engine",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_engine_1.5", ["p1_tailgate"]],
+    ],
+},
+"p1_coupe_lettering_engine_1.3": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"1.3L Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_coupe_lettering_engine",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_coupe_lettering_engine_1.3", ["p1_tailgate"]],
+    ],
+},
+"p1_coupe_lettering_engine_1.4": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"1.4L Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_coupe_lettering_engine",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_coupe_lettering_engine_1.4", ["p1_tailgate"]],
+    ],
+},
+"p1_coupe_lettering_engine_1.5": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"1.5L Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_coupe_lettering_engine",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_coupe_lettering_engine_1.5", ["p1_tailgate"]],
+    ],
+},
+"p1_coupe_lettering_diesel": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Diesel Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_coupe_lettering_engine_diesel",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_coupe_lettering_engine_diesel", ["p1_tailgate"]],
+    ],
+},
+"p1_logo_F_grille_autron": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Alternative Autron Badge",
+        "value":50,
+    },
+    "slotType" : "p1_logo_F_grille",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_logo_F_grille_autron", ["p1_fascia"]],
+    ],
+},
+"p1_logo_F_grille_sport": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SportPower Badge",
+        "value":50,
+    },
+    "slotType" : "p1_logo_F_grille",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_logo_F_grille_sport", ["p1_fascia"]],
+    ],
+},
+"p1_lettering_R_fascia_sport": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"SportPower Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_R_fascia",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_sport", ["p1_rearpanel"]],
+    ],
+},
+"p1_lettering_sport_c": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SportC Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_sport_c", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_sport_s": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SportS Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_sport_s", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_sport_l": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SportL Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_sport_l", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_sport_dash": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"SportPower Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_dash",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_sport_dash", ["p1_dash"]],
+    ],
+},
+"p1_lettering_sport_dash_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"SportPower Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_dash_rhd",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_sport_dash_rhd", ["p1_dash"]],
+    ],
+},
+"p1_lettering_R_fascia_inde": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Inde Lettering",
+        "value":91,
+    },
+    "slotType" : "p1_lettering_R_fascia",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_inde", ["p1_rearpanel"]],
+    ],
+},
+"p1_lettering_sport_l_turbo": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SportL Turbo Tailgate Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_sport_l_turbo", ["p1_tailgate"]],
+    ],
+},
+"p1_logo_F_grille_r2": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Autron Badge",
+        "value":50,
+    },
+    "slotType" : "p1_logo_F_grille_r2",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_logo_F_grille_autron_r2", ["p1_fascia"]],
+    ],
+},
+"p1_lettering_lxm_dash": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"LXM Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_dash",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_lxm_dash", ["p1_dash"]],
+    ],
+},
+"p1_lettering_lxm_dash_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"LXM Lettering",
+        "value":110,
+    },
+    "slotType" : "p1_lettering_dash_rhd",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_lxm_dash_rhd", ["p1_dash"]],
+    ],
+},
+"p1_lettering_R_fascia_p1e": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"P1-e Lettering",
+        "value":91,
+    },
+    "slotType" : "p1_lettering_R_fascia",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_p1_electric", ["p1_rearpanel"]],
+    ],
+},
+"p1_lettering_R_fascia_petitrone": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Petitron-e Lettering",
+        "value":91,
+    },
+    "slotType" : "p1_lettering_R_fascia",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_covet_electric", ["p1_rearpanel"]],
+    ],
+},
+"p1_lettering_concept": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Concept Tailgate Lettering",
+        "value":30,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_concept", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_R_fascia_concept": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Petite Voiture Lettering",
+        "value":91,
+    },
+    "slotType" : "p1_lettering_R_fascia",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_covet_pv1", ["p1_rearpanel"]],
+    ],
+},
+"p1_lettering_rlm": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"RLM Tailgate Lettering",
+        "value":40,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_rlm", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_rlm_plus": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"RLM+ Tailgate Lettering",
+        "value":55,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_rlm_plus", ["p1_tailgate"]],
+    ],
+},
+"p1_lettering_sport_l_super": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SportL Super Tailgate Lettering",
+        "value":140,
+    },
+    "slotType" : "p1_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_lettering_ibishu", ["p1_tailgate"]],
+         ["p1_lettering_sport_l_super", ["p1_tailgate"]],
+    ],
+},
+}

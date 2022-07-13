@@ -1,0 +1,78 @@
+{
+"beamng_Wheel_R": {
+	"information":{
+		"authors":"DrowsySam",
+		"name":"Example Car Rear Wheels",
+	}
+    "slotType" : "beamng_Wheel_R",
+	"scalebeamSpring":0.84,
+	"scalebeamDamp":1.3,
+	"scalebeamDeform":1.5,
+	"scalebeamStrength":1.78,
+	"flexbodies": [
+		 ["mesh", "[group]:", "nonFlexMaterials"],
+		 //Wheel mesh, Wheel group (Wheel name)
+		 ["Wheel_BL", ["Wheel_BL"]],
+		 ["Wheel_BR", ["Wheel_BR"]],
+	],	
+	"hubWheels": [
+            ["name","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+			{"enableTireSideSupportBeams":true},
+			//{"enableTireSideVBeams": true}, //unmark for extra tire support
+			
+			//general settings
+			
+			//Wheel size
+			{"radius":0.5},
+			//rim size
+			{"hubRadius":0.4},
+			//offset, left/right
+			{"WheelOffset":0.00},
+			//rim width
+			{"hubWidth":0.05},
+			//tire width
+			{"tireWidth":0.05},
+			//how many nodes per side, 12 for left side, 12 for right, 24 total for rim, 24 total for tire. Overall total of 48 nodes per tire with 12 numRays
+			{"numRays":12}, //x4 = Total nodes for Wheel
+			
+			//hub options
+			{"hubBeamSpring":1601000, "hubBeamDamp":16},
+			{"beamSpring":1601000, "beamDamp":16},
+			{"hubBeamDeform":98000, "hubBeamStrength":200000},
+			{"beamDeform":280000,"beamStrength":420000},
+			{"hubNodeWeight":0.55},
+			{"hubNodeMaterial":"|NM_METAL"},
+			{"hubFrictionCoef":0.7},
+			
+			//tire options
+			{"WheelTreadBeamSpring":121000,"WheelTreadBeamDamp":30,"WheelTreadBeamDeform":32000,"WheelTreadBeamStrength":22000},
+			{"WheelPeripheryBeamSpring":121000,"WheelPeripheryBeamDamp":120,"WheelPeripheryBeamDeform":32000,"WheelPeripheryBeamStrength":32000},
+			{"springExpansion":201000, "dampExpansion":18},
+			{"nodeWeight":0.25},
+			{"nodeMaterial":"|NM_RUBBER"},
+			{"frictionCoef":1.8},
+			
+			//
+			{"pressurePSI":50},
+			{"maxPressurePSI":1600},
+			{"reinforcementPressurePSI":50},
+			{"pressureSpring":601000},
+			{"reinforcementPressureSpring":30000},
+			{"pressureDamp":30},
+			{"reinforcementPressureDamp":35},
+			
+			//front
+			{"selfCollision":false},
+			{"collision":true},
+			{"enableHubcaps":false},
+			
+			//Wheel code, Wheel name, attach to node1, node2, 9999, node reference(needed), spin direction
+            ["Wheel_BL", "Wheel_BL", "a13", "a17", 9999,  "a14", 1],
+            ["Wheel_BR", "Wheel_BR", "a7", "a2", 9999,  "a8", -1],
+			
+			{"propulsed":1},
+			{"enableABS":false},
+			{"selfCollision":true}
+	],
+}
+}

@@ -1,0 +1,15 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"La baguette idiote (M)",
+  "Description":"The Baguette Idiot, a car that's terrible in anyway, indeed, it is actually imported from India, and got ruined by some stupid French people that later went to UK to do a derby races on it.",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":125,
+  "defaultPaintName1":"Matte Black"
+  "defaultPaintName2":"Kiddo Pink"
+}

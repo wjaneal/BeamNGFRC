@@ -1,0 +1,18 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"1.3 CM Hatchback (Facelift) (CVT)",
+  "Description":"Fuel injected 1.3 liter cheap model with steel wheels",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"CVT",
+  "Value":1220,
+  "Years":{
+    "max":2005,
+    "min":1996
+  },
+  "defaultPaintName1":"Solar Yellow"
+}

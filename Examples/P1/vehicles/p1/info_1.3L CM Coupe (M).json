@@ -1,0 +1,14 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"1.3 CM Coupe (M)",
+  "Description":"Fuel injected 1.3 liter cheap model with steel wheels",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":1200,
+  "defaultPaintName1":"Quicksilver"
+}

@@ -1,0 +1,15 @@
+{
+  "Config Type":"Service",
+  "Configuration":"La Poste (M)",
+  "Description":"La Poste, the most famous public service in France! Will deliver everything you want in... 3 years.",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":1050,
+  "defaultPaintName1":"Solar Yellow"
+  "defaultPaintName2":"Sea Blue"
+}

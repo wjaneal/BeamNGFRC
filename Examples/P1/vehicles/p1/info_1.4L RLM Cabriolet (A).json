@@ -1,0 +1,14 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"1.4 RLM Cabriolet (A)",
+  "Description":"Fuel injected 1.4 liter roofless model with steel wheels and hubcaps",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Automatic",
+  "Value":1600,
+  "defaultPaintName1":"Scarlet Red"
+}

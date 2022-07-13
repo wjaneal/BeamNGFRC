@@ -1,0 +1,243 @@
+{
+"p1_differential_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Open Front Differential",
+        "value":210,
+    },
+    "slotType" : "p1_differential_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_finaldrive_F","p1_finaldrive_F_389", "Front Final Drive", {"coreSlot":true}],
+        ["p1_halfshaft_F","p1_halfshaft_F", "Front Half Shafts"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torsionReactor", "torsionReactorF", "transfercase", 2],
+        ["differential", "differential_F", "torsionReactorF", 1, {"diffType":"open", "gearRatio": 1, "uiName":"Front Differential","defaultVirtualInertia":0.25}],
+    ],
+    "differential_F": {
+        "friction": 1.5,
+        "dynamicFriction": 0.0007,
+        "torqueLossCoef": 0.016,
+    },
+    "torsionReactorF": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"nodeWeight":10},
+        ["tra2", 0.25, -1.25, 0.325, {"group":"p1_halfshaft_L"}],
+        ["tra3", 0.0, -1.25, 0.325, {"group":"p1_halfshaft_R"}],
+        {"group":""},
+    ],
+},
+"p1_differential_F_welded": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Welded Front Differential",
+        "value":260,
+    },
+    "slotType" : "p1_differential_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_finaldrive_F","p1_finaldrive_F_389", "Front Final Drive", {"coreSlot":true}],
+        ["p1_halfshaft_F","p1_halfshaft_F", "Front Half Shafts"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torsionReactor", "torsionReactorF", "transfercase", 2],
+        ["differential", "differential_F", "torsionReactorF", 1, {"diffType":"locked", "lockTorque":10000, "gearRatio":1, "uiName":"Front Differential","defaultVirtualInertia":0.25}],
+    ],
+    "differential_F": {
+        "friction": 1.5,
+        "dynamicFriction": 0.0007,
+        "torqueLossCoef": 0.016,
+    },
+    "torsionReactorF": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"nodeWeight":10},
+        ["tra2", 0.25, -1.25, 0.325, {"group":"p1_halfshaft_L"}],
+        ["tra3", 0.0, -1.25, 0.325, {"group":"p1_halfshaft_R"}],
+        {"group":""},
+    ],
+},
+"p1_differential_F_LSD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Limited Slip Front Differential",
+        "value":550,
+    },
+
+    "slotType" : "p1_differential_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_finaldrive_F","p1_finaldrive_F_425", "Front Final Drive", {"coreSlot":true}],
+        ["p1_halfshaft_F","p1_halfshaft_F", "Front Half Shafts"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torsionReactor", "torsionReactorF", "transfercase", 2],
+        ["differential", "differential_F", "torsionReactorF", 1, {"diffType":"lsd", "gearRatio": 1, "lsdPreload":40, "lsdLockCoef":0.175, "lsdRevLockCoef":0.01, "uiName":"Front Differential","defaultVirtualInertia":0.25}],
+    ],
+    "differential_F": {
+        "friction": 1.5,
+        "dynamicFriction": 0.0007,
+        "torqueLossCoef": 0.016,
+    },
+    "torsionReactorF": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"nodeWeight":12},
+        ["tra2", 0.25, -1.25, 0.325, {"group":"p1_halfshaft_L"}],
+        ["tra3", 0.0, -1.25, 0.325, {"group":"p1_halfshaft_R"}],
+        {"group":""},
+    ],
+},
+"p1_differential_F_race": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Adjustable Race Limited Slip Front Differential",
+        "value":800,
+    },
+
+    "slotType" : "p1_differential_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_finaldrive_F","p1_finaldrive_F_race", "Front Final Drive", {"coreSlot":true}],
+        ["p1_halfshaft_F","p1_halfshaft_F", "Front Half Shafts"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$lsdpreload_F", "range", "N/m", "Differentials", 75, 0, 500, "Pre-load Torque", "Initial locking torque between left and right wheels"],
+        ["$lsdlockcoef_F", "range", "", "Differentials", 0.125, 0, 0.5, "Power Lock Rate", "Additional locking torque proportional to engine torque", {"minDis":0, "maxDis":100}],
+        ["$lsdlockcoefrev_F", "range", "", "Differentials", 0.025, 0, 0.5, "Coast Lock Rate", "Additional locking torque proportional to engine braking", {"minDis":0, "maxDis":100}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torsionReactor", "torsionReactorF", "transfercase", 2],
+        ["differential", "differential_F", "torsionReactorF", 1, {"diffType":"lsd", "gearRatio":1, "lsdPreload":"$lsdpreload_F", "lsdLockCoef":"$lsdlockcoef_F", "lsdRevLockCoef":"$lsdlockcoefrev_F", "uiName":"Front Differential","defaultVirtualInertia":0.25}],
+    ],
+    "differential_F": {
+        "friction": 1.5,
+        "dynamicFriction": 0.0007,
+        "torqueLossCoef": 0.016,
+    },
+    "torsionReactorF": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"nodeWeight":9},
+        ["tra2", 0.25, -1.25, 0.325, {"group":"p1_halfshaft_L"}],
+        ["tra3", 0.0, -1.25, 0.325, {"group":"p1_halfshaft_R"}],
+        {"group":""},
+    ],
+},
+"p1_finaldrive_F_389": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"3.89:1 Front Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "p1_finaldrive_F",
+
+    "torsionReactorF" : {
+        "gearRatio":3.89,
+    },
+},
+"p1_finaldrive_F_406": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4.06:1 Front Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "p1_finaldrive_F",
+
+    "torsionReactorF" : {
+        "gearRatio":4.06,
+    },
+},
+"p1_finaldrive_F_425": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4.25:1 Front Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "p1_finaldrive_F",
+
+    "torsionReactorF" : {
+        "gearRatio":4.25,
+    },
+},
+"p1_finaldrive_F_race": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Race Adjustable Front Final Drive",
+        "value":650,
+    },
+
+    "slotType" : "p1_finaldrive_F",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$finaldrive_F", "range", ":1", "Differentials", 4.39, 2.0, 6.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Front"}],
+    ],
+
+    "torsionReactorF" : {
+        "gearRatio":"$finaldrive_F",
+    },
+},
+"p1_halfshaft_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front Half Shafts",
+        "value":50,
+    },
+    "slotType" : "p1_halfshaft_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_halfshaft_L", ["p1_halfshaft_L","wheelhub_FL","p1_hub_FL"]],
+         ["p1_halfshaft_R", ["p1_halfshaft_R","wheelhub_FR","p1_hub_FR"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":5000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          ["fw1r","tra3", {"name":"halfshaft_FR", "breakGroup":"wheel_FR", "breakGroupType":1, "deformGroup":"wheelaxleFR", "deformationTriggerRatio":0.001, "optional":true}],
+          ["fw1l","tra2", {"name":"halfshaft_FL", "breakGroup":"wheel_FL", "breakGroupType":1, "deformGroup":"wheelaxleFL", "deformationTriggerRatio":0.001, "optional":true}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "wheelaxleFL", "differential_F", 1, {"deformGroups":["wheelaxleFL"], "breakTriggerBeam":"halfshaft_FL", "uiName":"Front Left Halfshaft", "friction":0.77, "dynamicFriction":0.0019}],
+        ["shaft", "wheelaxleFR", "differential_F", 2, {"deformGroups":["wheelaxleFR"], "breakTriggerBeam":"halfshaft_FR", "uiName":"Front Right Halfshaft", "friction":0.77, "dynamicFriction":0.0019}],
+    ],
+},
+}

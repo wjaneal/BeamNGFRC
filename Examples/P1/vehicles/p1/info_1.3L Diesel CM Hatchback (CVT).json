@@ -1,0 +1,14 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"1.3 Diesel CM Hatchback (CVT)",
+  "Description":"Fuel injected 1.3 liter diesel cheap model with steel wheels",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"NA",
+  "Power":50,
+  "Propulsion":"ICE",
+  "Torque":86,
+  "Transmission":"CVT",
+  "Value":1140,
+  "defaultPaintName1":"Steel Gray"
+}

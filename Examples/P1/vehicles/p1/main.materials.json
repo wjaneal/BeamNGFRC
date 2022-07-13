@@ -1,0 +1,2925 @@
+{
+  "coupe_engine": {
+    "name": "coupe_engine",
+    "mapTo": "coupe_engine",
+    "class": "Material",
+    "persistentId": "9e4868fd-5542-4e4f-8033-360ce22a3394",
+    "Stages": [
+      {
+        "colorMap": "vehicles/coupe/coupe_engine_d.dds",
+        "normalMap": "vehicles/coupe/coupe_engine_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/coupe/coupe_engine_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1": {
+    "name": "p1",
+    "mapTo": "p1_old",
+    "class": "Material",
+    "persistentId": "7adc8b1a-7fb8-473f-b716-099e7000e418",
+    "Stages": [
+      {
+        "colorMap": "vehicles/common/null.dds",
+        "normalMap": "vehicles/p1/p1_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 128,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/p1_d.dds",
+        "normalMap": "vehicles/p1/p1_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/p1_c.dds",
+        "instanceDiffuse": true,
+        "normalMap": "vehicles/p1/p1_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_s.dds",
+        "specularPower": 10,
+        "useAnisotropic": true
+      },
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None"
+  },
+  "p1_bumpers": {
+    "name": "p1_bumpers",
+    "mapTo": "p1_bumpers",
+    "class": "Material",
+    "persistentId": "5e1d336c-0df5-4a15-aa0c-15621bdfddad",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/p1/p1_bumpers_ao.data.png",
+        "baseColorMap": "/vehicles/p1/p1_bumpers_b.color.png",
+        "instanceDiffuse": false,
+        "metallicFactor": 0,
+        "normalMap": "vehicles/p1/p1_bumpers_n.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/p1/p1_bumpers_r.data.png",
+        "useAnisotropic": true
+      },
+      {
+        "clearCoatRoughnessFactor": 0
+      },
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
+  },
+  "p1_carbonfibre": {
+    "name": "p1_carbonfibre",
+    "mapTo": "p1_carbonfibre",
+    "class": "Material",
+    "persistentId": "9824ceab-6a06-493b-b862-9bb10abd3826",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/p1/p1_main_ao.data.png",
+        "baseColorFactor": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "clearCoatFactor": 0.5,
+        "clearCoatRoughnessFactor": 0.0500000007,
+        "normalMap": "/vehicles/p1/p1_main_n.normal.png",
+        "opacityMapUV": true,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/common/carbonfiber_r.data.png",
+        "roughnessMapUV1": true,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 1,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_chmsl": {
+    "name": "p1_chmsl",
+    "mapTo": "p1_chmsl",
+    "class": "Material",
+    "persistentId": "9c986c89-cdec-4d17-be49-b85b5501d41e",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "p1_exhaustflame": {
+    "name": "p1_exhaustflame",
+    "mapTo": "p1_exhaustflame",
+    "class": "Material",
+    "persistentId": "af2f170a-cf1c-4c78-a657-b42db4598676",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "p1_gauges": {
+    "name": "p1_gauges",
+    "mapTo": "p1_gauges",
+    "class": "Material",
+    "persistentId": "ad2e8ab5-bbe2-44cd-8a1e-f872d5496015",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_on": {
+    "name": "p1_gauges_on",
+    "mapTo": "p1_gauges_on",
+    "class": "Material",
+    "persistentId": "7b42a63d-7c08-498f-81de-4326c2002585",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/p1_gauges_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_glass": {
+    "name": "p1_glass",
+    "mapTo": "p1_glass",
+    "class": "Material",
+    "persistentId": "e90caaa9-d592-4613-b79a-a23fcf3803af",
+    "Stages": [
+      {
+        "baseColorMap": "vehicles/p1/p1_glass_b.color.png",
+        "normalMap": "/vehicles/common/null_n.dds",
+        "opacityMap": "/vehicles/p1/p1_glass_o.data.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 1852795252,
+    "translucent": true,
+    "translucentBlendOp": "PreMulAlpha",
+    "translucentRecvShadows": true,
+    "version": 1.5
+  },
+  "p1_glass_dmg": {
+    "name": "p1_glass_dmg",
+    "mapTo": "p1_glass_dmg",
+    "class": "Material",
+    "persistentId": "9aa7faec-8343-496c-ae11-733692074de3",
+   "Stages": [
+      {
+        "baseColorMap": "vehicles/p1/p1_glass_dmg_b.color.png",
+        "normalMap": "/vehicles/common/glass_dmg_n.dds",
+        "opacityMap": "/vehicles/p1/p1_glass_dmg_o.data.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 20,
+    "alphaTest": true,
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 1852795252,
+    "translucent": true,
+    "translucentBlendOp": "PreMulAlpha",
+    "translucentRecvShadows": true,
+    "version": 1.5
+  },
+  "p1_glass_int": {
+    "name": "p1_glass_int",
+    "mapTo": "p1_glass_int",
+    "class": "Material",
+    "persistentId": "112e1d1f-f382-4d25-868f-9e3574e916d8",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_glass_d.dds",
+        "diffuseColor": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "pixelSpecular": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 128,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "castShadows": false,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true
+  },
+  "p1_headlight": {
+    "name": "p1_headlight",
+    "mapTo": "p1_headlight",
+    "class": "Material",
+    "persistentId": "73c45d3f-ccc6-4026-9ef7-42020fd8dae6",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "p1_highbeam": {
+    "name": "p1_highbeam",
+    "mapTo": "p1_highbeam",
+    "class": "Material",
+    "persistentId": "5d9ad9f8-d5e7-45ec-9c3c-ff664e89dfb3",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "p1_interior": {
+    "name": "p1_interior",
+    "mapTo": "p1_interior",
+    "class": "material",
+    "persistentId": "212bbfc1-2cf4-474e-8757-8b4052512f1d",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/p1/p1_interior_ao.data.png",
+        "baseColorMap": "/vehicles/p1/p1_interior_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_interior_m.data.png",
+        "normalMap": "/vehicles/p1/p1_interior_n.normal.png",
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/p1/p1_interior_r.data.png",
+        "useAnisotropic": true
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/p1/p1_interior_ao.data.png",
+        "baseColorMap": "/vehicles/p1/p1_interior_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "baseColorFactor": [
+          0.473459996,
+          0.473459996,
+          0.473459996,
+          1
+        ],
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_interior_m.data.png",
+        "normalMap": "/vehicles/p1/p1_interior_n.normal.png",
+        "opacityMap": "/vehicles/p1/p1_interior_o.data.png",
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/p1/p1_interior_r.data.png",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
+  },
+  "p1_lettering": {
+    "name": "p1_lettering",
+    "mapTo": "p1_lettering",
+    "class": "Material",
+    "persistentId": "3bbcf471-4581-4ead-baf0-ed0bd2abd8b3",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_lettering_d.dds",
+        "normalMap": "vehicles/p1/p1_lettering_n.dds",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/p1/p1_lettering_s.dds",
+        "specularMap": "vehicles/p1/p1_lettering_s.dds",
+        "specularPower": 64,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 70,
+    "alphaTest": true,
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "materialTag2": "decal",
+    "translucent": false
+  },
+  "p1_lights" : {
+    "name" : "p1_lights",
+    "mapTo" : "p1_lights",
+    "class" : "Material",
+    "persistentId" : "66c299a6-2bee-4b0b-8147-f88d61b0cffb",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_lights_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_lights_m.data.png",
+        "normalMap": "vehicles/p1/p1_lights_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_lights_dmg" : {
+    "name" : "p1_lights_dmg",
+    "mapTo" : "p1_lights_dmg",
+    "class" : "Material",
+    "persistentId" : "be16b91f-ed14-42e6-9f14-537711f66711",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_lights_dmg_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_lights_dmg_m.data.png",
+        "normalMap": "vehicles/p1/p1_lights_dmg_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_lights_on" : {
+    "name" : "p1_lights_on",
+    "mapTo" : "p1_lights_on",
+    "class" : "Material",
+    "persistentId" : "619dc780-5287-4d3c-a5a8-785689729bb9",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_lights_b.color.png",
+        "emissiveFactor": [
+          0.6,
+          0.6,
+          0.6
+        ],
+        "emissiveMap": "/vehicles/p1/p1_lights_g.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_lights_m.data.png",
+        "normalMap": "vehicles/p1/p1_lights_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_lights_on_intense" : {
+    "name" : "p1_lights_on_intense",
+    "mapTo" : "p1_lights_on_intense",
+    "class" : "Material",
+    "persistentId" : "92085ef7-9919-4a47-8142-a7f5ce2dd135",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_lights_b.color.png",
+        "emissiveFactor": [
+          1,
+          1,
+          1
+        ],
+        "emissiveMap": "/vehicles/p1/p1_lights_g.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_lights_m.data.png",
+        "normalMap": "vehicles/p1/p1_lights_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "glow": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_main": {
+    "name": "p1_main",
+    "mapTo": "p1",
+    "class": "Material",
+    "persistentId": "c149d182-981e-4864-8d0d-6449b0372ece",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/p1/p1_main_ao.data.png",
+        "baseColorMap": "/vehicles/p1/p1_main_b.color.png",
+        "metallicMap": "/vehicles/p1/p1_main_m.data.png",
+        "metallicFactor": 1,
+        "roughnessFactor": 1,
+        "normalMap": "vehicles/p1/p1_main_n.normal.png",
+        "roughnessMap": "/vehicles/p1/p1_main_r.data.png",
+        "useAnisotropic": true
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/p1/p1_main_ao.data.png",
+        "instanceDiffuse": true, 
+        "useAnisotropic": true,
+        "colorPaletteMapUseUV": 1,
+        "clearCoatFactor": 1,
+        "clearCoatRoughnessFactor": 1,
+        "metallicFactor": 1,
+        "clearCoatMap": "/vehicles/p1/p1_main_cc.data.png",
+        "normalMap": "/vehicles/p1/p1_main_n.normal.png",
+        "opacityMap": "/vehicles/p1/p1_main_c.data.png",
+        "colorPaletteMap": "/vehicles/p1/p1_main_p.color.png"
+      },
+      {},
+      {}
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
+  },
+  "p1_parkinglight": {
+    "name": "p1_parkinglight",
+    "mapTo": "p1_parkinglight",
+    "class": "Material",
+    "persistentId": "654e7c92-e2b3-4256-bb9a-37ce430679b2",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "p1_signal_L": {
+    "name": "p1_signal_L",
+    "mapTo": "p1_signal_L",
+    "class": "Material",
+    "persistentId": "8e7a4e1c-a81d-41f1-b6d2-d199a87712ac",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "p1_signal_R": {
+    "name": "p1_signal_R",
+    "mapTo": "p1_signal_R",
+    "class": "Material",
+    "persistentId": "cb9d5925-786c-4c5a-b559-a56549b8d847",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "p1_windshield_dmg": {
+    "name": "p1_windshield_dmg",
+    "mapTo": "p1_windshield_dmg",
+    "class": "Material",
+    "persistentId": "a58bce1f-d1d1-4748-9d84-e742e16eb0b2",
+    "Stages": [
+      {
+        "baseColorMap": "vehicles/p1/p1_glass_dmg_b.color.png",
+        "normalMap": "vehicles/common/windshield_dmg_n.dds",
+        "opacityMap": "/vehicles/p1/p1_glass_dmg_o.data.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 1852795252,
+    "translucent": true,
+    "translucentBlendOp": "PreMulAlpha",
+    "translucentRecvShadows": true,
+    "version": 1.5
+  },
+  "p1_engine": {
+    "name": "p1_engine",
+    "mapTo": "p1_engine",
+    "class": "Material",
+    "persistentId": "9e4868fd-5542-4e4f-8033-360ce22a3394",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_engine_d.dds",
+        "normalMap": "vehicles/p1/p1_engine_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_engine_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_metric": {
+    "name": "p1_gauges_metric",
+    "mapTo": "p1_gauges_metric",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/p1_gauges_metric_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_metric_on": {
+    "name": "p1_gauges_metric_on",
+    "mapTo": "p1_gauges_metric_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/p1_gauges_metric_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/p1_gauges_metric_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_imperial": {
+    "name": "p1_gauges_imperial",
+    "mapTo": "p1_gauges_imperial",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/p1_gauges_imperial_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_imperial_on": {
+    "name": "p1_gauges_imperial_on",
+    "mapTo": "p1_gauges_imperial_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/p1_gauges_imperial_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/p1_gauges_imperial_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_metric_diesel": {
+    "name": "p1_gauges_metric_diesel",
+    "mapTo": "p1_gauges_metric_diesel",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/diesel/p1_gauges_metric_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/diesel/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/diesel/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_metric_diesel_on": {
+    "name": "p1_gauges_metric_diesel_on",
+    "mapTo": "p1_gauges_metric_diesel_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/diesel/p1_gauges_metric_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/diesel/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/diesel/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/diesel/p1_gauges_metric_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/diesel/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/diesel/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_imperial_diesel": {
+    "name": "p1_gauges_imperial_diesel",
+    "mapTo": "p1_gauges_imperial_diesel",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/diesel/p1_gauges_imperial_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/diesel/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/diesel/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_imperial_diesel_on": {
+    "name": "p1_gauges_imperial_diesel_on",
+    "mapTo": "p1_gauges_imperial_diesel_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/diesel/p1_gauges_imperial_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/diesel/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/diesel/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/diesel/p1_gauges_imperial_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/diesel/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/diesel/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_diesel": {
+    "name": "p1_gauges_diesel",
+    "mapTo": "p1_gauges_diesel",
+    "class": "Material",
+    "persistentId": "ad2e8ab5-bbe2-44cd-8a1e-f872d5496015",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/diesel/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/diesel/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/diesel/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_diesel_on": {
+    "name": "p1_gauges_diesel_on",
+    "mapTo": "p1_gauges_diesel_on",
+    "class": "Material",
+    "persistentId": "7b42a63d-7c08-498f-81de-4326c2002585",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/diesel/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/diesel/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/diesel/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/diesel/p1_gauges_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/diesel/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/diesel/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_lettering_engine": {
+    "name": "p1_lettering_engine",
+    "mapTo": "p1_lettering_engine",
+    "class": "Material",
+    "persistentId": "3bbcf471-4581-4ead-baf0-ed0bd2abd8b3",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_lettering_engine_d.dds",
+        "normalMap": "vehicles/p1/p1_lettering_engine_n.dds",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/p1/p1_lettering_engine_s.dds",
+        "specularMap": "vehicles/p1/p1_lettering_engine_s.dds",
+        "specularPower": 64,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 70,
+    "alphaTest": true,
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "materialTag2": "decal",
+    "translucent": false
+  },
+  "p1_gauges_metric_sport": {
+    "name": "p1_gauges_metric_sport",
+    "mapTo": "p1_gauges_metric_sport",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/sport/p1_gauges_metric_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_metric_sport_on": {
+    "name": "p1_gauges_metric_sport_on",
+    "mapTo": "p1_gauges_metric_sport_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/sport/p1_gauges_metric_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/sport/p1_gauges_metric_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_imperial_sport": {
+    "name": "p1_gauges_imperial_sport",
+    "mapTo": "p1_gauges_imperial_sport",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/sport/p1_gauges_imperial_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_imperial_sport_on": {
+    "name": "p1_gauges_imperial_sport_on",
+    "mapTo": "p1_gauges_imperial_sport_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/sport/p1_gauges_imperial_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/sport/p1_gauges_imperial_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_lettering_sport": {
+    "name": "p1_lettering_sport",
+    "mapTo": "p1_lettering_sport",
+    "class": "Material",
+    "persistentId": "3bbcf471-4581-4ead-baf0-ed0bd2abd8b3",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_lettering_sport_d.dds",
+        "normalMap": "vehicles/p1/p1_lettering_sport_n.dds",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/p1/p1_lettering_sport_s.dds",
+        "specularMap": "vehicles/p1/p1_lettering_sport_s.dds",
+        "specularPower": 64,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 70,
+    "alphaTest": true,
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "materialTag2": "decal",
+    "translucent": false
+  },
+  "p1_taillight_2" : {
+    "name" : "p1_taillight_2",
+    "mapTo" : "p1_taillight_2",
+    "class" : "Material",
+    "persistentId" : "66c299a6-2bee-4b0b-8147-f88d61b0cffb",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_b.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_taillight_2_dmg" : {
+    "name" : "p1_taillight_2_dmg",
+    "mapTo" : "p1_taillight_2_dmg",
+    "class" : "Material",
+    "persistentId" : "be16b91f-ed14-42e6-9f14-537711f66711",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_dmg_b.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_dmg_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_dmg_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_taillight_2_on" : {
+    "name" : "p1_taillight_2_on",
+    "mapTo" : "p1_taillight_2_on",
+    "class" : "Material",
+    "persistentId" : "619dc780-5287-4d3c-a5a8-785689729bb9",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_b.color.dds",
+        "emissiveFactor": [
+          0.6,
+          0.6,
+          0.6
+        ],
+        "emissiveMap": "/vehicles/p1/p1_taillight_g.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_taillight_2_on_intense" : {
+    "name" : "p1_taillight_2_on_intense",
+    "mapTo" : "p1_taillight_2_on_intense",
+    "class" : "Material",
+    "persistentId" : "92085ef7-9919-4a47-8142-a7f5ce2dd135",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_b.color.dds",
+        "emissiveFactor": [
+          1,
+          1,
+          1
+        ],
+        "emissiveMap": "/vehicles/p1/p1_taillight_g.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "glow": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_reverselight_2" : {
+    "name" : "p1_reverselight_2",
+    "mapTo" : "p1_reverselight_2",
+    "class" : "Material",
+    "persistentId" : "66c299a6-2bee-4b0b-8147-f88d61b0cffb",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_b.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_reverselight_2_dmg" : {
+    "name" : "p1_reverselight_2_dmg",
+    "mapTo" : "p1_reverselight_2_dmg",
+    "class" : "Material",
+    "persistentId" : "be16b91f-ed14-42e6-9f14-537711f66711",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_dmg_b.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_dmg_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_dmg_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_reverselight_2_on" : {
+    "name" : "p1_reverselight_2_on",
+    "mapTo" : "p1_reverselight_2_on",
+    "class" : "Material",
+    "persistentId" : "619dc780-5287-4d3c-a5a8-785689729bb9",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_b.color.dds",
+        "emissiveFactor": [
+          0.6,
+          0.6,
+          0.6
+        ],
+        "emissiveMap": "/vehicles/p1/p1_taillight_g.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_signal_RL" : {
+    "name" : "p1_signal_RL",
+    "mapTo" : "p1_signal_RL",
+    "class" : "Material",
+    "persistentId" : "66c299a6-2bee-4b0b-8147-f88d61b0cffb",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_b.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_signal_RL_dmg" : {
+    "name" : "p1_signal_RL_dmg",
+    "mapTo" : "p1_signal_RL_dmg",
+    "class" : "Material",
+    "persistentId" : "be16b91f-ed14-42e6-9f14-537711f66711",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_dmg_b.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_dmg_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_dmg_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_signal_RL_on" : {
+    "name" : "p1_signal_RL_on",
+    "mapTo" : "p1_signal_RL_on",
+    "class" : "Material",
+    "persistentId" : "619dc780-5287-4d3c-a5a8-785689729bb9",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_b.color.dds",
+        "emissiveFactor": [
+          0.6,
+          0.6,
+          0.6
+        ],
+        "emissiveMap": "/vehicles/p1/p1_taillight_g.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_signal_RR" : {
+    "name" : "p1_signal_RR",
+    "mapTo" : "p1_signal_RR",
+    "class" : "Material",
+    "persistentId" : "66c299a6-2bee-4b0b-8147-f88d61b0cffb",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_b.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_signal_RR_dmg" : {
+    "name" : "p1_signal_RR_dmg",
+    "mapTo" : "p1_signal_RR_dmg",
+    "class" : "Material",
+    "persistentId" : "be16b91f-ed14-42e6-9f14-537711f66711",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_dmg_b.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_dmg_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_dmg_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_signal_RR_on" : {
+    "name" : "p1_signal_RR_on",
+    "mapTo" : "p1_signal_RR_on",
+    "class" : "Material",
+    "persistentId" : "619dc780-5287-4d3c-a5a8-785689729bb9",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/p1/p1_taillight_b.color.dds",
+        "emissiveFactor": [
+          0.6,
+          0.6,
+          0.6
+        ],
+        "emissiveMap": "/vehicles/p1/p1_taillight_g.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_taillight_m.data.dds",
+        "normalMap": "vehicles/p1/p1_taillight_n.dds",
+        "pixelSpecular": true,
+        "roughnessFactor": 0,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "p1_steer": {
+    "name": "p1_steer",
+    "mapTo": "p1_steer",
+    "class": "material",
+    "persistentId": "212bbfc1-2cf4-474e-8757-8b4052512f1d",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/p1/p1_steer_ao.data.png",
+        "baseColorMap": "/vehicles/p1/p1_steer_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_steer_m.data.png",
+        "normalMap": "/vehicles/p1/p1_steer_n.normal.png",
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/p1/p1_steer_r.data.png",
+        "useAnisotropic": true
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/p1/p1_steer_ao.data.png",
+        "baseColorMap": "/vehicles/p1/p1_steer_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "baseColorFactor": [
+          0.473459996,
+          0.473459996,
+          0.473459996,
+          1
+        ],
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/p1/p1_steer_m.data.png",
+        "normalMap": "/vehicles/p1/p1_steer_n.normal.png",
+        "opacityMap": "/vehicles/p1/p1_steer_o.data.png",
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/p1/p1_steer_r.data.png",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
+  },
+  "p1_clock": {
+    "name": "p1_clock",
+    "mapTo": "p1_clock",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/clock/p1_clock_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/clock/p1_clock_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/clock/p1_clock_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_clock_on": {
+    "name": "p1_clock_on",
+    "mapTo": "p1_clock_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/clock/p1_clock_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/clock/p1_clock_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/clock/p1_clock_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/clock/p1_clock_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/clock/p1_clock_n.dds",
+        "specularMap": "vehicles/p1/clock/p1_clock_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "screen_gps": {
+    "name": "screen_gps",
+    "mapTo": "screen_gps",
+    "class": "Material",
+    "persistentId": "03201f3f-213c-414c-9686-1b7ab8fec731",
+    "Stages": [
+      {
+        "colorMap": "@screen_gps",
+        "emissive": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None"
+  },
+  "p1_lettering_inde": {
+    "name": "p1_lettering_inde",
+    "mapTo": "p1_lettering_inde",
+    "class": "Material",
+    "persistentId": "3bbcf471-4581-4ead-baf0-ed0bd2abd8b3",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_lettering_inde_d.dds",
+        "normalMap": "vehicles/p1/p1_lettering_inde_n.dds",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/p1/p1_lettering_inde_s.dds",
+        "specularMap": "vehicles/p1/p1_lettering_inde_s.dds",
+        "specularPower": 64,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 70,
+    "alphaTest": true,
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "materialTag2": "decal",
+    "translucent": false
+  },
+  "p1_gauges_metric_notacho": {
+    "name": "p1_gauges_metric_notacho",
+    "mapTo": "p1_gauges_metric_notacho",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/notacho/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_metric_notacho_on": {
+    "name": "p1_gauges_metric_notacho_on",
+    "mapTo": "p1_gauges_metric_notacho_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/notacho/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/notacho/p1_gauges_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_imperial_notacho": {
+    "name": "p1_gauges_imperial_notacho",
+    "mapTo": "p1_gauges_imperial_notacho",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/notacho/p1_gauges_imperial_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_imperial_notacho_on": {
+    "name": "p1_gauges_imperial_notacho_on",
+    "mapTo": "p1_gauges_imperial_notacho_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/notacho/p1_gauges_imperial_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/notacho/p1_gauges_imperial_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_r2_metric": {
+    "name": "p1_gauges_r2_metric",
+    "mapTo": "p1_gauges_r2_metric",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/facelift/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/facelift/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/facelift/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_r2_metric_on": {
+    "name": "p1_gauges_r2_metric_on",
+    "mapTo": "p1_gauges_r2_metric_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/facelift/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/facelift/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/facelift/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/facelift/p1_gauges_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/facelift/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/facelift/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_r2_imperial": {
+    "name": "p1_gauges_r2_imperial",
+    "mapTo": "p1_gauges_r2_imperial",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/facelift/p1_gauges_d_imperial.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/facelift/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/facelift/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_r2_imperial_on": {
+    "name": "p1_gauges_r2_imperial_on",
+    "mapTo": "p1_gauges_r2_imperial_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/facelift/p1_gauges_d_imperial.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/facelift/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/facelift/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/facelift/p1_gauges_g_imperial.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/facelift/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/facelift/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "etki_seats" : {
+    "name" : "etki_seats",
+    "class" : "Material",
+    "persistentId" : "05ff688b-05f0-49d2-9416-64ec2d30e697",
+    "Stages" : [
+      {
+        "colorMap" : "vehicles/etki/etki_seats_d.dds",
+        "normalMap" : "vehicles/etki/etki_seats_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/etki/etki_seats_s.dds",
+        "specularPower" : 32,
+        "useAnisotropic" : true
+      },
+      {},
+      {},
+      {}
+    ],
+    "mapTo" : "etki_seats",
+    "materialTag0" : "beamng",
+    "materialTag1" : "vehicle"
+  },
+  "p1_interior_r2" : {
+    "name" : "p1_interior_r2",
+    "class" : "Material",
+    "persistentId" : "0d2e09e5-6d8e-45b5-b7b0-0c36bd8210cf",
+    "Stages" : [
+      {
+        "colorMap" : "vehicles/p1/p1_interior_r2_d.dds",
+        "normalMap" : "vehicles/p1/p1_interior_r2_n.dds",
+        "reflectivityMap" : "vehicles/p1/p1_interior_r2_s.dds",
+        "specularMap" : "vehicles/p1/p1_interior_r2_s.dds",
+        "specularPower" : 32,
+        "useAnisotropic" : true
+      },
+      {
+        "colorMap" : "vehicles/p1/p1_interior_r2_d.dds",
+        "normalMap" : "vehicles/p1/p1_interior_r2_n.dds",
+        "reflectivityMap" : "vehicles/p1/p1_interior_r2_s.dds",
+        "specularMap" : "vehicles/p1/p1_interior_r2_s.dds",
+        "specularPower" : 32,
+        "useAnisotropic" : true
+      },
+      {},
+      {}
+    ],
+    "alphaRef" : 0,
+    "cubemap" : "global_cubemap_metalblurred",
+    "mapTo" : "p1_interior_r2",
+    "materialTag0" : "beamng",
+    "materialTag1" : "vehicle",
+    "translucentBlendOp" : "None"
+  },
+  "vivace_EV": {
+    "name": "vivace_EV",
+    "mapTo": "vivace_EV",
+    "class": "material",
+    "persistentId": "342cb0aa-f2c4-4dac-a91b-002f67273ccd",
+    "Stages": [
+      {
+        "colorMap": "vehicles/vivace/vivace_EV_d.color.png",
+        "normalMap": "vehicles/vivace/vivace_EV_n.normal.png",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/vivace/vivace_EV_r.color.png",
+        "specularMap": "vehicles/vivace/vivace_EV_s.color.png",
+        "specularPower": 64
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "translucent": true,
+    "translucentBlendOp": "None"
+  },
+  "p1_electric_lettering": {
+    "name": "p1_electric_lettering",
+    "mapTo": "p1_electric_lettering",
+    "class": "Material",
+    "persistentId": "3bbcf471-4581-4ead-baf0-ed0bd2abd8b3",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_electric_lettering_d.dds",
+        "normalMap": "vehicles/p1/p1_electric_lettering_n.dds",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/p1/p1_electric_lettering_s.dds",
+        "specularMap": "vehicles/p1/p1_electric_lettering_s.dds",
+        "specularPower": 64,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 70,
+    "alphaTest": true,
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "materialTag2": "decal",
+    "translucent": false
+  },
+  "p1_gauges_electric_metric": {
+    "name": "p1_gauges_electric_metric",
+    "mapTo": "p1_gauges_electric_metric",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/electric/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/electric/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/electric/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_electric_metric_on": {
+    "name": "p1_gauges_electric_metric_on",
+    "mapTo": "p1_gauges_electric_metric_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/electric/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/electric/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/electric/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/electric/p1_gauges_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/electric/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/electric/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_electric_imperial": {
+    "name": "p1_gauges_electric_imperial",
+    "mapTo": "p1_gauges_electric_imperial",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/electric/p1_gauges_d_imperial.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/electric/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/electric/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_electric_imperial_on": {
+    "name": "p1_gauges_electric_imperial_on",
+    "mapTo": "p1_gauges_electric_imperial_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/electric/p1_gauges_d_imperial.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/electric/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/electric/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/electric/p1_gauges_g_imperial.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/electric/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/electric/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "parts_offroad": {
+    "name": "parts_offroad",
+    "mapTo": "parts_offroad",
+    "class": "Material",
+    "persistentId": "7b498d7e-2d9f-4ec0-95e7-6f96be3f989d",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/parts_offroad_ao.color.png",
+        "baseColorMap": "/vehicles/common/parts_offroad_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/parts_offroad_m.data.png",
+        "normalMap": "vehicles/common/parts_offroad_n.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/common/parts_offroad_r.data.png",
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
+  },
+  "screen_gps": {
+    "name": "screen_gps",
+    "mapTo": "screen_gps",
+    "class": "Material",
+    "persistentId": "03201f3f-213c-414c-9686-1b7ab8fec731",
+    "Stages": [
+      {
+        "colorMap": "@screen_gps",
+        "emissive": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None"
+  },
+  "gps": {
+    "name": "gps",
+    "mapTo": "gps",
+    "class": "Material",
+    "persistentId": "7ab08a26-019d-448d-aba2-1b09188aadc6",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/common/gps_ao.data.png",
+        "baseColorMap": "vehicles/common/gps_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "vehicles/common/gps_m.data.png",
+        "normalMap": "vehicles/common/gps_nm.normal.png",
+        "roughnessMap": "vehicles/common/gps_r.data.png",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
+  },
+  "p1_hood_air" : {
+    "name" : "p1_hood_air",
+    "class" : "Material",
+    "persistentId" : "5935a6bc-cae5-40ba-9500-362572b0c9a9",
+    "Stages" : [
+      {
+        "colorMap" : "vehicles/common/null.dds",
+        "normalMap" : "vehicles/p1/p1_hood_air.n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/null.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {
+        "colorMap" : "vehicles/p1/p1_hood_air.d.dds",
+        "diffuseColor" : [ 1.5, 1.5, 1.5, 1 ],
+        "normalMap" : "vehicles/p1/p1_hood_air.n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/p1/p1_hood_air.s.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {},
+      {}
+    ],
+    "alphaRef" : 0,
+    "dynamicCubemap" : true,
+    "mapTo" : "p1_hood_air",
+    "materialTag0" : "beamng",
+    "materialTag1" : "vehicle",
+    "translucent" : true,
+    "translucentBlendOp" : "None"
+  },
+  "p1_air_screen_on": {
+    "name": "p1_air_screen_on",
+    "mapTo": "p1_air_screen_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_aircon_concept_g.dds",
+        "emissive": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "castShadows": false,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_air_screen": {
+    "name": "p1_air_screen",
+    "mapTo": "p1_air_screen",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_aircon_concept_off_g.dds",
+        "emissive": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "castShadows": false,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_logo_screen_on": {
+    "name": "p1_logo_screen_on",
+    "mapTo": "p1_logo_screen_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_logo_concept_g.dds",
+        "emissive": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "castShadows": false,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_logo_screen": {
+    "name": "p1_logo_screen",
+    "mapTo": "p1_logo_screen",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_aircon_concept_off_g.dds",
+        "emissive": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "castShadows": false,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_aircon_controlls": {
+    "name": "p1_aircon_controlls",
+    "mapTo": "p1_aircon_controlls",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_aircon_controlls.dds",
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 1,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "castShadows": false,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_lettering_concept": {
+    "name": "p1_lettering_concept",
+    "mapTo": "p1_lettering_concept",
+    "class": "Material",
+    "persistentId": "3bbcf471-4581-4ead-baf0-ed0bd2abd8b3",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_lettering_concept_d.dds",
+        "normalMap": "vehicles/p1/p1_lettering_concept_n.dds",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/p1/p1_lettering_concept_s.dds",
+        "specularMap": "vehicles/p1/p1_lettering_concept_s.dds",
+        "specularPower": 64,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 70,
+    "alphaTest": true,
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "materialTag2": "decal",
+    "translucent": false
+  },
+ "p1_gauges_prototype": {
+    "name": "p1_gauges_prototype",
+    "mapTo": "p1_gauges_prototype",
+    "class": "Material",
+    "persistentId": "ad2e8ab5-bbe2-44cd-8a1e-f872d5496015",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/prototype/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/prototype/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/prototype/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_prototype_on": {
+    "name": "p1_gauges_prototype_on",
+    "mapTo": "p1_gauges_prototype_on",
+    "class": "Material",
+    "persistentId": "7b42a63d-7c08-498f-81de-4326c2002585",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/prototype/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/prototype/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/prototype/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/prototype/p1_gauges_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/prototype/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/prototype/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_r2_metric_sport": {
+    "name": "p1_gauges_r2_metric_sport",
+    "mapTo": "p1_gauges_r2_metric_sport",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_r2_metric_sport_on": {
+    "name": "p1_gauges_r2_metric_sport_on",
+    "mapTo": "p1_gauges_r2_metric_sport_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_g.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_r2_imperial_sport": {
+    "name": "p1_gauges_r2_imperial_sport",
+    "mapTo": "p1_gauges_r2_imperial_sport",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_d_imperial.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_gauges_r2_imperial_sport_on": {
+    "name": "p1_gauges_r2_imperial_sport_on",
+    "mapTo": "p1_gauges_r2_imperial_sport_on",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_d_imperial.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_g_imperial.dds",
+        "diffuseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissive": true,
+        "normalMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_n.dds",
+        "specularMap": "vehicles/p1/gauges/sport_facelift/p1_gauges_s.dds",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_steer_sport": {
+    "name": "p1_steer_sport",
+    "mapTo": "p1_steer_sport",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_steer_sport_d.dds",
+        "diffuseColor": [
+          0.75,
+          0.75,
+          0.75,
+          1
+        ],
+        "normalMap": "vehicles/p1/p1_steer_sport_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_steer_sport_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_lettering_rlm": {
+    "name": "p1_lettering_rlm",
+    "mapTo": "p1_lettering_rlm",
+    "class": "Material",
+    "persistentId": "3bbcf471-4581-4ead-baf0-ed0bd2abd8b3",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_lettering_rlm_d.dds",
+        "normalMap": "vehicles/p1/p1_lettering_rlm_n.dds",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/p1/p1_lettering_rlm_s.dds",
+        "specularMap": "vehicles/p1/p1_lettering_rlm_s.dds",
+        "specularPower": 64,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 70,
+    "alphaTest": true,
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "materialTag2": "decal",
+    "translucent": false
+  },
+  "p1_phone": {
+    "name": "p1_phone",
+    "mapTo": "p1_phone",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_phone_d.dds",
+        "diffuseColor": [
+          0.99,
+          0.99,
+          0.99,
+          1
+        ],
+        "normalMap": "vehicles/p1/p1_phone_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_phone_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_phone2": {
+    "name": "p1_phone2",
+    "mapTo": "p1_phone2",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_phone2_d.dds",
+        "diffuseColor": [
+          0.95,
+          0.95,
+          0.95,
+          1
+        ],
+        "normalMap": "vehicles/p1/p1_phone2_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_phone2_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_phone3": {
+    "name": "p1_phone3",
+    "mapTo": "p1_phone3",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_phone3_d.dds",
+        "diffuseColor": [
+          0.95,
+          0.95,
+          0.95,
+          1
+        ],
+        "normalMap": "vehicles/p1/p1_phone3_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_phone3_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_phone4": {
+    "name": "p1_phone4",
+    "mapTo": "p1_phone4",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_phone4_d.dds",
+        "diffuseColor": [
+          0.95,
+          0.95,
+          0.95,
+          1
+        ],
+        "normalMap": "vehicles/p1/p1_phone4_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_phone4_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "sbr_engine_1": {
+    "name": "sbr_engine_1",
+    "mapTo": "sbr_engine_1",
+    "class": "Material",
+    "persistentId": "b29f5f1c-380a-47be-9771-2065366f6c8c",
+    "Stages": [
+      {
+        "colorMap": "vehicles/common/null.dds",
+        "normalMap": "vehicles/sbr/sbr_engine_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/sbr/sbr_engine_d.dds",
+        "normalMap": "vehicles/sbr/sbr_engine_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/sbr/sbr_engine_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None"
+  },
+  "p1_motherboard": {
+    "name": "p1_motherboard",
+    "mapTo": "p1_motherboard",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_motherboard_d.dds",
+        "diffuseColor": [
+          0.95,
+          0.95,
+          0.95,
+          1
+        ],
+        "normalMap": "vehicles/p1/p1_motherboard_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_motherboard_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_mrwhite_hat": {
+    "name": "p1_mrwhite_hat",
+    "mapTo": "p1_mrwhite_hat",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_hat_d.dds",
+        "diffuseColor": [
+          0.95,
+          0.95,
+          0.95,
+          1
+        ],
+        "normalMap": "vehicles/p1/p1_hat_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_hat_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "p1_mrwhite_glasses": {
+    "name": "p1_mrwhite_glasses",
+    "mapTo": "p1_mrwhite_glasses",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "vehicles/p1/p1_glasses_d.dds",
+        "diffuseColor": [
+          0.95,
+          0.95,
+          0.95,
+          1
+        ],
+        "normalMap": "vehicles/p1/p1_glasses_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/p1/p1_glasses_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle"
+  },
+  "midsize_engines": {
+    "name": "midsize_engines",
+    "mapTo": "midsize_engines",
+    "class": "Material",
+    "persistentId": "dd25ebdd-cf85-4d85-b91d-28e6b3075cbc",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/midsize/midsize_engines_ao.data.png",
+        "baseColorMap": "vehicles/midsize/midsize_engines_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "vehicles/midsize/midsize_engines_m.data.png",
+        "normalMap": "vehicles/midsize/midsize_engines_nm.normal.png",
+        "roughnessMap": "vehicles/midsize/midsize_engines_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "doubleSided": true,
+    "dynamicCubemap": true,
+    "invertBackFaceNormals": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+}

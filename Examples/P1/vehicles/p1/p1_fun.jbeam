@@ -1,0 +1,29 @@
+{
+"p1_fun_1": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Mr. Petitwhite",
+        "value":30,
+    },
+    "slotType" : "p1_fun",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_mrwhite_glasses", ["p1_fascia"]],
+         ["p1_mrwhite_glasses_glass", ["p1_fascia"]],
+         ["p1_mrwhite_hat", ["p1_body"]],
+    ],
+},
+"p1_fun_2": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Glasses",
+        "value":10,
+    },
+    "slotType" : "p1_fun",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_mrwhite_glasses", ["p1_fascia"]],
+         ["p1_mrwhite_glasses_glass", ["p1_fascia"]],
+    ],
+},
+}

@@ -1,0 +1,77 @@
+{
+"p1_sideskirts": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Unpainted Side Skirts",
+        "value":20,
+    },
+    "slotType" : "p1_sideskirts",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_sideskirt_R", ["p1_body","p1_sideskirt_R"]],
+        ["p1_sideskirt_L", ["p1_body","p1_sideskirt_L"]],
+        ["p1_sideskirt_fender_R", ["p1_fender_R"]],
+        ["p1_sideskirt_fender_L", ["p1_fender_L"]],
+    ],
+},
+"p1_sideskirts_alt": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Side Skirts",
+        "value":70,
+    },
+    "slotType" : "p1_sideskirts",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_sideskirt_R_alt", ["p1_body","p1_sideskirt_R"]],
+        ["p1_sideskirt_L_alt", ["p1_body","p1_sideskirt_L"]],
+        ["p1_sideskirt_fender_R_alt", ["p1_fender_R"]],
+        ["p1_sideskirt_fender_L_alt", ["p1_fender_L"]],
+    ],
+},
+"p1_sideskirts_sport_l": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"SportL Side Skirts",
+        "value":80,
+    },
+    "slotType" : "p1_sideskirts",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_sideskirt_R_sport_l", ["p1_body","p1_sideskirt_R"]],
+        ["p1_sideskirt_L_sport_l", ["p1_body","p1_sideskirt_L"]],
+        ["p1_sideskirt_fender_R_sport_l", ["p1_fender_R"]],
+        ["p1_sideskirt_fender_L_sport_l", ["p1_fender_L"]],
+    ],
+},
+"p1_sideskirts_tune_3": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Custom Unpainted Side Skirts",
+        "value":50,
+    },
+    "slotType" : "p1_sideskirts",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_sideskirt_R_tune_3", ["p1_body","p1_sideskirt_R"]],
+        ["p1_sideskirt_L_tune_3", ["p1_body","p1_sideskirt_L"]],
+        ["p1_sideskirt_fender_R_tune_3", ["p1_fender_R"]],
+        ["p1_sideskirt_fender_L_tune_3", ["p1_fender_L"]],
+    ],
+},
+"p1_sideskirts_tune_3_alt": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Custom Side Skirts",
+        "value":50,
+    },
+    "slotType" : "p1_sideskirts",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_sideskirt_R_tune_3_alt", ["p1_body","p1_sideskirt_R"]],
+        ["p1_sideskirt_L_tune_3_alt", ["p1_body","p1_sideskirt_L"]],
+        ["p1_sideskirt_fender_R_tune_3_alt", ["p1_fender_R"]],
+        ["p1_sideskirt_fender_L_tune_3_alt", ["p1_fender_L"]],
+    ],
+},
+}

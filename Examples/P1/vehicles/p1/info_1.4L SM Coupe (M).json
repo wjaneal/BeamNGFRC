@@ -1,0 +1,14 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"1.4 SM Coupe (M)",
+  "Description":"Fuel injected 1.4 liter standard model with steel wheels and hubcaps",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":1500,
+  "defaultPaintName1":"Cream"
+}
