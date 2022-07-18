@@ -1,0 +1,18 @@
+{
+  "Config Type":"Prototype",
+  "Configuration":"1.4 Facelift Prototype (M)",
+  "Description":"A prototype version of the 1.4 Facelift, It's very the same as the finalized facelifts, but it has pre-facelift interior with a facelift gauge cluster.",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":100150,
+  "Years":{
+    "max":1996,
+    "min":1995
+  },
+  "defaultPaintName1":"Matte Black"
+}

@@ -1,0 +1,362 @@
+{
+"p1_differential_R": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Open Rear Differential",
+        "value":700,
+    },
+    "slotType" : "p1_differential_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_finaldrive_R","p1_finaldrive_R_389", "Rear Final Drive", {"coreSlot":true}],
+        ["p1_driveshaft","p1_driveshaft", "Rear Driveshaft"],
+        ["p1_halfshafts_R","p1_halfshafts_R", "Rear Halfshafts"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"open", "gearRatio": 1, "uiName":"Rear Differential", "defaultVirtualInertia":0.25}],
+    ],
+    "differential_R": {
+        "friction": 1.5,
+        "dynamicFriction": 0.0007,
+        "torqueLossCoef": 0.016,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_diff_R", ["p1_body","p1_lowermounts_a_R","p1_lowermounts_b_R","p1_uppermounts_R","p1_shocktop_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":20},
+         ["rdiff", 0.00000, 1.07969, 0.29000],
+         {"group":""},
+
+         //add weight
+         {"nodeWeight":11.4},
+         {"collision":true},
+         {"selfCollision":false},
+         {"group":"p1_lowermounts_a_R"},
+         //control arm
+         ["rx1r", -0.17000, 0.95969, 0.22000, {"group":["p1_lowermounts_a_R","p1_subframe_R"]}],
+         ["rx1l", 0.17000, 0.95969, 0.22000, {"group":["p1_lowermounts_a_R","p1_subframe_R"]}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4rr"],
+          ["rdiff","f4ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"p1_differential_R_LSD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Limited Slip Rear Differential",
+        "value":1050,
+    },
+    "slotType" : "p1_differential_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_finaldrive_R","p1_finaldrive_R_389", "Rear Final Drive", {"coreSlot":true}],
+        ["p1_driveshaft","p1_driveshaft", "Rear Driveshaft"],
+        ["p1_halfshafts_R","p1_halfshafts_R", "Rear Halfshafts"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"lsd", "gearRatio": 1, "lsdPreload":80, "lsdLockCoef":0.12, "lsdRevLockCoef":0.01, "uiName":"Rear Differential", "defaultVirtualInertia":0.25}],
+    ],
+    "differential_R": {
+        "friction": 1.5,
+        "dynamicFriction": 0.0007,
+        "torqueLossCoef": 0.016,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_diff_R", ["p1_body","p1_lowermounts_a_R","p1_lowermounts_b_R","p1_uppermounts_R","p1_shocktop_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":24},
+         ["rdiff", 0.00000, 1.07969, 0.29000],
+         {"group":""},
+
+         //add weight
+         {"nodeWeight":11.4},
+         {"collision":true},
+         {"selfCollision":false},
+         {"group":"p1_lowermounts_a_R"},
+         //control arm
+         ["rx1r", -0.17000, 0.95969, 0.22000, {"group":["p1_lowermounts_a_R","p1_body"]}],
+         ["rx1l", 0.17000, 0.95969, 0.22000, {"group":["p1_lowermounts_a_R","p1_body"]}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"p1_differential_R_race": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Race Limited Slip Rear Differential",
+        "value":1650,
+    },
+    "slotType" : "p1_differential_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_finaldrive_R","p1_finaldrive_R_race", "Rear Final Drive", {"coreSlot":true}],
+        ["p1_driveshaft","p1_driveshaft", "Rear Driveshaft"],
+        ["p1_halfshafts_R","p1_halfshafts_R", "Rear Halfshafts"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$lsdpreload_R", "range", "N/m", "Differentials", 100, 0, 500, "Pre-load Torque", "Initial locking torque between left and right wheels", {"subCategory":"Rear"}]
+        ["$lsdlockcoef_R", "range", "", "Differentials", 0.15, 0, 0.5, "Power Lock Rate", "Additional locking torque proportional to engine torque", {"minDis":0, "maxDis":100, "subCategory":"Rear"}],
+        ["$lsdlockcoefrev_R", "range", "", "Differentials", 0.075, 0, 0.5, "Coast Lock Rate", "Additional locking torque proportional to engine braking", {"minDis":0, "maxDis":100, "subCategory":"Rear"}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"lsd", "gearRatio": 1, "lsdPreload":"$lsdpreload_R", "lsdLockCoef":"$lsdlockcoef_R", "lsdRevLockCoef":"$lsdlockcoefrev_R", "uiName":"Rear Differential", "defaultVirtualInertia":0.25}],
+    ],
+    "differential_R": {
+        "friction": 1.5,
+        "dynamicFriction": 0.0007,
+        "torqueLossCoef": 0.016,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_diff_R", ["p1_body","p1_lowermounts_a_R","p1_lowermounts_b_R","p1_uppermounts_R","p1_shocktop_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":24},
+         ["rdiff", 0.00000, 1.07969, 0.29000],
+         {"group":""},
+
+         //add weight
+         {"nodeWeight":11.4},
+         {"collision":true},
+         {"selfCollision":false},
+         {"group":"p1_lowermounts_a_R"},
+         //control arm
+         ["rx1r", -0.17000, 0.95969, 0.22000, {"group":["p1_lowermounts_a_R","p1_body"]}],
+         ["rx1l", 0.17000, 0.95969, 0.22000, {"group":["p1_lowermounts_a_R","p1_body"]}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"p1_differential_R_welded": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Welded Rear Differential",
+        "value":950,
+    },
+    "slotType" : "p1_differential_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_driveshaft","p1_driveshaft", "Rear Driveshaft"],
+        ["p1_finaldrive_R","p1_finaldrive_R_389", "Rear Final Drive", {"coreSlot":true}],
+        ["p1_halfshafts_R","p1_halfshafts_R", "Rear Halfshafts"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"locked", "gearRatio": 1, "lockTorque":8000, "uiName":"Rear Differential", "defaultVirtualInertia":0.25}],
+    ],
+    "differential_R": {
+        "friction": 1.5,
+        "dynamicFriction": 0.0007,
+        "torqueLossCoef": 0.016,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_diff_R", ["p1_body","p1_lowermounts_a_R","p1_lowermounts_b_R","p1_uppermounts_R","p1_shocktop_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":20},
+         ["rdiff", 0.00000, 1.07969, 0.29000],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"p1_finaldrive_R_389": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"3.89:1 Rear Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "p1_finaldrive_R",
+
+    "torsionReactorR" : {
+        "gearRatio":3.89,
+    },
+},
+"p1_finaldrive_R_406": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4.06:1 Rear Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "p1_finaldrive_R",
+
+    "torsionReactorR" : {
+        "gearRatio":4.06,
+    },
+},
+"p1_finaldrive_R_425": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4.25:1 Rear Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "p1_finaldrive_R",
+
+    "torsionReactorR" : {
+        "gearRatio":4.25,
+    },
+},
+"p1_finaldrive_R_race": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Race Adjustable Rear Final Drive",
+        "value":650,
+    },
+
+    "slotType" : "p1_finaldrive_R",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$finaldrive_R", "range", ":1", "Differentials", 4.39, 2.0, 6.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Front"}],
+    ],
+
+    "torsionReactorR" : {
+        "gearRatio":"$finaldrive_R",
+    },
+},
+"p1_driveshaft": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear Driveshaft",
+        "value":300,
+    },
+    "slotType" : "p1_driveshaft",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.17, "dynamicFriction":0.00038}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e1r","e4r"],
+	},
+    "props": [
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "p1_driveshaft", "f3r", "f3l", "f8r",    {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.02, "beamShortBound":0.02},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":1500,"beamStrength":3500},
+          {"beamLimitSpring":10001000,"beamLimitDamp":250},
+          ["rdiff","ta1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"p1_halfshafts_R": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear Halfshafts",
+        "value":200,
+    },
+    "slotType" : "p1_halfshafts_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_halfshaft_rear", ["p1_hub_R","p1_upperarm_R","p1_lowermounts_a_R","p1_lowermounts_b_R"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":5000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          ["rw1rr","rdiff", {"name":"halfshaft_RR", "breakGroup":"wheel_RR", "breakGroupType":1, "deformGroup":"wheelaxleRR", "deformationTriggerRatio":0.001, "optional":true}],
+          ["rw1ll","rdiff", {"name":"halfshaft_RL", "breakGroup":"wheel_RL", "breakGroupType":1, "deformGroup":"wheelaxleRL", "deformationTriggerRatio":0.001, "optional":true}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "wheelhub_RL", "differential_R", 1, {"deformGroups":["wheel_RL"], "breakTriggerBeam":"halfshaft_RL", "uiName":"Rear Left Halfshaft", "friction":1.13, "dynamicFriction":0.0028}],
+        ["shaft", "wheelhub_RR", "differential_R", 2, {"deformGroups":["wheel_RR"], "breakTriggerBeam":"halfshaft_RR", "uiName":"Rear Right Halfshaft", "friction":1.13, "dynamicFriction":0.0028}],
+    ],
+},
+}

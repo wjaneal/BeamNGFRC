@@ -1,0 +1,14 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"1.5 SM Coupe (North America) (CVT)",
+  "Description":"Fuel injected 1.5 liter standard model with steel wheels and hubcaps for North American market",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"CVT",
+  "Value":1530,
+  "defaultPaintName1":"Cream"
+}

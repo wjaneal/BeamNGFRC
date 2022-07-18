@@ -1,0 +1,19 @@
+{
+  "Config Type":"Concept",
+  "Configuration":"Concept Luxury (A)",
+  "Description":"Concept of the Luxury Petitron (Has LXM badge inside, which means it's a concept of the LXM configurations), has Petite Voiture and PV1 name on the car, and has screens inside.",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Automatic",
+  "Value":125200,
+  "Years":{
+    "max":1988,
+    "min":1989
+  },
+  "defaultPaintName1":"Silver"
+  "defaultPaintName2":"Aluminium"
+}

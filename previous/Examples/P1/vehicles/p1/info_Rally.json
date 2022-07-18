@@ -1,0 +1,16 @@
+{
+  "Config Type":"Rally",
+  "Configuration":"Rally (M)",
+  "Description":"Rally version of Petitron, made by the Autron Rally Team (A.R.T. for short)",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":5100,
+  "defaultPaintName1":"Silver"
+  "defaultPaintName2":"Midnight Pearl"
+  "defaultPaintName3":"Silver"
+}

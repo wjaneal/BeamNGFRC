@@ -1,0 +1,50 @@
+{
+  "p1_steelwheel_1": {
+    "name": "p1_steelwheel_1",
+    "mapTo": "p1_steelwheel_1",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/wheels/p1/p1_steelwheel_1_ao.data.png",
+        "baseColorMap": "/vehicles/common/wheels/p1/p1_steelwheel_1_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/wheels/p1/p1_steelwheel_1_m.data.png",
+        "normalMap": "vehicles/common/wheels/p1/p1_steelwheel_1_n.dds",
+        "roughnessMap": "/vehicles/common/wheels/p1/p1_steelwheel_1_r.data.png",
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
+  },
+  "p1_wheel_05a": {
+    "name": "p1_wheel_05a",
+    "mapTo": "p1_wheel_05a",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/wheels/p1/p1_wheel_05a_ao.data.png",
+        "baseColorMap": "/vehicles/common/wheels/p1/p1_wheel_05a_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/wheels/p1/p1_wheel_05a_m.data.png",
+        "normalMap": "vehicles/common/wheels/p1/p1_wheel_05a_n.dds",
+        "roughnessMap": "/vehicles/common/wheels/p1/p1_wheel_05a_r.data.png",
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
+  }
+}

@@ -1,0 +1,51 @@
+{
+"p1_ballast_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front Ballast Plate",
+        "value":300,
+    },
+    "slotType" : "p1_bumperbar_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["p1_ballast_F", ["p1_body","p1_ballast_F"]],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$ballast_F", "range", "kg", "Chassis", 5, 10, 45, "Front Ballast", "Adjusts weight added to the front end", {"stepDis":1, "minDis":10, "maxDis":90, "subCategory":"Front"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":"p1_ballast_F"},
+         {"nodeWeight":"$ballast_F"},
+         ["bl1r", -0.42, -1.92, 0.24],
+         ["bl1l", 0.42, -1.92, 0.24],
+         {"collision":true},
+         {"selfCollision":true},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //attach ballast
+          {"beamSpring":1501000,"beamDamp":150},
+          {"beamDeform":17280,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.1},
+          ["bl1r", "f11rr"],
+          ["bl1r", "f13rr"],
+          ["bl1r", "f11ll"],
+          ["bl1l", "f11ll"],
+          ["bl1l", "f13ll"],
+          ["bl1l", "f11rr"],
+          ["bl1l", "f13rr"],
+          ["bl1r", "f13ll"],
+          ["bl1r", "bl1l"],
+          {"deformLimitExpansion":1.1},
+
+    ],
+},
+}

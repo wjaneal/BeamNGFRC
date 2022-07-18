@@ -1,0 +1,14 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"1.4 CM Hatchback (North America) (A)",
+  "Description":"Fuel injected 1.4 liter cheap model with steel wheels and hubcaps for North American market",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":90,
+  "Propulsion":"ICE",
+  "Torque":118,
+  "Transmission":"Automatic",
+  "Value":1430,
+  "defaultPaintName1":"Deep Plum"
+}

@@ -1,0 +1,27 @@
+{
+"p1_battery": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"10kWh Battery",
+        "value":180,
+    },
+    "slotType" : "p1_fueltank",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_battery", ["p1_body"]],
+    ],
+    "energyStorage": [
+        ["type", "name"],
+        ["electricBattery", "mainBattery"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$fuel", "range", "kWh", "Chassis", 10, 0, 10, "Battery Level", "Initial battery charge", {"stepDis":0.9}],
+    ],
+    "mainBattery": {
+        "energyType":"electricEnergy",
+        "batteryCapacity": 10,
+        "startingCapacity": "$fuel",
+    },
+},
+}

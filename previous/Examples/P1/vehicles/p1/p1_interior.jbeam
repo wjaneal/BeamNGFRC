@@ -1,0 +1,2564 @@
+{
+"p1_seat_FL": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Left Front Seat",
+        "value":280,
+    },
+    "slotType" : "p1_seat_FL",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_seat_FL" ["p1_seat_FL","p1_floor"]{"pos":{"x":0.0,"y":0.02,"z":0.0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"p1_seat_FL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":2.1},
+         ["sf1l", 0.09000, -0.30000, 0.48000],
+         ["sf1ll", 0.60000, -0.30000, 0.48000],
+         ["sf2l", 0.12000, 0.20000, 0.40000],
+         ["sf2ll", 0.57000, 0.20000, 0.40000],
+         {"nodeWeight":1},
+         ["sf3l", 0.20000, 0.32000, 0.96058],
+         ["sf3ll", 0.49000, 0.32000, 0.96058],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":2501000,"beamDamp":300},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sf1l", "sf1ll"],
+        ["sf2l", "sf2ll"],
+        ["sf3l", "sf3ll"],
+        ["sf1l", "sf2l"],
+        ["sf2l", "sf3l"],
+        ["sf1ll", "sf2ll"],
+        ["sf2ll", "sf3ll"],
+        //crossing
+        {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        ["sf1ll", "sf2l"],
+        ["sf2ll", "sf1l"],
+        ["sf2l", "sf3ll"],
+        ["sf3l", "sf2ll"],
+        //corners
+        {"beamDeform":3000},
+        ["sf3l", "sf1l"],
+        ["sf3ll", "sf1ll"],
+
+        //damper
+        {"beamSpring":0,"beamDamp":800},
+        ["sf3ll", "r3l"],
+        ["sf3l", "r3l"],
+
+        //attach
+        {"beamSpring":282000,"beamDamp":37.6},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["sf2l", "f3l"],
+        ["sf2l", "f2l"],
+        ["sf2l", "f3r"],
+        ["sf2l", "f2r"],
+
+        ["sf2ll", "f3l"],
+        ["sf2ll", "f3ll"],
+        ["sf2ll", "f2l"],
+        ["sf1l", "f2l"],
+        ["sf1ll", "f2l"],
+        ["sf1ll", "f2ll"],
+        ["sf1l", "f3l"],
+
+        //limiter
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":470000,"beamDamp":141},
+        {"beamPrecompression":0.9},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        {"optional":true},
+        ["sf3l", "p3l"],
+        ["sf3l", "p4l"],
+        ["sf3l", "rf2l"],
+        ["sf2l", "q5l"],
+        ["sf2l", "f3ll"],
+        ["sf1l", "f1ll"],
+        ["sf1l", "f3ll"],
+
+        //to other seat
+        {"beamPrecompression":0.7},
+        ["sf1rr", "sf1ll"],
+        ["sf2rr", "sf2ll"],
+        ["sf3rr", "sf3ll"],
+        {"optional":false},
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":0},
+        //front seat
+        ["sf2l",  "sf1l",  "sf1ll"],
+        ["sf1ll", "sf2ll", "sf2l"],
+        ["sf3l",  "sf2l",  "sf2ll"],
+        ["sf2ll", "sf3ll", "sf3l"],
+    ],
+},
+"p1_seat_FR": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Right Front Seat",
+        "value":280,
+    },
+    "slotType" : "p1_seat_FR",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_seat_FR" ["p1_seat_FR","p1_floor"]{"pos":{"x":0.0,"y":0.02,"z":0.0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"p1_seat_FR"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":2.1},
+         ["sf1r", -0.09000, -0.30000, 0.48000],
+         ["sf1rr", -0.60000, -0.30000, 0.48000],
+         ["sf2r", -0.12000, 0.20000, 0.40000],
+         ["sf2rr", -0.57000, 0.20000, 0.40000],
+         {"nodeWeight":1},
+         ["sf3r", -0.20000, 0.32000, 0.95061],
+         ["sf3rr", -0.49000, 0.32000, 0.95061],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":2501000,"beamDamp":300},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sf1r", "sf1rr"],
+        ["sf2r", "sf2rr"],
+        ["sf3r", "sf3rr"],
+        ["sf1r", "sf2r"],
+        ["sf2r", "sf3r"],
+        ["sf1rr", "sf2rr"],
+        ["sf2rr", "sf3rr"],
+        //crossing
+        {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        ["sf1rr", "sf2r"],
+        ["sf2rr", "sf1r"],
+        ["sf2r", "sf3rr"],
+        ["sf3r", "sf2rr"],
+        //corners
+        {"beamDeform":3000},
+        ["sf3r", "sf1r"],
+        ["sf3rr", "sf1rr"],
+
+        //damper
+        {"beamSpring":0,"beamDamp":800},
+        ["sf3rr", "r3r"],
+        ["sf3r", "r3r"],
+
+        //attach
+        {"beamSpring":282000,"beamDamp":37.6},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["sf2r", "f3l"],
+        ["sf2r", "f2l"],
+        ["sf2r", "f3r"],
+        ["sf2r", "f2r"],
+
+        ["sf2rr", "f3r"],
+        ["sf2rr", "f3rr"],
+        ["sf2rr", "f2r"],
+        ["sf1r", "f2r"],
+        ["sf1rr", "f2r"],
+        ["sf1rr", "f2rr"],
+        ["sf1r", "f3r"],
+
+        //limiter
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":470000,"beamDamp":141},
+        {"beamPrecompression":0.9},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        {"optional":true},
+        ["sf3r", "p3r"],
+        ["sf3r", "p4r"],
+        ["sf3r", "rf2r"],
+        ["sf2r", "q5r"],
+        ["sf2r", "f3rr"],
+        ["sf1r", "f1rr"],
+        ["sf1r", "f3rr"],
+        //to other seat
+        {"beamPrecompression":0.7},
+        //["sf1rr", "sf1ll"],
+        //["sf2rr", "sf2ll"],
+        //["sf3rr", "sf3ll"],
+        {"optional":false},
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":0},
+        //front seat
+        ["sf1r", "sf2r", "sf1rr"],
+        ["sf2rr", "sf1rr", "sf2r"],
+        ["sf2r", "sf3r", "sf2rr"],
+        ["sf3rr", "sf2rr", "sf3r"],
+    ],
+},
+"p1_race_seat_FL": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front Left Race Seat Base",
+        "value":10,
+    },
+    "slotType" : "p1_seat_FL",
+    "slots": [
+        ["type", "default", "description"],
+        ["race_seat_FL","race_seat_FL", "Front Left Race Seat", {"nodeMove":{"x":0.35, "y":0.00, "z":0.27}}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["racingseat_base", ["race_seat_FL","p1_floor"],[],{"pos":{"x":0.36,"y":0.00,"z":0.27}, "scale":{"x":0.95, "y":0.95, "z":0.95}}],
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":2501000,"beamDamp":300},
+        {"beamDeform":9000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        {"optional":true},
+
+        //damper
+        {"beamSpring":0,"beamDamp":800},
+        ["sf3ll", "r3l"],
+        ["sf3l", "r3l"],
+
+        //attach
+        {"beamSpring":282000,"beamDamp":37.6},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["sf2l", "f3l"],
+        ["sf2l", "f2l"],
+        ["sf2l", "f3r"],
+        ["sf2l", "f2r"],
+
+        ["sf2ll", "f3l"],
+        ["sf2ll", "f3ll"],
+        ["sf2ll", "f2l"],
+        ["sf1l", "f2l"],
+        ["sf1ll", "f2l"],
+        ["sf1ll", "f2ll"],
+        ["sf1l", "f3l"],
+
+        //limiter
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":470000,"beamDamp":141},
+        {"beamPrecompression":0.9},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["sf3l", "p3l"],
+        ["sf3l", "p4l"],
+        ["sf3l", "rf2l"],
+        ["sf2l", "q5l"],
+        ["sf2l", "f3ll"],
+        ["sf1l", "f1ll"],
+        ["sf1l", "f3ll"],
+
+        //to other seat
+        {"beamPrecompression":0.7},
+        ["sf1rr", "sf1ll"],
+        ["sf2rr", "sf2ll"],
+        ["sf3rr", "sf3ll"],
+        {"optional":false},
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+},
+"p1_race_seat_FR": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front Right Race Seat Base",
+        "value":10,
+    },
+    "slotType" : "p1_seat_FR",
+    "slots": [
+        ["type", "default", "description"],
+        ["race_seat_FR","race_seat_FR", "Front Right Race Seat", {"nodeMove":{"x":-0.35, "y":0.00, "z":0.27}}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["racingseat_base", ["race_seat_FR","p1_floor"],[],{"pos":{"x":-0.36,"y":0.00,"z":0.27}, "scale":{"x":0.95, "y":0.95, "z":0.95}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"nodeWeight":6},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"p1_seat_FR"},
+         {"nodeWeight":1.5},
+         ["sf1r", -0.10, -0.24, 0.5],
+         ["sf1rr", -0.62, -0.24, 0.5],
+         ["sf2r", -0.15, 0.18, 0.42],
+         ["sf2rr", -0.58, 0.18, 0.42],
+         ["sf3r", -0.20, 0.38, 1.15],
+         ["sf3rr", -0.52, 0.38, 1.15],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":2501000,"beamDamp":300},
+        {"beamDeform":9000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        {"optional":true},
+
+        //damper
+        {"beamSpring":0,"beamDamp":800},
+        ["sf3rr", "r3r"],
+        ["sf3r", "r3r"],
+
+        //attach
+        {"beamSpring":282000,"beamDamp":37.6},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["sf2r", "f3l"],
+        ["sf2r", "f2l"],
+        ["sf2r", "f3r"],
+        ["sf2r", "f2r"],
+
+        ["sf2rr", "f3r"],
+        ["sf2rr", "f3rr"],
+        ["sf2rr", "f2r"],
+        ["sf1r", "f2r"],
+        ["sf1rr", "f2r"],
+        ["sf1rr", "f2rr"],
+        ["sf1r", "f3r"],
+
+        //limiter
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":470000,"beamDamp":141},
+        {"beamPrecompression":0.9},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["sf3r", "p3r"],
+        ["sf3r", "p4r"],
+        ["sf3r", "rf2r"],
+        ["sf2r", "q5r"],
+        ["sf2r", "f3rr"],
+        ["sf1r", "f1rr"],
+        ["sf1r", "f3rr"],
+        //to other seat
+        {"beamPrecompression":0.7},
+        //["sf1rr", "sf1ll"],
+        //["sf2rr", "sf2ll"],
+        //["sf3rr", "sf3ll"],
+        {"optional":false},
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+},
+"p1_gauges": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Metric French Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges", ["p1_dash"]],
+        ["p1_decals_gauges", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_metric": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_metric", ["p1_dash"]],
+        ["p1_decals_gauges", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_imperial": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_imperial", ["p1_dash"]],
+        ["p1_decals_gauges", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_diesel": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Diesel Metric French Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_diesel", ["p1_dash"]],
+        ["p1_decals_gauges", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_metric_diesel": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Diesel Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_metric_diesel", ["p1_dash"]],
+        ["p1_decals_gauges", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_imperial_diesel": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Diesel Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_imperial_diesel", ["p1_dash"]],
+        ["p1_decals_gauges", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_dashboard": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Left Hand Drive Interior",
+        "value":40,
+    },
+
+    "slotType" : "p1_dashboard",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_steer","p1_steer", "Steering Wheel"],
+        ["p1_gauges","p1_gauges","Gauges"],
+        ["p1_shiftlight","", "Shift Light"],
+		["p1_pedals","p1_pedals", "Pedals"],
+		["p1_clock","", "Clock"],
+		["p1_lettering_dash","", "Dashboard Lettering"],
+		["p1_intmirror","p1_intmirror", "Rear View Mirror"]
+		["p1_dash_gps","", "Dashboard Navigation Unit"]
+    ],
+    "camerasInternal":[
+       ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+       {"nodeWeight":1},
+       {"beamSpring":300,"beamDamp":60},
+       {"selfCollision":true},
+       {"collision":true},
+       //dash cam
+       ["dash", 0.333, 0.20, 1.145, 55, "f1ll","f1r","f3ll","f3r","f4ll","f4r", {"beamDeform":5001000,"beamStrength":"FLT_MAX"}],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //turn signal stalk
+       ["turnsignal", "p1_signalstalk",   "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":-15},    {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+       //wiper stalk
+       ["wipers"  , "p1_wiperstalk",      "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":0},      {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash", ["p1_dash"]],
+    ],
+    "nodes": [
+         {"nodeWeight":0.4},
+         {"group":"p1_dash"},
+         ["dshr", -0.65, -0.45, 0.72],
+         ["dsh", 0.0, -0.45, 0.72],
+         ["dshl", 0.65, -0.45, 0.72],
+         ["dsh2", 0.36, -0.6, 0.84],
+	],
+	"beams": [
+          //dash flexbody node
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":401000,"beamDamp":150},
+          {"beamDeform":4000,"beamStrength":"FLT_MAX"},
+          ["dshr","f5r"],
+          ["dshl","f5l"],
+          ["dshr","f6r"],
+          ["dshl","f6l"],
+          ["dshr","f1r"],
+          ["dshl","f1l"],
+          ["dshr","f5rr"],
+          ["dshl","f5ll"],
+          ["dshr","f6rr"],
+          ["dshl","f6ll"],
+          ["dshl","dshr"],
+          ["dsh","f5r"],
+          ["dsh","f5l"],
+          ["dsh","f6r"],
+          ["dsh","f6l"],
+          ["dsh","f1r"],
+          ["dsh","f1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh2","dshl"],
+          ["dsh2","dsh"],
+          ["dsh2","f6ll"],
+          ["dsh2","f6l"],
+          ["dsh2","f5ll"],
+          ["dsh2","f5l"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.1},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+},
+"p1_pedals": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Manual Pedals",
+        "value":10,
+    },
+    "slotType" : "p1_pedals",
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //pedals
+       ["brake",      "p1_brakepedal",    "f1l","f1r","f6l",        {"x":5, "y":0, "z":180},     {"x":-25, "y":0, "z":0},    {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+       ["throttle",   "p1_gaspedal",      "f1l","f1r","f6l",        {"x":0, "y":0, "z":180},     {"x":-25, "y":0, "z":0},    {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+       ["clutch",       "p1_clutchpedal",  "f1l","f1r","f6l", {"x":0, "y":0, "z":180}, {"x":-25, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+},
+"p1_pedals_auto": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Automatic Pedals",
+        "value":10,
+    },
+    "slotType" : "p1_pedals",
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //pedals
+       ["brake",      "p1_brakepedal",    "f1l","f1r","f6l",        {"x":5, "y":0, "z":180},     {"x":-25, "y":0, "z":0},    {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+       ["throttle",   "p1_gaspedal",      "f1l","f1r","f6l",        {"x":0, "y":0, "z":180},     {"x":-25, "y":0, "z":0},    {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+},
+"p1_gauges_metric_sport": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"SportPower Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_metric_sport", ["p1_dash"]],
+        ["p1_decals_gauges", ["p1_dash"]],
+        ["p1_decals_gauges_sport", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_sport", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_sport",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_sport",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_sport",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_imperial_sport": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"SportPower Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_imperial_sport", ["p1_dash"]],
+        ["p1_decals_gauges", ["p1_dash"]],
+        ["p1_decals_gauges_sport", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_sport", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_sport",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_sport",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_sport",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_clock": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Clock",
+        "value":10,
+    },
+    "slotType" : "p1_clock",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_clock_base", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //clock
+       ["clockh",    "p1_needle_hour_clock",   "f1l","f1r","f6l",          {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-1},     {"x":0, "y":0, "z":0}, 0, 360, -360, 1],
+       ["clockmin",  "p1_needle_minute_clock", "f1l","f1r","f6l",          {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-1},     {"x":0, "y":0, "z":0}, 0, 360, -360, 1],
+    ],
+},
+"p1_pedals_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Manual Pedals",
+        "value":10,
+    },
+    "slotType" : "p1_pedals_rhd",
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //pedals
+       ["brake",      "p1_brakepedal_rhd",    "f1l","f1r","f6l",        {"x":5, "y":0, "z":180},     {"x":-25, "y":0, "z":0},    {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+       ["throttle",   "p1_gaspedal_rhd",      "f1l","f1r","f6l",        {"x":0, "y":0, "z":180},     {"x":-25, "y":0, "z":0},    {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+       ["clutch",       "p1_clutchpedal_rhd",  "f1l","f1r","f6l", {"x":0, "y":0, "z":180}, {"x":-25, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+},
+"p1_pedals_auto_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Automatic Pedals",
+        "value":10,
+    },
+    "slotType" : "p1_pedals_rhd",
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //pedals
+       ["brake",      "p1_brakepedal_rhd",    "f1l","f1r","f6l",        {"x":5, "y":0, "z":180},     {"x":-25, "y":0, "z":0},    {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+       ["throttle",   "p1_gaspedal_rhd",      "f1l","f1r","f6l",        {"x":0, "y":0, "z":180},     {"x":-25, "y":0, "z":0},    {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+},
+"p1_dashboard_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Right Hand Drive Interior",
+        "value":40,
+    },
+
+    "slotType" : "p1_dashboard",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_steer_rhd","p1_steer_rhd", "Steering Wheel"],
+        ["p1_gauges_rhd","p1_gauges_rhd","Gauges"],
+        ["p1_shiftlight_rhd","", "Shift Light"],
+		["p1_pedals_rhd","p1_pedals_rhd", "Pedals"],
+		["p1_clock","", "Clock"],
+		["p1_lettering_dash_rhd","", "Dashboard Lettering"],
+		["p1_intmirror_rhd","p1_intmirror_rhd", "Rear View Mirror"]
+		["p1_dash_gps","", "Dashboard Navigation Unit"]
+    ],
+    "camerasInternal":[
+       ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+       {"nodeWeight":1},
+       {"beamSpring":300,"beamDamp":60},
+       {"selfCollision":true},
+       {"rightHandCamera":true},
+       {"collision":true},
+       //dash cam
+       ["dash", -0.333, 0.20, 1.145, 55, "f1ll","f1r","f3ll","f3r","f4ll","f4r", {"beamDeform":5001000,"beamStrength":"FLT_MAX"}],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //turn signal stalk
+       ["turnsignal", "p1_signalstalk_rhd",   "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":-15},    {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+       //wiper stalk
+       ["wipers"  , "p1_wiperstalk_rhd",      "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":0},      {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_rhd", ["p1_dash"]],
+    ],
+    "nodes": [
+         {"nodeWeight":0.4},
+         {"group":"p1_dash"},
+         ["dshr", -0.65, -0.45, 0.72],
+         ["dsh", 0.0, -0.45, 0.72],
+         ["dshl", 0.65, -0.45, 0.72],
+         ["dsh2", 0.36, -0.6, 0.84],
+	],
+	"beams": [
+          //dash flexbody node
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":401000,"beamDamp":150},
+          {"beamDeform":4000,"beamStrength":"FLT_MAX"},
+          ["dshr","f5r"],
+          ["dshl","f5l"],
+          ["dshr","f6r"],
+          ["dshl","f6l"],
+          ["dshr","f1r"],
+          ["dshl","f1l"],
+          ["dshr","f5rr"],
+          ["dshl","f5ll"],
+          ["dshr","f6rr"],
+          ["dshl","f6ll"],
+          ["dshl","dshr"],
+          ["dsh","f5r"],
+          ["dsh","f5l"],
+          ["dsh","f6r"],
+          ["dsh","f6l"],
+          ["dsh","f1r"],
+          ["dsh","f1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh2","dshl"],
+          ["dsh2","dsh"],
+          ["dsh2","f6ll"],
+          ["dsh2","f6l"],
+          ["dsh2","f5ll"],
+          ["dsh2","f5l"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.1},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+},
+"p1_gauges_metric_sport_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Sport Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_metric_sport_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_sport_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_sport_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_sport_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_sport_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_sport_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_imperial_sport_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Sport Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_imperial_sport_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_sport_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_sport_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_sport_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_sport_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_sport_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Metric French Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_metric_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_metric_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_imperial_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_imperial_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_diesel_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Diesel Metric French Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_diesel_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_metric_diesel_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Diesel Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_metric_diesel_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_imperial_diesel_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Diesel Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_imperial_diesel_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_intmirror": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Rear View Mirror",
+        "value":5,
+    },
+    "slotType" : "p1_intmirror",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_intmirror", ["p1_body"]],
+    ],
+},
+"p1_intmirror_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Rear View Mirror",
+        "value":5,
+    },
+    "slotType" : "p1_intmirror_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_intmirror_rhd", ["p1_body"]],
+    ],
+},
+"p1_dashboard_rhd_inde": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Right Hand Drive Inde Interior",
+        "value":40,
+    },
+
+    "slotType" : "p1_dashboard",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_steer_rhd","p1_steer_rhd", "Steering Wheel"],
+        ["p1_gauges_rhd","p1_gauges_rhd","Gauges"],
+		["p1_pedals_rhd","p1_pedals_rhd", "Pedals"],
+		["p1_intmirror_rhd","p1_intmirror_rhd", "Rear View Mirror"]
+		["p1_dash_gps","", "Dashboard Navigation Unit"]
+    ],
+    "camerasInternal":[
+       ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+       {"nodeWeight":1},
+       {"beamSpring":300,"beamDamp":60},
+       {"selfCollision":true},
+       {"rightHandCamera":true},
+       {"collision":true},
+       //dash cam
+       ["dash", -0.333, 0.20, 1.145, 55, "f1ll","f1r","f3ll","f3r","f4ll","f4r", {"beamDeform":5001000,"beamStrength":"FLT_MAX"}],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //turn signal stalk
+       ["turnsignal", "p1_signalstalk_rhd",   "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":-15},    {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+       //wiper stalk
+       ["wipers"  , "p1_wiperstalk_rhd",      "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":0},      {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_rhd_inde", ["p1_dash"]],
+    ],
+    "nodes": [
+         {"nodeWeight":0.4},
+         {"group":"p1_dash"},
+         ["dshr", -0.65, -0.45, 0.72],
+         ["dsh", 0.0, -0.45, 0.72],
+         ["dshl", 0.65, -0.45, 0.72],
+         ["dsh2", 0.36, -0.6, 0.84],
+	],
+	"beams": [
+          //dash flexbody node
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":401000,"beamDamp":150},
+          {"beamDeform":4000,"beamStrength":"FLT_MAX"},
+          ["dshr","f5r"],
+          ["dshl","f5l"],
+          ["dshr","f6r"],
+          ["dshl","f6l"],
+          ["dshr","f1r"],
+          ["dshl","f1l"],
+          ["dshr","f5rr"],
+          ["dshl","f5ll"],
+          ["dshr","f6rr"],
+          ["dshl","f6ll"],
+          ["dshl","dshr"],
+          ["dsh","f5r"],
+          ["dsh","f5l"],
+          ["dsh","f6r"],
+          ["dsh","f6l"],
+          ["dsh","f1r"],
+          ["dsh","f1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh2","dshl"],
+          ["dsh2","dsh"],
+          ["dsh2","f6ll"],
+          ["dsh2","f6l"],
+          ["dsh2","f5ll"],
+          ["dsh2","f5l"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.1},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+},
+"p1_gauges_metric_notacho_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"No Tacho Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_metric_notacho_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["fuel",       "p1_needle_fuel_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_imperial_notacho_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"No Tacho Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_imperial_notacho_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["fuel",       "p1_needle_fuel_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_r2_metric": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Facelift Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_r2_metric", ["p1_dash"]],
+        ["p1_decals_gauges_r2", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_r2", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_r2",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_r2",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_r2",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_r2_imperial": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Facelift Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_r2_imperial", ["p1_dash"]],
+        ["p1_decals_gauges_r2", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_r2", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_r2",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_r2",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_r2",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_seat_FL_r2": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Facelift Left Front Seat",
+        "value":280,
+    },
+    "slotType" : "p1_seat_FL",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_seat_FL_r2" ["p1_seat_FL","p1_floor"]{"pos":{"x":0.0,"y":0.02,"z":0.0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"p1_seat_FL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":2.1},
+         ["sf1l", 0.09, -0.3, 0.48],
+         ["sf1ll", 0.6, -0.3, 0.48],
+         ["sf2l", 0.12, 0.2, 0.4],
+         ["sf2ll", 0.57, 0.2, 0.4],
+         {"nodeWeight":1},
+         ["sf3l", 0.2, 0.32, 1.2],
+         ["sf3ll", 0.49, 0.32, 1.2],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":2501000,"beamDamp":300},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sf1l", "sf1ll"],
+        ["sf2l", "sf2ll"],
+        ["sf3l", "sf3ll"],
+        ["sf1l", "sf2l"],
+        ["sf2l", "sf3l"],
+        ["sf1ll", "sf2ll"],
+        ["sf2ll", "sf3ll"],
+        //crossing
+        {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        ["sf1ll", "sf2l"],
+        ["sf2ll", "sf1l"],
+        ["sf2l", "sf3ll"],
+        ["sf3l", "sf2ll"],
+        //corners
+        {"beamDeform":3000},
+        ["sf3l", "sf1l"],
+        ["sf3ll", "sf1ll"],
+
+        //damper
+        {"beamSpring":0,"beamDamp":800},
+        ["sf3ll", "r3l"],
+        ["sf3l", "r3l"],
+
+        //attach
+        {"beamSpring":282000,"beamDamp":37.6},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["sf2l", "f3l"],
+        ["sf2l", "f2l"],
+        ["sf2l", "f3r"],
+        ["sf2l", "f2r"],
+
+        ["sf2ll", "f3l"],
+        ["sf2ll", "f3ll"],
+        ["sf2ll", "f2l"],
+        ["sf1l", "f2l"],
+        ["sf1ll", "f2l"],
+        ["sf1ll", "f2ll"],
+        ["sf1l", "f3l"],
+
+        //limiter
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":470000,"beamDamp":141},
+        {"beamPrecompression":0.9},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        {"optional":true},
+        ["sf3l", "p3l"],
+        ["sf3l", "p4l"],
+        ["sf3l", "rf2l"],
+        ["sf2l", "q5l"],
+        ["sf2l", "f3ll"],
+        ["sf1l", "f1ll"],
+        ["sf1l", "f3ll"],
+
+        //to other seat
+        {"beamPrecompression":0.7},
+        ["sf1rr", "sf1ll"],
+        ["sf2rr", "sf2ll"],
+        ["sf3rr", "sf3ll"],
+        {"optional":false},
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":0},
+        //front seat
+        ["sf2l",  "sf1l",  "sf1ll"],
+        ["sf1ll", "sf2ll", "sf2l"],
+        ["sf3l",  "sf2l",  "sf2ll"],
+        ["sf2ll", "sf3ll", "sf3l"],
+    ],
+},
+"p1_seat_FR_r2": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Facelift Right Front Seat",
+        "value":280,
+    },
+    "slotType" : "p1_seat_FR",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_seat_FR_r2" ["p1_seat_FR","p1_floor"]{"pos":{"x":0.0,"y":0.02,"z":0.0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"p1_seat_FR"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":2.1},
+         ["sf1r", -0.09, -0.3, 0.48],
+         ["sf1rr", -0.6, -0.3, 0.48],
+         ["sf2r", -0.12, 0.2, 0.4],
+         ["sf2rr", -0.57, 0.2, 0.4],
+         {"nodeWeight":1},
+         ["sf3r", -0.2, 0.32, 1.2],
+         ["sf3rr", -0.49, 0.32, 1.2],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":2501000,"beamDamp":300},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sf1r", "sf1rr"],
+        ["sf2r", "sf2rr"],
+        ["sf3r", "sf3rr"],
+        ["sf1r", "sf2r"],
+        ["sf2r", "sf3r"],
+        ["sf1rr", "sf2rr"],
+        ["sf2rr", "sf3rr"],
+        //crossing
+        {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        ["sf1rr", "sf2r"],
+        ["sf2rr", "sf1r"],
+        ["sf2r", "sf3rr"],
+        ["sf3r", "sf2rr"],
+        //corners
+        {"beamDeform":3000},
+        ["sf3r", "sf1r"],
+        ["sf3rr", "sf1rr"],
+
+        //damper
+        {"beamSpring":0,"beamDamp":800},
+        ["sf3rr", "r3r"],
+        ["sf3r", "r3r"],
+
+        //attach
+        {"beamSpring":282000,"beamDamp":37.6},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["sf2r", "f3l"],
+        ["sf2r", "f2l"],
+        ["sf2r", "f3r"],
+        ["sf2r", "f2r"],
+
+        ["sf2rr", "f3r"],
+        ["sf2rr", "f3rr"],
+        ["sf2rr", "f2r"],
+        ["sf1r", "f2r"],
+        ["sf1rr", "f2r"],
+        ["sf1rr", "f2rr"],
+        ["sf1r", "f3r"],
+
+        //limiter
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":470000,"beamDamp":141},
+        {"beamPrecompression":0.9},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        {"optional":true},
+        ["sf3r", "p3r"],
+        ["sf3r", "p4r"],
+        ["sf3r", "rf2r"],
+        ["sf2r", "q5r"],
+        ["sf2r", "f3rr"],
+        ["sf1r", "f1rr"],
+        ["sf1r", "f3rr"],
+        //to other seat
+        {"beamPrecompression":0.7},
+        //["sf1rr", "sf1ll"],
+        //["sf2rr", "sf2ll"],
+        //["sf3rr", "sf3ll"],
+        {"optional":false},
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":0},
+        //front seat
+        ["sf1r", "sf2r", "sf1rr"],
+        ["sf2rr", "sf1rr", "sf2r"],
+        ["sf2r", "sf3r", "sf2rr"],
+        ["sf3rr", "sf2rr", "sf3r"],
+    ],
+},
+"p1_gauges_metric_notacho": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"No Tacho Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_metric_notacho", ["p1_dash"]],
+        ["p1_decals_gauges", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["fuel",       "p1_needle_fuel",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_imperial_notacho": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"No Tacho Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_imperial_notacho", ["p1_dash"]],
+        ["p1_decals_gauges", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["fuel",       "p1_needle_fuel",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_r2_metric_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Facelift Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_r2_metric_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_r2_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_r2_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_r2_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_r2_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_r2_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_r2_imperial_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Facelift Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_r2_imperial_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_r2_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_r2_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_r2_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_r2_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_r2_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_dashboard_rhd_r2": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Right Hand Drive Facelift Interior",
+        "value":40,
+    },
+
+    "slotType" : "p1_dashboard",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_steer_rhd","p1_steer_rhd", "Steering Wheel"],
+        ["p1_gauges_rhd","p1_gauges_rhd","Gauges"],
+        ["p1_shiftlight_rhd","", "Shift Light"],
+		["p1_pedals_rhd","p1_pedals_rhd", "Pedals"],
+		["p1_clock","", "Clock"],
+		["p1_lettering_dash_rhd","", "Dashboard Lettering"],
+		["p1_intmirror_rhd","p1_intmirror_rhd", "Rear View Mirror"]
+		["p1_dash_gps_r2","", "Dashboard Navigation Unit"]
+    ],
+    "camerasInternal":[
+       ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+       {"nodeWeight":1},
+       {"beamSpring":300,"beamDamp":60},
+       {"selfCollision":true},
+       {"rightHandCamera":true},
+       {"collision":true},
+       //dash cam
+       ["dash", -0.333, 0.20, 1.145, 55, "f1ll","f1r","f3ll","f3r","f4ll","f4r", {"beamDeform":5001000,"beamStrength":"FLT_MAX"}],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //turn signal stalk
+       ["turnsignal", "p1_signalstalk_rhd",   "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":-15},    {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+       //wiper stalk
+       ["wipers"  , "p1_wiperstalk_rhd",      "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":0},      {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_r2_rhd", ["p1_dash"]],
+        ["p1_knob_r2", ["p1_dash"]],
+    ],
+    "nodes": [
+         {"nodeWeight":0.4},
+         {"group":"p1_dash"},
+         ["dshr", -0.65, -0.45, 0.72],
+         ["dsh", 0.0, -0.45, 0.72],
+         ["dshl", 0.65, -0.45, 0.72],
+         ["dsh2", 0.36, -0.6, 0.84],
+	],
+	"beams": [
+          //dash flexbody node
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":401000,"beamDamp":150},
+          {"beamDeform":4000,"beamStrength":"FLT_MAX"},
+          ["dshr","f5r"],
+          ["dshl","f5l"],
+          ["dshr","f6r"],
+          ["dshl","f6l"],
+          ["dshr","f1r"],
+          ["dshl","f1l"],
+          ["dshr","f5rr"],
+          ["dshl","f5ll"],
+          ["dshr","f6rr"],
+          ["dshl","f6ll"],
+          ["dshl","dshr"],
+          ["dsh","f5r"],
+          ["dsh","f5l"],
+          ["dsh","f6r"],
+          ["dsh","f6l"],
+          ["dsh","f1r"],
+          ["dsh","f1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh2","dshl"],
+          ["dsh2","dsh"],
+          ["dsh2","f6ll"],
+          ["dsh2","f6l"],
+          ["dsh2","f5ll"],
+          ["dsh2","f5l"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.1},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+},
+"p1_dashboard_r2": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Left Hand Drive Facelift Interior",
+        "value":40,
+    },
+
+    "slotType" : "p1_dashboard",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_steer","p1_steer", "Steering Wheel"],
+        ["p1_gauges","p1_gauges","Gauges"],
+        ["p1_shiftlight","", "Shift Light"],
+		["p1_pedals","p1_pedals", "Pedals"],
+		["p1_clock","", "Clock"],
+		["p1_lettering_dash","", "Dashboard Lettering"],
+		["p1_intmirror","p1_intmirror", "Rear View Mirror"]
+		["p1_dash_gps_r2","", "Dashboard Navigation Unit"]
+    ],
+    "camerasInternal":[
+       ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+       {"nodeWeight":1},
+       {"beamSpring":300,"beamDamp":60},
+       {"selfCollision":true},
+       {"collision":true},
+       //dash cam
+       ["dash", 0.333, 0.20, 1.145, 55, "f1ll","f1r","f3ll","f3r","f4ll","f4r", {"beamDeform":5001000,"beamStrength":"FLT_MAX"}],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //turn signal stalk
+       ["turnsignal", "p1_signalstalk",   "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":-15},    {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+       //wiper stalk
+       ["wipers"  , "p1_wiperstalk",      "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":0},      {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_r2", ["p1_dash"]],
+        ["p1_knob_r2", ["p1_dash"]],
+    ],
+    "nodes": [
+         {"nodeWeight":0.4},
+         {"group":"p1_dash"},
+         ["dshr", -0.65, -0.45, 0.72],
+         ["dsh", 0.0, -0.45, 0.72],
+         ["dshl", 0.65, -0.45, 0.72],
+         ["dsh2", 0.36, -0.6, 0.84],
+	],
+	"beams": [
+          //dash flexbody node
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":401000,"beamDamp":150},
+          {"beamDeform":4000,"beamStrength":"FLT_MAX"},
+          ["dshr","f5r"],
+          ["dshl","f5l"],
+          ["dshr","f6r"],
+          ["dshl","f6l"],
+          ["dshr","f1r"],
+          ["dshl","f1l"],
+          ["dshr","f5rr"],
+          ["dshl","f5ll"],
+          ["dshr","f6rr"],
+          ["dshl","f6ll"],
+          ["dshl","dshr"],
+          ["dsh","f5r"],
+          ["dsh","f5l"],
+          ["dsh","f6r"],
+          ["dsh","f6l"],
+          ["dsh","f1r"],
+          ["dsh","f1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh2","dshl"],
+          ["dsh2","dsh"],
+          ["dsh2","f6ll"],
+          ["dsh2","f6l"],
+          ["dsh2","f5ll"],
+          ["dsh2","f5l"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.1},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+},
+"p1_seat_FL_2": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Left Front Seat (With Headrest)",
+        "value":280,
+    },
+    "slotType" : "p1_seat_FL",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_seat_FL_2" ["p1_seat_FL","p1_floor"]{"pos":{"x":0.0,"y":0.02,"z":0.0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"p1_seat_FL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":2.1},
+         ["sf1l", 0.09, -0.3, 0.48],
+         ["sf1ll", 0.6, -0.3, 0.48],
+         ["sf2l", 0.12, 0.2, 0.4],
+         ["sf2ll", 0.57, 0.2, 0.4],
+         {"nodeWeight":1},
+         ["sf3l", 0.2, 0.32, 1.2],
+         ["sf3ll", 0.49, 0.32, 1.2],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":2501000,"beamDamp":300},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sf1l", "sf1ll"],
+        ["sf2l", "sf2ll"],
+        ["sf3l", "sf3ll"],
+        ["sf1l", "sf2l"],
+        ["sf2l", "sf3l"],
+        ["sf1ll", "sf2ll"],
+        ["sf2ll", "sf3ll"],
+        //crossing
+        {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        ["sf1ll", "sf2l"],
+        ["sf2ll", "sf1l"],
+        ["sf2l", "sf3ll"],
+        ["sf3l", "sf2ll"],
+        //corners
+        {"beamDeform":3000},
+        ["sf3l", "sf1l"],
+        ["sf3ll", "sf1ll"],
+
+        //damper
+        {"beamSpring":0,"beamDamp":800},
+        ["sf3ll", "r3l"],
+        ["sf3l", "r3l"],
+
+        //attach
+        {"beamSpring":282000,"beamDamp":37.6},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["sf2l", "f3l"],
+        ["sf2l", "f2l"],
+        ["sf2l", "f3r"],
+        ["sf2l", "f2r"],
+
+        ["sf2ll", "f3l"],
+        ["sf2ll", "f3ll"],
+        ["sf2ll", "f2l"],
+        ["sf1l", "f2l"],
+        ["sf1ll", "f2l"],
+        ["sf1ll", "f2ll"],
+        ["sf1l", "f3l"],
+
+        //limiter
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":470000,"beamDamp":141},
+        {"beamPrecompression":0.9},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        {"optional":true},
+        ["sf3l", "p3l"],
+        ["sf3l", "p4l"],
+        ["sf3l", "rf2l"],
+        ["sf2l", "q5l"],
+        ["sf2l", "f3ll"],
+        ["sf1l", "f1ll"],
+        ["sf1l", "f3ll"],
+
+        //to other seat
+        {"beamPrecompression":0.7},
+        ["sf1rr", "sf1ll"],
+        ["sf2rr", "sf2ll"],
+        ["sf3rr", "sf3ll"],
+        {"optional":false},
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":0},
+        //front seat
+        ["sf2l",  "sf1l",  "sf1ll"],
+        ["sf1ll", "sf2ll", "sf2l"],
+        ["sf3l",  "sf2l",  "sf2ll"],
+        ["sf2ll", "sf3ll", "sf3l"],
+    ],
+},
+"p1_seat_FR_2": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Right Front Seat (With Headrest)",
+        "value":280,
+    },
+    "slotType" : "p1_seat_FR",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_seat_FR_2" ["p1_seat_FR","p1_floor"]{"pos":{"x":0.0,"y":0.02,"z":0.0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"p1_seat_FR"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":2.1},
+         ["sf1r", -0.09, -0.3, 0.48],
+         ["sf1rr", -0.6, -0.3, 0.48],
+         ["sf2r", -0.12, 0.2, 0.4],
+         ["sf2rr", -0.57, 0.2, 0.4],
+         {"nodeWeight":1},
+         ["sf3r", -0.2, 0.32, 1.2],
+         ["sf3rr", -0.49, 0.32, 1.2],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":2501000,"beamDamp":300},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sf1r", "sf1rr"],
+        ["sf2r", "sf2rr"],
+        ["sf3r", "sf3rr"],
+        ["sf1r", "sf2r"],
+        ["sf2r", "sf3r"],
+        ["sf1rr", "sf2rr"],
+        ["sf2rr", "sf3rr"],
+        //crossing
+        {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        ["sf1rr", "sf2r"],
+        ["sf2rr", "sf1r"],
+        ["sf2r", "sf3rr"],
+        ["sf3r", "sf2rr"],
+        //corners
+        {"beamDeform":3000},
+        ["sf3r", "sf1r"],
+        ["sf3rr", "sf1rr"],
+
+        //damper
+        {"beamSpring":0,"beamDamp":800},
+        ["sf3rr", "r3r"],
+        ["sf3r", "r3r"],
+
+        //attach
+        {"beamSpring":282000,"beamDamp":37.6},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["sf2r", "f3l"],
+        ["sf2r", "f2l"],
+        ["sf2r", "f3r"],
+        ["sf2r", "f2r"],
+
+        ["sf2rr", "f3r"],
+        ["sf2rr", "f3rr"],
+        ["sf2rr", "f2r"],
+        ["sf1r", "f2r"],
+        ["sf1rr", "f2r"],
+        ["sf1rr", "f2rr"],
+        ["sf1r", "f3r"],
+
+        //limiter
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":470000,"beamDamp":141},
+        {"beamPrecompression":0.9},
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        {"optional":true},
+        ["sf3r", "p3r"],
+        ["sf3r", "p4r"],
+        ["sf3r", "rf2r"],
+        ["sf2r", "q5r"],
+        ["sf2r", "f3rr"],
+        ["sf1r", "f1rr"],
+        ["sf1r", "f3rr"],
+        //to other seat
+        {"beamPrecompression":0.7},
+        //["sf1rr", "sf1ll"],
+        //["sf2rr", "sf2ll"],
+        //["sf3rr", "sf3ll"],
+        {"optional":false},
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":0},
+        //front seat
+        ["sf1r", "sf2r", "sf1rr"],
+        ["sf2rr", "sf1rr", "sf2r"],
+        ["sf2r", "sf3r", "sf2rr"],
+        ["sf3rr", "sf2rr", "sf3r"],
+    ],
+},
+"p1_gauges_electric_metric": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Electric Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_electric_metric", ["p1_dash"]],
+        ["p1_decals_gauges_r2", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_electric", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["fuel",       "p1_needle_fuel_electric",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+    ],
+},
+"p1_gauges_electric_imperial": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Electric Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_electric_imperial", ["p1_dash"]],
+        ["p1_decals_gauges_r2", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_electric", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["fuel",       "p1_needle_fuel_electric",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+    ],
+},
+"p1_gauges_electric_metric_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Electric Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_electric_metric_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_r2_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_electric_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["fuel",       "p1_needle_fuel_electric_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+    ],
+},
+"p1_gauges_electric_imperial_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Electric Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_electric_imperial_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_r2_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_electric_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["fuel",       "p1_needle_fuel_electric_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+    ],
+},
+"p1_dash_gps_1": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Dashboard Navigation Unit 1",
+        "value":65,
+    },
+    "slotType" : "p1_dash_gps",
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_gps_1", ["p1_dash"]],
+    ],
+},
+"p1_dash_gps_2": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Dashboard Navigation Unit 2",
+        "value":120,
+    },
+    "slotType" : "p1_dash_gps",
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_gps_2", ["p1_dash"]],
+    ],
+},
+"p1_dash_gps_rhd_1": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Dashboard Navigation Unit 1",
+        "value":110,
+    },
+    "slotType" : "p1_dash_gps_r2",
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_gps_1_r2", ["p1_dash"]],
+    ],
+},
+"p1_dash_gps_rhd_2": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Dashboard Navigation Unit 2",
+        "value":190,
+    },
+    "slotType" : "p1_dash_gps_r2",
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_gps_2_r2", ["p1_dash"]],
+    ],
+},
+"p1_dashboard_race_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Right Hand Drive Race Interior",
+        "value":150,
+    },
+
+    "slotType" : "p1_dashboard",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_steer_rhd","p1_steer_rhd", "Steering Wheel"],
+        ["p1_gauges_rhd","p1_gauges_rhd","Gauges"],
+        ["p1_shiftlight_rhd","", "Shift Light"],
+		["p1_pedals_rhd","p1_pedals_rhd", "Pedals"],
+		["p1_intmirror_rhd","p1_intmirror_rhd", "Rear View Mirror"]
+    ],
+    "camerasInternal":[
+       ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+       {"nodeWeight":1},
+       {"beamSpring":300,"beamDamp":60},
+       {"selfCollision":true},
+       {"rightHandCamera":true},
+       {"collision":true},
+       //dash cam
+       ["dash", -0.333, 0.20, 1.145, 55, "f1ll","f1r","f3ll","f3r","f4ll","f4r", {"beamDeform":5001000,"beamStrength":"FLT_MAX"}],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //turn signal stalk
+       ["turnsignal", "p1_signalstalk_rhd",   "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":-15},    {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+       //wiper stalk
+       ["wipers"  , "p1_wiperstalk_rhd",      "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":0},      {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_rhd_inde", ["p1_dash"]],
+        ["p1_knob_race_rhd", ["p1_dash"]],
+    ],
+    "nodes": [
+         {"nodeWeight":0.4},
+         {"group":"p1_dash"},
+         ["dshr", -0.65, -0.45, 0.72],
+         ["dsh", 0.0, -0.45, 0.72],
+         ["dshl", 0.65, -0.45, 0.72],
+         ["dsh2", 0.36, -0.6, 0.84],
+	],
+	"beams": [
+          //dash flexbody node
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":401000,"beamDamp":150},
+          {"beamDeform":4000,"beamStrength":"FLT_MAX"},
+          ["dshr","f5r"],
+          ["dshl","f5l"],
+          ["dshr","f6r"],
+          ["dshl","f6l"],
+          ["dshr","f1r"],
+          ["dshl","f1l"],
+          ["dshr","f5rr"],
+          ["dshl","f5ll"],
+          ["dshr","f6rr"],
+          ["dshl","f6ll"],
+          ["dshl","dshr"],
+          ["dsh","f5r"],
+          ["dsh","f5l"],
+          ["dsh","f6r"],
+          ["dsh","f6l"],
+          ["dsh","f1r"],
+          ["dsh","f1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh2","dshl"],
+          ["dsh2","dsh"],
+          ["dsh2","f6ll"],
+          ["dsh2","f6l"],
+          ["dsh2","f5ll"],
+          ["dsh2","f5l"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.1},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+},
+"p1_dashboard_race": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Left Hand Drive Race Interior",
+        "value":150,
+    },
+
+    "slotType" : "p1_dashboard",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_steer","p1_steer", "Steering Wheel"],
+        ["p1_gauges","p1_gauges","Gauges"],
+        ["p1_shiftlight","", "Shift Light"],
+		["p1_pedals","p1_pedals", "Pedals"],
+		["p1_intmirror","p1_intmirror", "Rear View Mirror"]
+    ],
+    "camerasInternal":[
+       ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+       {"nodeWeight":1},
+       {"beamSpring":300,"beamDamp":60},
+       {"selfCollision":true},
+       {"collision":true},
+       //dash cam
+       ["dash", 0.333, 0.20, 1.145, 55, "f1ll","f1r","f3ll","f3r","f4ll","f4r", {"beamDeform":5001000,"beamStrength":"FLT_MAX"}],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //turn signal stalk
+       ["turnsignal", "p1_signalstalk",   "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":-15},    {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+       //wiper stalk
+       ["wipers"  , "p1_wiperstalk",      "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":0},      {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_race", ["p1_dash"]],
+        ["p1_knob_race", ["p1_dash"]],
+    ],
+    "nodes": [
+         {"nodeWeight":0.4},
+         {"group":"p1_dash"},
+         ["dshr", -0.65, -0.45, 0.72],
+         ["dsh", 0.0, -0.45, 0.72],
+         ["dshl", 0.65, -0.45, 0.72],
+         ["dsh2", 0.36, -0.6, 0.84],
+	],
+	"beams": [
+          //dash flexbody node
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":401000,"beamDamp":150},
+          {"beamDeform":4000,"beamStrength":"FLT_MAX"},
+          ["dshr","f5r"],
+          ["dshl","f5l"],
+          ["dshr","f6r"],
+          ["dshl","f6l"],
+          ["dshr","f1r"],
+          ["dshl","f1l"],
+          ["dshr","f5rr"],
+          ["dshl","f5ll"],
+          ["dshr","f6rr"],
+          ["dshl","f6ll"],
+          ["dshl","dshr"],
+          ["dsh","f5r"],
+          ["dsh","f5l"],
+          ["dsh","f6r"],
+          ["dsh","f6l"],
+          ["dsh","f1r"],
+          ["dsh","f1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh2","dshl"],
+          ["dsh2","dsh"],
+          ["dsh2","f6ll"],
+          ["dsh2","f6l"],
+          ["dsh2","f5ll"],
+          ["dsh2","f5l"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.1},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+},
+"p1_dashboard_concept": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Left Hand Drive Concept Interior",
+        "value":40,
+    },
+
+    "slotType" : "p1_dashboard",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_steer","p1_steer", "Steering Wheel"],
+        ["p1_gauges","p1_gauges","Gauges"],
+        ["p1_shiftlight","", "Shift Light"],
+		["p1_pedals","p1_pedals", "Pedals"],
+		["p1_clock","", "Clock"],
+		["p1_lettering_dash","", "Dashboard Lettering"],
+		["p1_intmirror","p1_intmirror", "Rear View Mirror"]
+    ],
+    "camerasInternal":[
+       ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+       {"nodeWeight":1},
+       {"beamSpring":300,"beamDamp":60},
+       {"selfCollision":true},
+       {"collision":true},
+       //dash cam
+       ["dash", 0.333, 0.20, 1.145, 55, "f1ll","f1r","f3ll","f3r","f4ll","f4r", {"beamDeform":5001000,"beamStrength":"FLT_MAX"}],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //turn signal stalk
+       ["turnsignal", "p1_signalstalk",   "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":-15},    {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+       //wiper stalk
+       ["wipers"  , "p1_wiperstalk",      "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":0},      {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+    ],
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_concept", ["p1_dash"]],
+        ["p1_dash_concept_aircon_controlls", ["p1_dash"]],
+    ],
+    "nodes": [
+         {"nodeWeight":0.4},
+         {"group":"p1_dash"},
+         ["dshr", -0.65, -0.45, 0.72],
+         ["dsh", 0.0, -0.45, 0.72],
+         ["dshl", 0.65, -0.45, 0.72],
+         ["dsh2", 0.36, -0.6, 0.84],
+	],
+	"beams": [
+          //dash flexbody node
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":401000,"beamDamp":150},
+          {"beamDeform":4000,"beamStrength":"FLT_MAX"},
+          ["dshr","f5r"],
+          ["dshl","f5l"],
+          ["dshr","f6r"],
+          ["dshl","f6l"],
+          ["dshr","f1r"],
+          ["dshl","f1l"],
+          ["dshr","f5rr"],
+          ["dshl","f5ll"],
+          ["dshr","f6rr"],
+          ["dshl","f6ll"],
+          ["dshl","dshr"],
+          ["dsh","f5r"],
+          ["dsh","f5l"],
+          ["dsh","f6r"],
+          ["dsh","f6l"],
+          ["dsh","f1r"],
+          ["dsh","f1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh2","dshl"],
+          ["dsh2","dsh"],
+          ["dsh2","f6ll"],
+          ["dsh2","f6l"],
+          ["dsh2","f5ll"],
+          ["dsh2","f5l"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.1},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+},
+"p1_dashboard_concept_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Right Hand Drive Concept Interior",
+        "value":40,
+    },
+
+    "slotType" : "p1_dashboard",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_steer_rhd","p1_steer_rhd", "Steering Wheel"],
+        ["p1_gauges_rhd","p1_gauges_rhd","Gauges"],
+        ["p1_shiftlight_rhd","", "Shift Light"],
+		["p1_pedals_rhd","p1_pedals_rhd", "Pedals"],
+		["p1_clock","", "Clock"],
+		["p1_lettering_dash_rhd","", "Dashboard Lettering"],
+		["p1_intmirror_rhd","p1_intmirror_rhd", "Rear View Mirror"]
+    ],
+    "camerasInternal":[
+       ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+       {"nodeWeight":1},
+       {"beamSpring":300,"beamDamp":60},
+       {"selfCollision":true},
+       {"rightHandCamera":true},
+       {"collision":true},
+       //dash cam
+       ["dash", -0.333, 0.20, 1.145, 55, "f1ll","f1r","f3ll","f3r","f4ll","f4r", {"beamDeform":5001000,"beamStrength":"FLT_MAX"}],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //turn signal stalk
+       ["turnsignal", "p1_signalstalk_rhd",   "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":-15},    {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+       //wiper stalk
+       ["wipers"  , "p1_wiperstalk_rhd",      "f1l","f1r","f6l",        {"x":-70, "y":0, "z":180},   {"x":0, "y":0, "z":0},      {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+    ],
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_dash_concept_rhd", ["p1_dash"]],
+        ["p1_dash_concept_aircon_controlls_rhd", ["p1_dash"]],
+    ],
+    "nodes": [
+         {"nodeWeight":0.4},
+         {"group":"p1_dash"},
+         ["dshr", -0.65, -0.45, 0.72],
+         ["dsh", 0.0, -0.45, 0.72],
+         ["dshl", 0.65, -0.45, 0.72],
+         ["dsh2", 0.36, -0.6, 0.84],
+	],
+	"beams": [
+          //dash flexbody node
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":401000,"beamDamp":150},
+          {"beamDeform":4000,"beamStrength":"FLT_MAX"},
+          ["dshr","f5r"],
+          ["dshl","f5l"],
+          ["dshr","f6r"],
+          ["dshl","f6l"],
+          ["dshr","f1r"],
+          ["dshl","f1l"],
+          ["dshr","f5rr"],
+          ["dshl","f5ll"],
+          ["dshr","f6rr"],
+          ["dshl","f6ll"],
+          ["dshl","dshr"],
+          ["dsh","f5r"],
+          ["dsh","f5l"],
+          ["dsh","f6r"],
+          ["dsh","f6l"],
+          ["dsh","f1r"],
+          ["dsh","f1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh2","dshl"],
+          ["dsh2","dsh"],
+          ["dsh2","f6ll"],
+          ["dsh2","f6l"],
+          ["dsh2","f5ll"],
+          ["dsh2","f5l"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.1},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+},
+"p1_gauges_prototype": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Prototype Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_prototype", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_prototype_rhd": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Prototype Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_prototype_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_rhd", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_rhd",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_rhd",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_rhd",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_r2_metric_sport": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Facelift SportPower Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_r2_metric_sport", ["p1_dash"]],
+        ["p1_decals_gauges_r2", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_r2_sport", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_r2_sport",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_r2_sport",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_r2_sport",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_r2_imperial_sport": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Facelift SportPower Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_r2_imperial_sport", ["p1_dash"]],
+        ["p1_decals_gauges_r2", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_r2_sport", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_r2_sport",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_r2_sport",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_r2_sport",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_r2_metric_rhd_sport": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Facelift SportPower Metric Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_r2_metric_sport_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_r2_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_r2_rhd_sport", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_r2_rhd_sport",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_r2_rhd_sport",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_r2_rhd_sport",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_gauges_r2_imperial_rhd_sport": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Facelift SportPower Imperial Gauges",
+        "value":10,
+    },
+    "slotType" : "p1_gauges_rhd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_gauges_r2_imperial_sport_rhd", ["p1_dash"]],
+        ["p1_decals_gauges_r2_rhd", ["p1_dash"]],
+    ],
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "p1_needle_speedo_r2_rhd_sport", "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-4.10},  {"x":0, "y":0, "z":0}, 0, 53.5, -26.4, 1],
+       ["rpm",        "p1_needle_tacho_r2_rhd_sport",  "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-0.029}, {"x":0, "y":0, "z":0}, 500, 7500, -4000, 1],
+       ["fuel",       "p1_needle_fuel_r2_rhd_sport",   "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":-100},   {"x":0, "y":0, "z":0}, 0, 1, -1.4, 1],
+       ["watertemp",  "p1_needle_oil_r2_rhd_sport",    "f1l","f1r","f6l",        {"x":-72.5, "y":0, "z":180}, {"x":0, "y":0, "z":1.7},    {"x":0, "y":0, "z":0}, 60, 120, 75, 1],
+    ],
+},
+"p1_dash_phoneholder": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Phone Holder",
+        "value":5,
+    },
+    "slotType" : "p1_dash_gps",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_phone","", "Phone"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_phoneholder", ["p1_dash"]],
+    ],
+},
+"p1_dash_phoneholder_r2": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"Phone Holder",
+        "value":5,
+    },
+    "slotType" : "p1_dash_gps_r2",
+    "slots": [
+        ["type", "default", "description"],
+        ["p1_phone","", "Phone"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_phoneholder", ["p1_dash"]],
+    ],
+},
+"p1_phone": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"2008 BeeSky BX9 Phone",
+        "value":255,
+    },
+    "slotType" : "p1_phone",
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_phone", ["p1_dash"]],
+        ["p1_phone_buttons", ["p1_dash"]],
+        ["p1_phone_camera", ["p1_dash"]],
+        ["p1_phone_camera_glass", ["p1_dash"]],
+        ["p1_phone_grille", ["p1_dash"]],
+    ],
+},
+"p1_phone2": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"2012 Orange MePhone 5A Phone",
+        "value":600,
+    },
+    "slotType" : "p1_phone",
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_phone2", ["p1_dash"]],
+        ["p1_phone2_buttons", ["p1_dash"]],
+        ["p1_phone2_camera", ["p1_dash"]],
+        ["p1_phone2_camera_glass", ["p1_dash"]],
+        ["p1_phone2_grille", ["p1_dash"]],
+        ["p1_phone2_flash", ["p1_dash"]],
+        ["p1_phone2_home_button", ["p1_dash"]],
+    ],
+},
+"p1_phone3": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"2018 Mippa M7 Phone",
+        "value":340,
+    },
+    "slotType" : "p1_phone",
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_phone3", ["p1_dash"]],
+        ["p1_phone3_camera", ["p1_dash"]],
+        ["p1_phone3_grille", ["p1_dash"]],
+    ],
+},
+"p1_phone4": {
+    "information":{
+        "authors":"BeamNG boy",
+        "name":"2020 Orange MePhone Classic Phone",
+        "value":560,
+    },
+    "slotType" : "p1_phone",
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_phone4", ["p1_dash"]],
+        ["p1_phone4_camera", ["p1_dash"]],
+        ["p1_phone4_home_button", ["p1_dash"]],
+    ],
+},
+}

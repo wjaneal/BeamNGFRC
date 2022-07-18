@@ -1,0 +1,158 @@
+{
+"p1_beaconlight_blue": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Blue Beacon Light",
+        "value":450,
+    },
+    "slotType" : "p1_lightbar",
+    "slots": [
+        ["type", "default", "description"],
+        ["soundscape_siren","soundscape_siren_6", "Siren Audio"],
+    ],
+    "soundscape": [
+        ["name", "src"],
+        //affects siren location because siren soundscape part is loaded after
+        {"node:":"f15"},
+    ],
+    "controller": [
+        ["fileName"],
+        ["beaconSpin"],
+        ["lightbar", {
+            "defaultModeIndex": 1,
+            "modes": [
+                ["name", "config"],
+                ["Chase", [
+                    ["electric", "value", "duration"],
+                        ["blue_1", 1, 0.15],
+                        ["blue_1", 0, 0.15],
+                        ["blue_1", 1, 0.15],
+                        ["blue_1", 0, 0.60],
+
+                        ["blue_2", 0, 0.60],
+                        ["blue_2", 1, 0.15],
+                        ["blue_2", 0, 0.15],
+                        ["blue_2", 1, 0.15],
+                    ],
+                ],
+            ],
+        }],
+    ],
+    "glowMap":{
+            "mod_lightbar_b1":                   {"simpleFunction":"lightbar", "off":"mod_lightbar_b1", "on":"mod_lightbar_on"},
+            "mod_lightbar_r1":                   {"simpleFunction":"lightbar", "off":"mod_lightbar_r1", "on":"mod_lightbar_on"},
+            "mod_lightbar_w1":                   {"simpleFunction":"lightbar", "off":"mod_lightbar_w1", "on":"mod_lightbar_on"},
+
+            "beaconlight":                   {"simpleFunction":"lightbar", "off":"beaconlight", "on":"beaconlight_on"},
+            "beaconlight_blue_glass":                   {"simpleFunction":"lightbar", "off":"beaconlight_blue_glass", "on":"beaconlight_blue_glass_on"},
+
+            "mod_lightbar_b1":                   {"simpleFunction":"blue_1", "off":"mod_lightbar_b1", "on":"mod_lightbar_on"},
+            "mod_lightbar_b2":                   {"simpleFunction":"blue_2", "off":"mod_lightbar_b2", "on":"mod_lightbar_on"},
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+         {"deformGroup":"beaconlight_break", "deformMaterialBase":"beaconlight", "deformMaterialDamaged":"beaconlight_dmg"},
+        ["sunburst_beaconlight", ["beaconlight"]],
+         {"deformGroup":"beaconlight_break", "deformMaterialBase":"beaconlight_blue_glass", "deformMaterialDamaged":"glass_invisible"},
+         ["sunburst_beaconlight_glass_blue", ["beaconlight"]],
+        {"deformGroup":"", "deformMaterialBase":"", "deformMaterialDamaged":""},
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
+        ["beaconSpin","beaconlight_bulb", "bl2r","bl2l","bl1r",  {"x":270, "y":0, "z":0} , {"x":0, "y":0, "z":1}    , {"x":0.0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.08, "y":0.08, "z":-0.085},"deformGroup":"beaconlight_break"}],
+        {
+            "lightInnerAngle":0,
+            "lightOuterAngle":70,
+            "lightBrightness":1,
+            "lightRange":15,
+            "lightColor":{"r":50, "g":50, "b":255, "a":255},
+            "lightAttenuation":{"x":0, "y":1, "z":1},
+            "lightCastShadows":false,
+            "texSize":512,
+            "shadowSoftness":1,
+            "flareName":"vehicleHeadLightFlare",
+            "flareScale":0.1,
+        },
+        ["beaconSpin" ,      "SPOTLIGHT"        , "bl2r","bl2l","bl1r", {"x":85, "y":0, "z":0} , {"x":0, "y":0, "z":-1}    , {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslation":{"x":0.5, "y":0.5, "z":0.03},"deformGroup":"beaconlight_break"}],
+        ["beaconSpin" ,      "SPOTLIGHT"        , "bl2r","bl2l","bl1r", {"x":265, "y":0, "z":0} , {"x":0, "y":0, "z":1}    , {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslation":{"x":0.5, "y":0.5, "z":0.03},"deformGroup":"beaconlight_break"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"group":"p1_lightbar"},
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":0.76},
+         {"frictionCoef":0.7},
+         {"group":"beaconlight"},
+         {"nodeMaterial":"|NM_METAL"},
+         ["bl1l", 0.0867, -0.01, 1.39],
+         ["bl2l", 0.0867, 0.16, 1.4],
+
+         ["bl1r", -0.0867, -0.01, 1.39],
+         ["bl2r", -0.0867, 0.16, 1.4],
+
+         ["bl3", 0.0, 0.08, 1.5],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":300000,"beamDamp":60},
+          {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+          //Main shape
+          {"deformGroup":"beaconlight_break"},
+          {"deformationTriggerRatio":0.01},
+          ["bl1r","bl1l"],
+          ["bl2r","bl2l"],
+          ["bl1r","bl2r"],
+          ["bl1l","bl2l"],
+
+          ["bl1r","bl2l"],
+          ["bl1l","bl2r"],
+
+          ["bl1r","bl3"],
+          ["bl2r","bl3"],
+          ["bl1l","bl3"],
+          ["bl2l","bl3"],
+
+          //attach
+          {"beamSpring":300000,"beamDamp":60},
+          {"beamDeform":4000,"beamStrength":5000},
+          {"breakGroup":"light_attach"},
+          ["bl2r","rf2"],
+          ["bl2l","rf2"],
+          ["bl1r","rf2"],
+          ["bl1l","rf2"],
+          ["bl1r","rf1"],
+          ["bl1l","rf1"],
+
+          ["bl3","rf2"],
+          ["bl3","rf1"],
+          ["bl3","rf2r"],
+          ["bl3","rf1r"],
+          ["bl3","rf2l"],
+          ["bl3","rf1l"],
+
+          ["bl2r","rf2r"],
+          ["bl2l","rf2l"],
+
+          ["bl1r","rf2r"],
+          ["bl1l","rf2l"],
+          {"deformGroup":""},
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"beaconlight"},
+            {"groundModel":"plastic"},
+            {"dragCoef":3},
+            ["bl3","bl2r","bl1r"],
+            ["bl3","bl2l","bl2r"],
+            ["bl3","bl1l","bl2l"],
+            ["bl3","bl1r","bl1l"],
+
+            ["bl1r","bl2r","bl2l"],
+            ["bl1r","bl2l","bl1l"],
+    ],
+},
+}

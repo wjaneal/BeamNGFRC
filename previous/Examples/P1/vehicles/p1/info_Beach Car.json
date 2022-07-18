@@ -1,0 +1,14 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"Beach Car (A)",
+  "Description":"A custom modified Autron Petitron facelift specifically made for driving on beach.",
+  "Drivetrain":"AWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Automatic",
+  "Value":1385,
+  "defaultPaintName1":"Kiddo Cyan"
+}

@@ -1,0 +1,121 @@
+{
+"moonhawk_tailcone": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"1976-1978 Rear Fascia",
+        "value":800,
+    },
+    "slotType" : "moonhawk_tailcone",
+     "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["moonhawk_tailcone", ["moonhawk_body"],[],{"pos":{"x":0,"y":0,"z":0}}],
+         ["moonhawk_taillightframe_R", ["moonhawk_body"],[],{"pos":{"x":0,"y":0,"z":0}}],
+         ["moonhawk_taillightframe_L", ["moonhawk_body"],[],{"pos":{"x":0,"y":0,"z":0}}],
+         {"deformGroup":"taillight_R_break", "deformMaterialBase":"moonhawk_lights", "deformMaterialDamaged":"moonhawk_lights_dmg"},
+         ["moonhawk_taillight_R", ["moonhawk_body"],[],{"pos":{"x":0,"y":0,"z":0},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound1", "deformVolume":0.5}],
+         {"deformGroup":"taillight_L_break", "deformMaterialBase":"moonhawk_lights", "deformMaterialDamaged":"moonhawk_lights_dmg"},
+         ["moonhawk_taillight_L", ["moonhawk_body"],[],{"pos":{"x":0,"y":0,"z":0},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2", "deformVolume":0.5}],
+         {"deformGroup":""},
+     ],
+     "slots": [
+        ["type", "default", "description"],
+        ["moonhawk_tailcone_panel","","Rear Filler Panel"],
+        ["moonhawk_lettering_tailcone","moonhawk_lettering_tailcone","Lettering"],
+     ],
+     "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
+        {
+            "lightInnerAngle":0,
+            "lightOuterAngle":120,
+            "lightRange":8,
+            "lightColor":{"r":255, "g":255, "b":150, "a":255},
+            "lightAttenuation":{"x":0, "y":1, "z":1},
+            "lightCastShadows":false,
+            "flareName":"vehicleReverseLightFlare",
+            "cookieName":"art/special/BNG_light_cookie_headlight.dds"
+            "texSize":512,
+            "shadowSoftness":0.5,
+        },
+        //reverse lights
+        ["reverse" ,         "SPOTLIGHT"        , "tb4r", "q6r", "tb5r", {"x":20, "y":-25, "z":10} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.42, "y":0.36, "z":0.025},"flareScale":0.05,"lightBrightness":0.06,"deformGroup":"taillight_R_break"}],
+        ["reverse" ,         "SPOTLIGHT"        , "tb4l", "q6l", "tb5l", {"x":160, "y":-25, "z":-10} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.42, "y":0.36, "z":-0.025},"flareScale":0.05,"lightBrightness":0.06	,"deformGroup":"taillight_L_break"}],
+        //taillights
+        {
+            "lightInnerAngle":0,
+            "lightOuterAngle":120,
+            "lightRange":8,
+            "lightColor":{"r":255, "g":50, "b":0, "a":255},
+            "lightCastShadows":false,
+            "flareName":"vehicleBrakeLightFlare",
+        },
+        //brake lights
+        ["brake" ,         "SPOTLIGHT"        ,"tb4r", "q6r", "tb5r", {"x":10, "y":-25, "z":10} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.57, "y":0.36, "z":0.025},"flareScale":0.07,"lightBrightness":0.06,"deformGroup":"taillight_R_break"}],
+        ["brake" ,         "SPOTLIGHT"        , "tb4l", "q6l", "tb5l", {"x":170, "y":-25, "z":-10} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.57, "y":0.36, "z":-0.025},"flareScale":0.07,"lightBrightness":0.06,"deformGroup":"taillight_L_break"}],
+        ["lowhighbeam" ,         "SPOTLIGHT"     , "tb4r", "q6r", "tb5r", {"x":10, "y":-5, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.77, "y":0.36, "z":0.03},"flareScale":0.05,"lightBrightness":0.03,"lightRange":10,"deformGroup":"taillight_R_break"}],
+        ["lowhighbeam" ,         "SPOTLIGHT"     , "tb4l", "q6l", "tb5l", {"x":170, "y":-5, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.77, "y":0.36, "z":-0.03},"flareScale":0.05,"lightBrightness":0.03,"lightRange":10,"deformGroup":"taillight_L_break"}],
+
+        //signals
+        ["signal_R" ,         "SPOTLIGHT"        , "tb4r", "q6r", "tb5r", {"x":30, "y":-25, "z":10} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.77, "y":0.36, "z":0.025},"flareScale":0.05,"lightBrightness":0.03,"deformGroup":"taillight_R_break"}],
+        ["signal_L" ,         "SPOTLIGHT"        , "tb4l", "q6l", "tb5l", {"x":150, "y":-25, "z":-10} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.77, "y":0.36, "z":-0.025},"flareScale":0.05,"lightBrightness":0.03,"deformGroup":"taillight_L_break"}],
+     ],
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":2.9},
+         {"group":"moonhawk_body"},
+         ["q6r",-0.86, 2.57 0.80],
+         ["q6l", 0.86, 2.57, 0.80],
+         ["q12r",-0.875, 2.61, 0.59],
+         ["q12l", 0.875, 2.61, 0.59],
+         ["q15r",-0.78, 2.57, 0.36],
+         ["q15l", 0.78, 2.57, 0.36],
+
+         ["tb5r",-0.44, 2.64, 0.48],
+         ["tb5",0.0, 2.65, 0.48],
+         ["tb5l", 0.44, 2.64, 0.48],
+         {"group":""},
+    ],
+},
+"moonhawk_tailcone_panel": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear Filler Panel",
+        "value":250,
+    },
+    "slotType" : "moonhawk_tailcone_panel",
+     "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["moonhawk_rearpanel", ["moonhawk_body"],[],{"pos":{"x":0,"y":0,"z":0}}],
+     ],
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"group":"moonhawk_tailcone"},
+         {"selfCollision":true},
+         {"collision":true},
+         //tail cone
+         {"nodeWeight":3.2},
+         {"group":"moonhawk_body"},
+         ["tb5r",-0.44, 2.61, 0.38],
+         ["tb5",0.0, 2.61, 0.38],
+         ["tb5l", 0.44, 2.61, 0.38],
+         {"group":""},
+    ],
+},
+"moonhawk_lettering_tailcone": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Moonhawk Lettering",
+        "value":95,
+    },
+    "slotType" : "moonhawk_lettering_tailcone",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["moonhawk_lettering_tailcone", ["moonhawk_body"],[],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+}

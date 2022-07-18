@@ -1,0 +1,85 @@
+{
+"p1_rollcage": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Roll Cage",
+        "value":5600,
+    },
+
+    "slotType" : "p1_rollcage",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["p1_rollcage", ["p1_rollcage","p1_body"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":33},
+         {"group":"p1_rollcage"},
+         ["rc1", 0.0, 0.4, 0.75],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":1601000,"beamDamp":50},
+          {"beamDeform":180000,"beamStrength":"FLT_MAX"},
+          ["rc1","rf2r"],
+          ["rc1","rf2l"],
+          ["rc1","f3rr"],
+          ["rc1","f3ll"],
+
+          ["rc1","rf1"],
+          ["rc1","rf2"],
+
+          ["rc1","f9r"],
+          ["rc1","f9l"],
+          ["rc1","q5r"],
+          ["rc1","q5l"],
+
+          ["rc1","f1rr"],
+          ["rc1","f1ll"],
+
+          ["rc1","rf1r"],
+          ["rc1","rf1l"],
+
+          {"optional":true},
+          {"beamSpring":801000,"beamDamp":50},
+          ["rf2r","f3rr"],
+          ["rf2l","f3ll"],
+
+          ["q5r","rf2l"],
+          ["q5l","rf2r"],
+          ["rf1r","rf1l"],
+          ["rf2r","rf2l"],
+
+          ["rf2r","q5r"],
+          ["rf2l","q5l"],
+          ["rf2r","f9r"],
+          ["rf2l","f9l"],
+
+          ["rf1r","f1rr"],
+          ["rf1l","f1ll"],
+          ["rf1r","f2rr"],
+          ["rf1l","f2ll"],
+          ["p2rr","f5rr", {"beamSpring":301000,"beamDamp":50}],
+          ["p2ll","f5ll", {"beamSpring":301000,"beamDamp":50}],
+
+          ["f3rr","f6rr"],
+          ["f3ll","f6ll"],
+
+          ["q4r","f1rr"],
+          ["q4l","f1ll"],
+          ["f3rr","f5rr"],
+          ["f3ll","f5ll"],
+
+          ["q1r","q5r"],
+          ["q1l","q5l"],
+          {"optional":false},
+    ],
+  },
+}

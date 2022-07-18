@@ -1,0 +1,14 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"Home Built (M)",
+  "Description":"A car that was made at home in India.",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":160,
+  "defaultPaintName1":"Solar Yellor"
+}

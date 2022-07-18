@@ -1,0 +1,167 @@
+{
+  "p1_hubcaps" : {
+    "name" : "p1_hubcaps",
+    "class" : "Material",
+    "persistentId" : "5935a6bc-cae5-40ba-9500-362572b0c9a9",
+    "Stages" : [
+      {
+        "colorMap" : "vehicles/common/null.dds",
+        "normalMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/null.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {
+        "colorMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_d.dds",
+        "diffuseColor" : [ 1.5, 1.5, 1.5, 1 ],
+        "normalMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_s.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {},
+      {}
+    ],
+    "alphaRef" : 0,
+    "dynamicCubemap" : true,
+    "mapTo" : "p1_hubcaps",
+    "materialTag0" : "beamng",
+    "materialTag1" : "vehicle",
+    "translucent" : true,
+    "translucentBlendOp" : "None"
+  },
+  "p1_hubcaps_2" : {
+    "name" : "p1_hubcaps_2",
+    "class" : "Material",
+    "persistentId" : "5935a6bc-cae5-40ba-9500-362572b0c9a9",
+    "Stages" : [
+      {
+        "colorMap" : "vehicles/common/null.dds",
+        "normalMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_2_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/null.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {
+        "colorMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_2_d.dds",
+        "diffuseColor" : [ 1.5, 1.5, 1.5, 1 ],
+        "normalMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_2_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_2_s.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {},
+      {}
+    ],
+    "alphaRef" : 0,
+    "dynamicCubemap" : true,
+    "mapTo" : "p1_hubcaps_2",
+    "materialTag0" : "beamng",
+    "materialTag1" : "vehicle",
+    "translucent" : true,
+    "translucentBlendOp" : "None"
+  },
+  "hubcap_0203a_p1" : {
+    "name" : "hubcap_0203a_p1",
+    "class" : "Material",
+    "persistentId" : "5935a6bc-cae5-40ba-9500-362572b0c9a9",
+    "Stages" : [
+      {
+        "colorMap" : "vehicles/common/null.dds",
+        "normalMap" : "vehicles/common/hubcaps/p1/hubcap_0203a_p1_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/null.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {
+        "colorMap" : "vehicles/common/hubcaps/p1/hubcap_0203a_p1_d.dds",
+        "diffuseColor" : [ 1.5, 1.5, 1.5, 1 ],
+        "normalMap" : "vehicles/common/hubcaps/p1/hubcap_0203a_p1_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/hubcaps/p1/hubcap_0203a_p1_s.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {},
+      {}
+    ],
+    "alphaRef" : 0,
+    "dynamicCubemap" : true,
+    "mapTo" : "hubcap_0203a_p1",
+    "materialTag0" : "beamng",
+    "materialTag1" : "vehicle",
+    "translucent" : true,
+    "translucentBlendOp" : "None"
+  },
+  "p1_hubcaps_3" : {
+    "name" : "p1_hubcaps_3",
+    "class" : "Material",
+    "persistentId" : "5935a6bc-cae5-40ba-9500-362572b0c9a9",
+    "Stages" : [
+      {
+        "colorMap" : "vehicles/common/null.dds",
+        "normalMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_3_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/null.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {
+        "colorMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_3_d.dds",
+        "diffuseColor" : [ 1.5, 1.5, 1.5, 1 ],
+        "normalMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_3_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_3_s.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {},
+      {}
+    ],
+    "alphaRef" : 0,
+    "dynamicCubemap" : true,
+    "mapTo" : "p1_hubcaps_3",
+    "materialTag0" : "beamng",
+    "materialTag1" : "vehicle",
+    "translucent" : true,
+    "translucentBlendOp" : "None"
+  },
+  "p1_hubcaps_4" : {
+    "name" : "p1_hubcaps_4",
+    "class" : "Material",
+    "persistentId" : "5935a6bc-cae5-40ba-9500-362572b0c9a9",
+    "Stages" : [
+      {
+        "colorMap" : "vehicles/common/null.dds",
+        "normalMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_4_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/null.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {
+        "colorMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_4_d.dds",
+        "diffuseColor" : [ 1.5, 1.5, 1.5, 1 ],
+        "normalMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_4_n.dds",
+        "pixelSpecular" : true,
+        "specularMap" : "vehicles/common/hubcaps/p1/p1_hubcaps_4_s.dds",
+        "specularPower" : 128,
+        "useAnisotropic" : true
+      },
+      {},
+      {}
+    ],
+    "alphaRef" : 0,
+    "dynamicCubemap" : true,
+    "mapTo" : "p1_hubcaps_4",
+    "materialTag0" : "beamng",
+    "materialTag1" : "vehicle",
+    "translucent" : true,
+    "translucentBlendOp" : "None"
+  }
+}

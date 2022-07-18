@@ -1,0 +1,94 @@
+{
+"beamng_Wheel_F": {
+	"information":{
+		"authors":"DrowsySam",
+		"name":"Example Car Front Wheels",
+	}
+    "slotType" : "beamng_Wheel_F",
+	"scalebeamSpring":0.84,
+	"scalebeamDamp":1.3,
+	"scalebeamDeform":1.5,
+	"scalebeamStrength":1.78,
+	"flexbodies": [
+		 ["mesh", "[group]:", "nonFlexMaterials"],
+		 //Wheel mesh, Wheel group (Wheel name)
+		 //["Tire_FL", ["Tire_FL"],"TireMaterial"],
+		 //["Tire_FR", ["Tire_FR"],"TireMaterial"],
+ 		 ["Wheel_FL", ["Wheel_FL"],"WheelMaterial"],
+		 ["Wheel_FR", ["Wheel_FR"],"WheelMaterial"],
+	],
+	"slots": [
+    	["type:","default:","description:"],
+	    //["steelwheel_02a_16x7_F", "steelwheel_02a_16x7_F", "Front Left Wheel"],
+	    //["steelwheel_02a_16x7_F", "steelwheel_02a_16x7_F", "Front Right Wheel"],
+	    //["Wheel_FR","Wheel_FR","Front Right Wheel"],
+	    //["Wheel_FL","Wheel_FL","Front Left Wheel"],
+	     ["Wheel_FL", "Wheel_FL", "Back Left Wheel"],
+	    ["Wheel_FR", "Wheel_FR", "Back Right Wheel"],
+	   	],
+	 "pressureWheels": [
+	    {"radius":0.375}, //Radius of the tire nodes
+        {"hubRadius":0.22}, //Radius of the rim
+        {"wheelOffset":0}, //Offset from the original position(Left/right)
+        {"hubWidth":0.225}, //Width of the rim
+        {"tireWidth":0.215}, //Width of the tire
+        {"numRays":12}, 
+        {"hasTire":"false"},
+         ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+         ["Wheel_FR", "Wheel_FR", "Tire_FR", "a15", "a9", 9999,  "brakeCaliper1", -1,  {"speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+         ["Wheel_FL", "Wheel_FL", "Tire_FL", "a0", "a3", 9999,  "brakeCaliper1", -1,  {"speedo":true, "nodeCoupling:":"brakeDisc1", "torqueArm:":"diff1", "torqueCoupling:":"diff2"}],
+],
+/*
+	"hubWheels": [
+	 //general settings
+        {"radius":0.375}, //Radius of the tire nodes
+        {"hubRadius":0.22}, //Radius of the rim
+        {"wheelOffset":0}, //Offset from the original position(Left/right)
+        {"hubWidth":0.225}, //Width of the rim
+        {"tireWidth":0.215}, //Width of the tire
+        {"numRays":12}, //The amount of nodes to make the circle, more may result in smoother driving, but at the cost of performance, weight & stability(This value must contain an even number between 2-50 ideally between 16-28. numbers below 10 shouldn't be used)
+         
+        //hub options
+        {"hubBeamSpring":1081000, "hubBeamDamp":16},
+        {"beamSpring":1081000, "beamDamp":16},
+        {"hubBeamDeform":36000, "hubBeamStrength":112000},
+        {"beamDeform":240000,"beamStrength":380000},
+        {"hubNodeWeight":0.60}, //Weight of the rim nodes, to get the total weight of the rim, calculate numRays X nodeWeight X 2
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.7},
+         
+        //tire options
+        {"wheelTreadBeamSpring":281000,"wheelTreadBeamDamp":90,"wheelTreadBeamDeform":25000,"wheelTreadBeamStrength":34000},
+        {"wheelPeripheryBeamSpring":281000,"wheelPeripheryBeamDamp":90,"wheelPeripheryBeamDeform":25000,"wheelPeripheryBeamStrength":34000},
+        {"springExpansion":1081000, "dampExpansion":18},
+        {"nodeWeight":0.60}, //Weight of the tire nodes, to get the total weight of the tire, calculate numRays X nodeWeight X 2
+        {"nodeMaterial":"|NM_RUBBER"},
+        {"frictionCoef":1.1}, //Tire friction for each node, increasing will add more grip to your vehicle
+         
+        //pressure options
+        {"pressurePSI":32}, //Tire pressure in PSI
+        {"maxPressurePSI":1500},
+        {"reinforcementPressurePSI":31},
+        {"pressureSpring":2601000},
+        {"reinforcementPressureSpring":144000},
+        {"pressureDamp":90},
+        {"reinforcementPressureDamp":90},
+         
+        //front
+        {"selfCollision":false}
+        {"collision":true}
+        //Wheel code, Wheel name, attach to node1, node2, 9999, node reference(needed), spin direction
+
+
+        {"axleBeams":["a15","a9",]}
+            ["HubWheel_FL", "HubWheel_FL", "a15", "a9", 9999,  "a10", 1],
+        {"axleBeams":["a0","a3"]}
+            ["HubWheel_FR", "HubWheel_FR", "a0", "a3", 9999,  "a4", -1],
+        {"axleBeams":[]}
+        {"propulsed":0}
+        {"enableABS":false}
+        {"selfCollision":true}
+	],
+*/
+}
+}

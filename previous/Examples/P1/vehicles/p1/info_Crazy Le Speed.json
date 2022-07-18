@@ -1,0 +1,14 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"Crazy Le Speed (M)",
+  "Description":"Very quick custom that makes the car to go crazy fast! Nothing more to say here.",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Power":65,
+  "Propulsion":"ICE",
+  "Torque":91,
+  "Transmission":"Manual",
+  "Value":8520,
+  "defaultPaintName1":"Lava Red"
+}
