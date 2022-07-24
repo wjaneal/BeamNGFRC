@@ -1,0 +1,101 @@
+{
+    "pigeon_transmisson_electric_2spd": {
+        "information": {
+            "authors": "AkaShaadow",
+            "name": "2-Speed Electric Automatic Transmisson",
+            "value": 15000
+        },
+        "slotType": "pigeon_transmission",
+        "slots": [
+            [ "type", "default", "description" ],
+            [
+                "pigeon_converter",
+                "pigeon_converter_electric",
+                "Torque Converter",
+                { "coreSlot": true }
+            ]
+        ],
+        "powertrain": [
+            [ "type", "name", "inputName", "inputIndex" ],
+            [ "torqueConverter", "torqueConverter", "mainEngine", 1 ],
+            [ "automaticGearbox", "gearbox", "torqueConverter", 1 ]
+        ],
+        "gearbox": {
+            "uiName": "Gearbox",
+            "gearRatios": [ -8, 0, 8, 2.5 ],
+            "friction": 1.24,
+            "dynamicFriction": 0.0012,
+            "torqueLossCoef": 0.0155,
+            "parkLockTorque": 2000,
+            "additionalEngineInertia": 0.05,
+            "gearboxNode:": [ "tra1" ]
+        },
+        "vehicleController": {
+            "automaticModes": "PRND12",
+            "calculateOptimalLoadShiftPoints": true,
+            "shiftDownRPMOffsetCoef": 1.2,
+            //"aggressionSmoothingUp":2
+            //"aggressionSmoothingDown":0.06
+            "lowShiftDownRPM": [ 0, 0, 0, 1600, 1600, 1500, 1400, 1300, 1300 ],
+            "lowShiftUpRPM": [ 0, 0, 2800, 2600, 2400, 2200, 2000, 2000 ],
+            "clutchLaunchStartRPM": 2500,
+            "clutchLaunchTargetRPM": 3000,
+            "transmissionGearChangeDelay": 0.1
+        },
+            "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["pigeon_transmission", ["pigeon_engine","pigeon_transmission"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--3 Speed Manual--
+         {"selfCollision":false},
+         {"collision":true},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"pigeon_transmission"},
+         {"nodeWeight":9},
+         ["tra1", 0.0, -0.1, 0.31],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8001000,"beamDamp":150},
+          {"beamDeform":100000,"beamStrength":"FLT_MAX"},
+          //transmission
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"triangleType":"NONCOLLIDABLE"},
+            ["e1l", "e1r", "tra1"],
+            {"triangleType":"NORMALTYPE"},
+    ],
+},
+    "pigeon_converter_electric": {
+        "information": {
+            "authors": "AkaShaadow",
+            "name": "Electric Locking Torque Converter",
+            "value": 250
+        },
+        "slotType": "pigeon_converter",
+        "torqueConverter": {
+            "uiName": "Torque Converter Electric",
+            "converterDiameter": 0.3,
+            "converterStiffness": 8,
+            "couplingAVRatio": 0.85,
+            "stallTorqueRatio": 2.2,
+            "lockupClutchTorque": 5000,
+            "additionalEngineInertia": 0.001
+        },
+        "vehicleController": {
+            "torqueConverterLockupRPM": 1,
+            "torqueConverterLockupMinGear": 1
+        }
+    }
+}

@@ -1,0 +1,86 @@
+{
+"FRCBattery": {
+    "information":{
+        "authors":"wjaneal",
+        "name":"FRC Battery",
+        "value":340,
+    },
+    "slotType" : "FRC_Power_Source",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+    ],
+    "variables": [
+            [ "name", "type", "unit", "category", "default", "min", "max", "title", "description" ],
+            [
+                "$fuel",
+                "range",
+                "kWh",
+                "Chassis",
+                75,
+                0,
+                75,
+                "Battery Level",
+                "Initial battery charge",
+                { "stepDis": 0.5 }
+            ]
+        ],
+    "energyStorage": [
+            [ "type", "name" ],
+            [ "electricBattery", "mainBattery" ]
+        ],
+    "mainBattery": {
+            "energyType": "electricEnergy",
+            "batteryCapacity": 75,
+            "startingCapacity": "$fuel"
+        },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //fuel tank particles
+         {"frictionCoef":1},
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":""},
+         {"nodeWeight":0.5},
+         {"engineGroup":["fuel"]},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.06,"smokePoint":220,"containerBeam":"fuelTank"},
+         ["ft1",     0, 1.05, 0.33],
+         ["ft1l", 0.31, 1.05, 0.33],
+         ["ft1r",-0.31, 1.05, 0.33],
+         ["ft2l", 0.31, 0.89, 0.33],
+         ["ft2r",-0.31, 0.89, 0.33],
+         {"selfIgnitionCoef":false,"selfCollision":false},
+         ["ft3",     0, 0.72, 0.29],
+         ["ft3l", 0.31, 0.72, 0.29],
+         ["ft3r",-0.31, 0.72, 0.29],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"vaporPoint":false,"specHeat":false,"selfIgnitionCoef":false,"smokePoint":false,"containerBeam":false},
+         {"engineGroup":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+         
+          //connect fuel particles to tank
+          {"deformLimitExpansion":""},
+          ["ft1","n1"],
+          ["ft1","n9"],
+          ["ft1","n10"],
+
+          ["ft1l","n11"],
+          ["ft1l","n12"],
+          ["ft1l","n13"],
+
+          ["ft1r","n14"],
+          ["ft1r","n15"],
+          ["ft1r","n16"],
+
+          //["ft2","n17"],
+          //["ft2","n18"],
+          //["ft2","n19"],
+
+          ["ft2l","n20"],
+          ["ft2l","n21"],
+          ["ft2l","n22"],
+        
+    ],
+},
+}

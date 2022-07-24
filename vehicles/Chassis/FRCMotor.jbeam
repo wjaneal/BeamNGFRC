@@ -1,0 +1,461 @@
+{
+"FRCMotor": {
+    "information":{
+        "authors":"FIRST Robotics Canada",
+        "name":"FRC Electric Motor",
+    },
+    "slotType" : "FRCMotor",
+    "slots": [
+        ["type", "default", "description"],
+        //Slot for transmission
+        [ "FRC_Power_Source", "FRC_Power_Source", "battery pack" ],
+        [ "FRC_Transmission", "FRC_Transmission", "Transmission" ],
+        ["differential","beamng_diff_F", "Front Differential"],
+        ["differential","beamng_diff_R", "Rear Differential"],
+    ],
+    "controller": [
+        ["fileName"],
+        ["vehicleController", {}],
+    ],
+
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["electricMotor", "mainEngine", "dummy", 0],
+        //["torqueConverter",  "FRCTorqueConverter", "frontMotor",1],
+        //["automaticGearbox", "FRCGearbox", "FRCTorqueConverter", 1],
+        //["shaft",            "FRCDriveshaft",      "FRCGearbox", 1],
+        //["differential",     "beamng_diff_F",        "FRCDriveshaft", 1],
+        //["shaft",            "frontAxleShaft1",      "beamng_diff_F", 1,{"connectedWheel":"Wheel_FL"}],
+        //["shaft",            "frontAxleShaft2",      "beamng_diff_F", 2,{"connectedWheel":"Wheel_FR"}],
+        //["differential",     "beamng_diff_R",        "myDriveshaft",      1           ]
+        //["shaft",            "backAxleShaft1",      "beamng_diff_R",        1,          {"connectedWheel":"BL"}]
+        //["shaft",            "backAxleShaft2",      "beamng_diff_R",        2,          {"connectedWheel":"BR"}]
+    ],
+    "mainEngine": {
+			"torque": [
+				[ "rpm", "torque" ],
+				[ 0, 150 ],
+				[ 500, 250 ],
+				[ 6000, 250 ],
+				[ 20000, 20 ],
+			],
+	"maxRPM":20100, //Max RPM before overrev damage is likely
+	"inertia":0.2, //(kg*m/s^2)
+	"friction":4, //Constant friction torque (Nm)
+	"dynamicFriction":0.0005, //Friction torque that increases with engine speed (Nm/rad/s)
+    "energyStorage": "mainBattery", //Name of the fuel tank
+	"requiredEnergyType":"battery", //Type of fuel required
+	"burnEfficiency": [ //How much fuel energy is converted to work in the cylinders (does not account for engine friction losses)
+				[0.00, 0.14],
+				[0.05, 0.29],
+				[0.40, 0.38],
+				[0.70, 0.47],
+				[1.00, 0.32],
+
+			],	
+	}
+    "vehicleController":{
+       "shiftLogicName":"electricMotor",
+        "motorNames": ["frontMotor"],
+        "topSpeedLimitReverse": 15,
+        "automaticModes":"PRND",
+        },  		
+	
+
+	
+	/*		
+    "FRCTorqueConverter": {
+        "converterDiameter": 0.252,
+        "converterStiffness":10,
+        "couplingAVRatio":0.9,
+        "stallTorqueRatio":1.8,
+        "lockupClutchTorque":400,
+    },
+    "FRCGearbox": {
+      "gearRatios":[-2.27, 0, 2.79, 1.54, 1.00, 0.695],
+      //"parkLockTorque":2000,
+      "oneWayViscousCoef":8,
+      "friction": 1,
+    },
+    "FRCDriveshaft": {gearRatio:1}, 
+    "frontAxleShaft1": {gearRatio:1}, 
+    "frontAxleShaft2": {gearRatio:1}, 
+    "frontMotor":{
+        "torque":[
+            ["rpm", "torque"],
+            [0, 580],
+            [500, 580],
+            [1000, 580],
+            [1500, 580],
+            [2000, 580],
+            [3000, 560],
+            [4000, 520],
+            [5000, 500],
+            [6000, 483],
+            [7000, 475],
+            [8000, 458],
+            [9000, 423],
+            [10000, 400],
+			[11000, 385],
+			[12000, 369],
+			[13000, 358],
+			[14000, 347],
+            [15000, 330],
+            [16000, 305],
+            [17000, 277],
+			[18000, 243],
+			[19000, 190],
+			[20000, 70],
+        ],
+
+        "maxRPM":11000,
+        "inertia":0.10,
+        "friction":1,
+        "dynamicFriction":0.00025,
+        "electricalEfficiency":0.96,
+        //"torqueReactionNodes:":["fem4l","fem4r","fem1r"],
+        "energyStorage": "mainBattery",
+        //"electricsThrottleFactorName": "throttleFactorFront",
+        //"maximumWantedRegenTorque": 300
+
+        
+        //node beam interface
+        //"waterDamage": {"[engineGroup]:":["front_motor_waterdamage"]},
+        //"engineBlock": {"[engineGroup]:":["front_motor_block"]},
+        //"breakTriggerBeam":"front_motor",
+        //"uiName":"Front Motor",
+        //"soundConfig": "soundConfigFront",
+    },
+    */
+    
+    "FRCDriveshaft": {gearRatio:1}, 
+    "frontAxleShaft1": {gearRatio:1}, 
+    "frontAxleShaft2": {gearRatio:1},
+    
+    "soundConfigFront": {
+        "sampleName": "ElectricMotor_v2",
+        "mainGain": -12,
+    },
+    "FRC_Transmission":{
+        "information":{
+        
+        
+        
+        }
+     "slotType" : "FRC_Transmission",
+     
+		"slots": [
+			["type", "default", "description"]
+			
+		],
+
+		"gearbox": {
+			//https://wiki.beamng.com/ManualGearbox
+			//"gearDamageThreshold":3000, //Multiplier for tolerance to smashing gears (no clutch + mismatched rpm)
+			"gearRatios":[-3.65, 0, 3],
+			"friction": 0, //Constant friction torque on input shaft
+			"gearboxNode:":["engine0"], //node used to play gear damage sound
+		},
+		"clutch": {
+			//"thermalsEnabled":true
+			//"clutchMass":10, //Thermal mass representing clutch disc and PP/Clutch surfaces
+			//"coolingCoef":1, //Multiplier to tweak how fast it cools
+			//"warningTemp":200, //Temp for UI warning
+			//"maxSafeClutchTemp":300, //Temp after which torque limit decreases (but may recover if left to cool)
+			//"clutchOverheatRange":100, //Additional temp before clutch is pretty wrecked and won't recover much
+			//"maxClutchTemp":500, //Clutch will never recover at all if it hits this temp
+		},
+
+
+		"vehicleController":
+		{
+		     //manual transmission useful values
+			"clutchLaunchStartRPM":1.70427651004, //RPM where launching behavior starts
+			"clutchLaunchTargetRPM":1.70427651, //RPM it tries to maintain while launching
+			"transmissionShiftDelay":0.1, //Time taken in between clutching actions
+			"revMatchThrottle":0.47894759012197, //Controls shift rev matching assist. Reduce this value to as much as 0.25 for high powered engines
+			"clutchInRate":10, //Controls shift assist clutching speed (value of 5 will be take 1/5 seconds to complete)
+			"clutchOutRate":10, //Controls shift assist clutching speed (value of 5 will be take 1/5 seconds to complete)
+		},
+
+
+		"powertrain" : [
+		["type", "name", "inputName", "inputIndex"],
+		["frictionClutch", "clutch", "mainEngine", 1],
+		["manualGearbox", "gearbox", "clutch", 1],
+        //["automaticGearbox", "FRCGearbox", "FRCTorqueConverter", 1],
+        ["shaft",            "FRCDriveshaft",      "FRCGearbox", 1],
+        ["differential",     "beamng_diff_F",        "FRCDriveshaft", 1],
+        ["shaft",            "frontAxleShaft1",      "beamng_diff_F", 1,{"connectedWheel":"Wheel_FL"}],
+        ["shaft",            "frontAxleShaft2",      "beamng_diff_F", 2,{"connectedWheel":"Wheel_FR"}],
+      
+		
+	],
+	},
+    
+    
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":false},
+         {"collision":true},
+         {"group":"front_motor"},
+         //{"engineGroup":"front_motor_block"},
+         //{"nodeWeight":4.0},
+         //{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15},
+         ["fem1r", -0.28, -0.5, 0.25],
+         ["fem1l", 0.28, -0.5, 0.25],
+         ["fem2r", -0.28, -0.25, 0.25],
+         ["fem2l", 0.28, -0.25, 0.25],
+         //{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+         //{"engineGroup":["front_motor_block","front_motor_waterdamage"]},
+         ["fem3r", -0.2, -0.55, 0.72],
+         ["fem3l", 0.28, -0.55, 0.72],
+         ["fem4r", -0.2, -0.25, 0.72],
+         ["fem4l", 0.28, -0.25, 0.72],
+         //{"engineGroup":""},
+         //{"nodeWeight":4.0},
+         ["fem5r", -0.42, -0.45, 0.45],
+         ["fem5l", 0.42, -0.45, 0.45],
+         ["fem6", 0.0, -0.15, 0.46],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4001000,"beamDamp":250},
+          {"beamDeform":100000,"beamStrength":"FLT_MAX"},
+          //motor
+          {"deformLimitExpansion":1.2},
+          ["fem1r","fem1l"],
+          ["fem2r","fem2l"],
+          ["fem3r","fem3l"],
+          ["fem4r","fem4l"],
+
+          ["fem1r","fem2r"],
+          ["fem1l","fem2l"],
+          ["fem3r","fem4r"],
+          ["fem3l","fem4l"],
+
+          ["fem1r","fem3r"],
+          ["fem1l","fem3l"],
+          ["fem2r","fem4r"],
+          ["fem2l","fem4l"],
+
+          ["fem2r","fem3r"],
+          ["fem2l","fem3l"],
+          ["fem2r","fem3l"],
+          ["fem2l","fem3r"],
+
+          ["fem1r","fem4r"],
+          ["fem1l","fem4l"],
+          ["fem1r","fem4l"],
+          ["fem1l","fem4r"],
+
+          ["fem1r","fem2l"],
+          ["fem1l","fem2r"],
+          ["fem3r","fem4l"],
+          ["fem3l","fem4r"],
+
+          ["fem1r","fem3l"],
+          ["fem1l","fem3r"],
+          ["fem2r","fem4l"],
+          ["fem2l","fem4r"],
+
+          ["fem6", "fem1l"],
+          ["fem6", "fem1r"],
+          ["fem6", "fem3r"],
+          ["fem6", "fem3l"],
+          ["fem6", "fem2l"],
+          ["fem6", "fem2r"],
+          ["fem6", "fem4r"],
+          ["fem6", "fem4l"],
+
+          ["fem5l", "fem4l"],
+          ["fem5l", "fem2l"],
+          ["fem5l", "fem4r"],
+          ["fem5l", "fem2r"],
+          ["fem5l", "fem3l"],
+          ["fem5l", "fem1l"],
+
+          ["fem5r", "fem4r"],
+          ["fem5r", "fem2r"],
+          ["fem5r", "fem4l"],
+          ["fem5r", "fem2l"],
+          ["fem5r", "fem3r"],
+          ["fem5r", "fem1r"],
+
+          //motor soft mount
+          //{"deformLimitExpansion":""},
+          //{"beamType":"|BOUNDED", "longBoundRange":0.02, "shortBoundRange":0.02},
+          //{"beamSpring":1101000,"beamDamp":2000},
+          //{"beamLimitSpring":5001000,"beamLimitDamp":200},
+          //{"beamDeform":40000,"beamStrength":90000},
+          //{"breakGroup":"enginemount_a"},
+          //{"dampCutoffHz":500},
+          //{"boundZone":0.01},
+          ["fem5r", "n4"],
+          ["fem5r", "n5"],
+          ["fem5r", "n14", {"boundZone":0.003}],
+          ["fem5r", "n15", {"boundZone":0.003}],
+          ["fem5r", "n24"],
+          ["fem5r", "n26"],
+
+          //{"breakGroup":"enginemount_b"},
+          ["fem5l", "n14"],
+          ["fem5l", "n6"],
+          ["fem5l", "n4", {"boundZone":0.003}],
+          ["fem5l", "n16", {"boundZone":0.003}],
+          ["fem5l", "n12"],
+          ["fem5l", "n2"],
+
+          //torque mount
+          //{"beamType":"|BOUNDED", "longBoundRange":0.01, "shortBoundRange":0.01},
+          //{"beamSpring":851000,"beamDamp":2000},
+          //{"beamDeform":40000,"beamStrength":90000},
+          //{"breakGroup":"enginemount_c"},
+          //{"boundZone":0.01},
+          ["fem6", "n17"],
+          ["fem6", "n26"],
+          ["fem6", "n27"],
+          ["fem6", "n7"],
+          ["fem6", "n8"],
+          ["fem6", "n9"],
+          ["fem1l", "n18"],
+          ["fem1r", "n28"],
+          {"boundZone":""},
+          {"breakGroup":""},
+          //{"beamType":"|NORMAL", "longBoundRange":"", "shortBoundRange":""},
+
+          //damper
+          //{"beamDeform":15000,"beamStrength":60000},
+          //{"beamSpring":51000,"beamDamp":8000},
+          ["fem4l", "n18"],
+          ["fem4r", "n28"],
+          ["fem4r", "n9"],
+          ["fem4l", "n8"],
+          //{"dampCutoffHz":""},
+
+          //prevent unrealistic motor ejection
+          //{"beamSpring":21000,"beamDamp":300},
+          //{"beamDeform":10000,"beamStrength":50000},
+          ["fem4l", "n4"],
+          ["fem3l", "n4"],
+          ["fem3r", "n14"],
+          ["fem4r", "n14"],
+          ["fem3l", "n2"],
+          ["fem3r", "n26"],
+          //{"beamSpring":7000,"beamDamp":300},
+          ["fem4l", "n28"],
+          ["fem4l", "n9"],
+          ["fem4r", "n18"],
+          ["fem4r", "n8"],
+
+          //motor limiters
+          //{"beamType":"|SUPPORT", "beamLongBound":5.0},
+          //{"beamSpring":1001000,"beamDamp":150,"beamDeform":50000,"beamStrength":"FLT_MAX"},
+          //front end collide
+          //{"beamPrecompression":0.3},
+          ["fem2r", "n19"],
+          ["fem4r", "n23"],
+          ["fem2l", "n22"],
+          ["fem4l", "n13"],
+          ["fem2r", "n18"],
+          ["fem2l", "n18"],
+
+          //firewall collide
+          //{"beamDeform":40000},
+          //{"beamPrecompression":0.8},
+          ["fem1l", "n12"],
+          ["fem3l", "n7"],
+          ["fem1r", "n24"],
+          ["fem3r", "n26"],
+          ["fem1r", "n12"],
+          ["fem1l", "n24"],
+          ["fem3r", "n2"],
+          ["fem3l", "n26"],
+          ["fem3r", "n10"],
+          ["fem3l", "n11"],
+
+          //side collide
+          //{"beamSpring":3001000,"beamDeform":50000},
+          //{"beamPrecompression":0.95},
+          ["fem3r", "n6"],
+          ["fem4r", "n6"],
+          ["fem3l", "n16"],
+          ["fem4l", "n16"],
+          ["fem1l", "n16"],
+          ["fem2l", "n16"],
+          ["fem1r", "n6"],
+          ["fem2r", "n6"],
+
+          //subframe collide
+          //{"beamPrecompression":0.95},
+          ["fem4r", "n27"],
+          ["fem4r", "n9"],
+          ["fem3r", "n9"],
+          ["fem4l", "n7"],
+          ["fem4l", "n8"],
+          ["fem3l", "n8"],
+
+          //extreme crash situations
+          //{"beamType":"|SUPPORT", "beamLongBound":15.0},
+          //{"beamSpring":3001000,"beamDeform":20000},
+          //{"beamPrecompression":0.8},
+          ["fem1r", "n22"],
+          ["fem1l", "n2"],
+          ["fem3l", "n2"],
+          ["fem3r", "n22"],
+          ["fem3r", "n3"],
+          ["fem3l", "n23"],
+          ["fem1r", "n3"],
+          ["fem1l", "n23"],
+
+          //motor break
+          //{"beamLongBound":0.9},
+          //{"beamSpring":401000,"beamDamp":150,"beamDeform":110000},
+          //{"beamPrecompression":0.7},
+          ["fem4l", "n23", {"name":"front_motor","beamStrength":35000,"disableMeshBreaking":true,"disableTriangleBreaking":true}],
+          ["fem4r", "n13", {"name":"front_motor","beamStrength":35000,"disableMeshBreaking":true,"disableTriangleBreaking":true}],
+          //{"beamPrecompression":0.65},
+          ["n14", "fem4l", {"name":"front_motor","beamStrength":35000,"disableMeshBreaking":true,"disableTriangleBreaking":true}],
+          ["n15", "fem4r", {"name":"front_motor","beamStrength":35000,"disableMeshBreaking":true,"disableTriangleBreaking":true}],
+          //{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          //{"deformLimitExpansion":1.2},
+    ],
+    
+    "beamng_diff_F": {
+	"differentials": [
+			["wheelName1", 	"wheelName2", "type", "state", "closedTorque", "engineTorqueCoef"],
+			["Wheel_FL","Wheel_FR", "lsd", "closed", 500, 1],
+		
+	],
+	"engine":{
+		"differential":7.00,
+		"axleFriction":1
+		},
+    "slotType" : "differential",
+	"flexbodies": [
+		 ["mesh", "[group]:", "nonFlexMaterials"],
+	],	
+    },
+
+    "beamng_diff_R": {
+	"differentials": [
+	    //Changed to 0 engineTorqueCoef
+		["wheelName1", 	"wheelName2", "type", "state", "closedTorque", "engineTorqueCoef"],
+    	["Wheel_BL","Wheel_BR", "lsd", "closed", 500, 0],		
+	],
+	"engine":{
+		"differential":7.00,
+		"axleFriction":1
+		},
+    "slotType" : "differential",
+	"flexbodies": [
+		 ["mesh", "[group]:", "nonFlexMaterials"],
+	],		
+    },
+},
+}
+

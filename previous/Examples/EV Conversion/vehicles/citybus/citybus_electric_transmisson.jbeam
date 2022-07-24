@@ -1,0 +1,167 @@
+{
+    "citybus_transmisson_electric_2spd": {
+        "information": {
+            "authors": "AkaShaadow",
+            "name": "2-Speed Electric Automatic Transmisson",
+            "value": 15000
+        },
+        "slotType": "citybus_transmission",
+        "slots": [
+            [ "type", "default", "description" ],
+            [
+                "citybus_converter",
+                "citybus_converter_electric",
+                "Torque Converter",
+                { "coreSlot": true }
+            ],
+            [ "citybus_transfer_case", "citybus_transfer_case_4WD", "Transfer Case" ]
+        ],
+        "powertrain": [
+            [ "type", "name", "inputName", "inputIndex" ],
+            [ "torqueConverter", "torqueConverter", "mainEngine", 1 ],
+            [ "automaticGearbox", "gearbox", "torqueConverter", 1 ]
+        ],
+        "gearbox": {
+            "uiName": "Gearbox",
+            "gearRatios": [ -8, 0, 8, 2.5 ],
+            "friction": 1.24,
+            "dynamicFriction": 0.0012,
+            "torqueLossCoef": 0.0155,
+            "parkLockTorque": 50000,
+            "additionalEngineInertia": 0.05,
+            "gearboxNode:": [ "tra1" ]
+        },
+        "vehicleController": {
+            "automaticModes": "PRND12",
+            "calculateOptimalLoadShiftPoints": true,
+            "shiftDownRPMOffsetCoef": 1.2,
+            //"aggressionSmoothingUp":2
+            //"aggressionSmoothingDown":0.06
+            "lowShiftDownRPM": [ 0, 0, 0, 1600, 1600, 1500, 1400, 1300, 1300 ],
+            "lowShiftUpRPM": [ 0, 0, 2800, 2600, 2400, 2200, 2000, 2000 ],
+            "clutchLaunchStartRPM": 2500,
+            "clutchLaunchTargetRPM": 3000,
+            "transmissionGearChangeDelay": 0.1
+        },
+        "flexbodies": [
+            [ "mesh", "[group]:" ],
+            [
+                "citybus_transmission",
+                [ "citybus_transmission", "citybus_engine_L", "citybus_engine_R" ]
+            ]
+        ],
+        "nodes": [
+            [ "id", "posX", "posY", "posZ" ],
+            { "selfCollision": true },
+            { "collision": true },
+            //--TRANSMISSION CONE--
+            { "nodeWeight": 80 },
+            { "frictionCoef": 0.5 },
+            { "nodeMaterial": "|NM_METAL" },
+            { "group": "citybus_transmission" },
+            [ "tra2r", -0.22, 4.15, 0.28 ],
+            [ "tra2l", 0.22, 4.15, 0.28 ],
+            [ "tra1", -0.05, 4.28, 0.562 ],
+            [ "tra3r", -0.15, 4.4, 0.73 ],
+            [ "tra3l", 0.15, 4.4, 0.73 ],
+            { "group": "" }
+        ],
+        "beams": [
+            [ "id1:", "id2:" ],
+            //--TRANSMISSION CONE--
+            {
+                "beamPrecompression": 1,
+                "beamType": "|NORMAL",
+                "beamLongBound": 1,
+                "beamShortBound": 1
+            },
+            {
+                "beamSpring": 20001000,
+                "beamDamp": 5000
+            },
+            {
+                "beamDeform": 250000,
+                "beamStrength": "FLT_MAX"
+            },
+            [ "tra1", "tra2r" ],
+            [ "tra1", "tra2l" ],
+            [ "tra1", "tra3r" ],
+            [ "tra1", "tra3l" ],
+            [ "tra2r", "tra2l" ],
+            [ "tra3r", "tra3l" ],
+            [ "tra2r", "tra3r" ],
+            [ "tra2l", "tra3l" ],
+            [ "tra2r", "tra3l" ],
+            [ "tra2l", "tra3r" ],
+            //attach to engine
+            [ "tra1", "en2r" ],
+            [ "tra1", "en2l" ],
+            [ "tra3l", "en1l" ],
+            [ "tra3r", "en1r" ],
+            [ "tra2r", "en2r" ],
+            [ "tra2r", "en2l" ],
+            [ "tra2r", "en4r" ],
+            [ "tra2r", "en4l" ],
+            [ "tra2l", "en2r" ],
+            [ "tra2l", "en2l" ],
+            [ "tra2l", "en4r" ],
+            [ "tra2l", "en4l" ],
+            [ "tra3r", "en2r" ],
+            [ "tra3r", "en2l" ],
+            [ "tra3r", "en4r" ],
+            [ "tra3r", "en4l" ],
+            [ "tra3l", "en2r" ],
+            [ "tra3l", "en2l" ],
+            [ "tra3l", "en4r" ],
+            [ "tra3l", "en4l" ],
+            //transmission mounts
+            {
+                "beamPrecompression": 1,
+                "beamType": "|NORMAL",
+                "beamLongBound": 1,
+                "beamShortBound": 1
+            },
+            {
+                "beamSpring": 4001000,
+                "beamDamp": 2500
+            },
+            {
+                "beamDeform": 50000,
+                "beamStrength": 295000
+            },
+            [ "tra2l", "fs15l" ],
+            [ "tra2r", "fs15r" ],
+            [ "tra1", "fs15l" ],
+            [ "tra1", "fs15r" ],
+            [ "tra2l", "fs15r" ],
+            [ "tra2r", "fs15l" ],
+            {
+                "beamPrecompression": 1,
+                "beamType": "|NORMAL",
+                "beamLongBound": 1,
+                "beamShortBound": 1
+            }
+        ]
+    },
+    "citybus_converter_electric": {
+        "information": {
+            "authors": "AkaShaadow",
+            "name": "Electric Locking Torque Converter",
+            "value": 250
+        },
+        "slotType": "citybus_converter",
+        "torqueConverter": {
+            "uiName": "Torque Converter Electric",
+            "converterDiameter": 0.3,
+            "converterStiffness": 8,
+            "couplingAVRatio": 0.85,
+            "stallTorqueRatio": 2.2,
+            "lockupClutchTorque": 50000,
+            "additionalEngineInertia": 0.001
+        },
+        "vehicleController": {
+            "torqueConverterLockupRPM": 1,
+            "torqueConverterLockupMinGear": 1
+        }
+    }
+}

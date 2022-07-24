@@ -1,0 +1,29 @@
+{
+"wendover_halfshaft_F_electric": {
+    "information":{
+        "authors":"AkaShaadow",
+        "name":"Better Front Half Shafts",
+        "value":50,
+    },
+    "slotType" : "wendover_halfshaft_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["wendover_halfshaft_F", ["wendover_halfshaft_F","wendover_transmission","wheelhub_FR","wheelhub_FL","wheelhub_FR","wheelhub_FL"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.12, "beamShortBound":0.08},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":324000,"beamStrength":855000},
+          {"beamLimitSpring":7501000,"beamLimitDamp":300},
+          ["fw1r","tra1r", {"name":"halfshaft_FR", "breakGroup":"wheel_FR", "breakGroupType":1, "deformGroup":"wheelaxleFR", "deformationTriggerRatio":0.001, "optional":true}],
+          ["fw1l","tra1l", {"name":"halfshaft_FL", "breakGroup":"wheel_FL", "breakGroupType":1, "deformGroup":"wheelaxleFL", "deformationTriggerRatio":0.001, "optional":true}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "wheelaxleFL", "differential_F", 1, {"deformGroups":["wheelaxleFL"], "breakTriggerBeam":"halfshaft_FL", "uiName":"Front Left Halfshaft", "friction":1.69, "dynamicFriction":0.0042}],
+        ["shaft", "wheelaxleFR", "differential_F", 2, {"deformGroups":["wheelaxleFR"], "breakTriggerBeam":"halfshaft_FR", "uiName":"Front Right Halfshaft", "friction":1.69, "dynamicFriction":0.0042}],
+    ],
+},
+}

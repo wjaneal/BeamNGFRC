@@ -1,0 +1,23 @@
+{
+   "etki_converter_electric": {
+        "information": {
+            "authors": "AkaShaadow",
+            "name": "Electric Locking Torque Converter",
+            "value": 250
+        },
+        "slotType": "etki_converter",
+        "torqueConverter": {
+            "uiName": "Torque Converter Electric",
+            "converterDiameter": 0.3,
+            "converterStiffness": 8,
+            "couplingAVRatio": 0.85,
+            "stallTorqueRatio": 2.2,
+            "lockupClutchTorque": 5000,
+            "additionalEngineInertia": 0.001
+        },
+        "vehicleController": {
+            "torqueConverterLockupRPM": 1,
+            "torqueConverterLockupMinGear": 1
+        }
+    }
+}

@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.93.9 commit date:2022-04-19, commit time:14:25, hash:31712ce77a6a</authoring_tool>
     </contributor>
-    <created>2022-07-18T13:28:10</created>
-    <modified>2022-07-18T13:28:10</modified>
+    <created>2022-07-18T14:14:26</created>
+    <modified>2022-07-18T14:14:26</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -30,6 +30,23 @@
             </emission>
             <diffuse>
               <texture texture="_0220711_100234_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_001-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -295,6 +312,9 @@
   <library_materials>
     <material id="WheelMaterial-material" name="WheelMaterial">
       <instance_effect url="#WheelMaterial-effect"/>
+    </material>
+    <material id="Material_001-material" name="Material.001">
+      <instance_effect url="#Material_001-effect"/>
     </material>
     <material id="Letters-material" name="Letters">
       <instance_effect url="#Letters-effect"/>
@@ -1965,7 +1985,15 @@
       </node>
       <node id="ChassisBeams" name="ChassisBeams" type="NODE">
         <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
-        <instance_geometry url="#ChassisBeams-mesh" name="ChassisBeams"/>
+        <instance_geometry url="#ChassisBeams-mesh" name="ChassisBeams">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_001-material" target="#Material_001-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
       </node>
       <node id="Text_003" name="Text.003" type="NODE">
         <matrix sid="transform">-1.42363e-7 1.27966e-8 0.4182168 -1.82152e-4 0.3547198 5.13577e-15 1.67847e-7 9.5404e-4 0 0.2927517 -1.82808e-8 -0.001326814 0 0 0 1</matrix>

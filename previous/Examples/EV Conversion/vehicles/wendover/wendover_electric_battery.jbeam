@@ -1,0 +1,119 @@
+{
+"wendover_battery_75": {
+    "information":{
+        "authors":"AkaShaadow",
+        "name":"75kWh Battery Pack",
+        "value":340,
+    },
+    "slotType" : "wendover_fueltank",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["wendover_fueltank", ["wendover_body"]],
+    ],
+    "variables": [
+            [ "name", "type", "unit", "category", "default", "min", "max", "title", "description" ],
+            [
+                "$fuel",
+                "range",
+                "kWh",
+                "Chassis",
+                75,
+                0,
+                75,
+                "Battery Level",
+                "Initial battery charge",
+                { "stepDis": 0.5 }
+            ]
+        ],
+    "energyStorage": [
+            [ "type", "name" ],
+            [ "electricBattery", "mainBattery" ]
+        ],
+    "mainBattery": {
+            "energyType": "electricEnergy",
+            "batteryCapacity": 75,
+            "startingCapacity": "$fuel"
+        },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //fuel tank particles
+         {"frictionCoef":1},
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":""},
+         {"nodeWeight":0.5},
+         {"engineGroup":["fuel"]},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.06,"smokePoint":220,"containerBeam":"fuelTank"},
+         ["ft1",     0, 1.05, 0.33],
+         ["ft1l", 0.31, 1.05, 0.33],
+         ["ft1r",-0.31, 1.05, 0.33],
+         ["ft2l", 0.31, 0.89, 0.33],
+         ["ft2r",-0.31, 0.89, 0.33],
+         {"selfIgnitionCoef":false,"selfCollision":false},
+         ["ft3",     0, 0.72, 0.29],
+         ["ft3l", 0.31, 0.72, 0.29],
+         ["ft3r",-0.31, 0.72, 0.29],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"vaporPoint":false,"specHeat":false,"selfIgnitionCoef":false,"smokePoint":false,"containerBeam":false},
+         {"engineGroup":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":20000,"beamDamp":500},
+          {"beamDeform":5000,"beamStrength":35000},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          //connect fuel particles to tank
+          {"deformLimitExpansion":""},
+          ["ft1","r1"],
+          ["ft1","f9l"],
+          ["ft1","f9r"],
+
+          {"breakGroupType":1},
+          {"breakGroup":"fueltank"},
+          ["ft1l","r1ll"],
+          ["ft1l","f9l"],
+          ["ft1l","f4l"],
+
+          ["ft1r","r1rr"],
+          ["ft1r","f9r"],
+          ["ft1r","f4r"],
+
+          //["ft2","r1"],
+          //["ft2","f4l"],
+          //["ft2","f4r"],
+
+          ["ft2l","f9l"],
+          ["ft2l","f4l"],
+          ["ft2l","f8l"],
+
+          ["ft2r","f9r"],
+          ["ft2r","f4r"],
+          ["ft2r","f8r"],
+
+          ["ft3","r1"],
+          ["ft3","f8l"],
+          ["ft3","f8r"],
+
+          ["ft3l","f8r"],
+          ["ft3l","f8l"],
+          ["ft3l","f3l"],
+
+          ["ft3r","f8l"],
+          ["ft3r","f8r"],
+          ["ft3r","f3r"],
+
+          {"breakGroupType":0},
+          {"beamSpring":100,"beamDamp":20},
+          {"beamDeform":120,"beamStrength":160},
+          {"optional":true},
+          ["f4l","f4r", {"name":"fuelTank","containerBeam": "fuelTank"}],
+          ["f4l","r1"],
+          ["f4r","r1"],
+          {"optional":false},
+          {"deformLimitExpansion":1.1},
+          {"breakGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+    ],
+},
+}

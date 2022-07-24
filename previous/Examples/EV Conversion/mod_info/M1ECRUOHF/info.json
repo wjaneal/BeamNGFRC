@@ -1,0 +1,161 @@
+{
+    "attachments": [
+        {
+            "data_filename": "839078.png",
+            "original_filename": "screenshot_2021-09-12_17-54-19.png",
+            "thumb_filename": "thumbs\/839078.jpg"
+        },
+        {
+            "data_filename": "839079.png",
+            "original_filename": "screenshot_2021-09-15_20-40-27.png",
+            "thumb_filename": "thumbs\/839079.jpg"
+        },
+        {
+            "data_filename": "839080.png",
+            "original_filename": "screenshot_2021-09-15_20-41-19.png",
+            "thumb_filename": "thumbs\/839080.jpg"
+        }
+    ],
+    "resource_id": 19811,
+    "current_version_id": 34910,
+    "download_count": 0,
+    "resource_version_id": 35293,
+    "version_string": "0.6",
+    "last_update": 1632728110,
+    "rating_avg": 4.63636,
+    "rating_count": 0,
+    "rating_sum": 0,
+    "resource_category_id": 7,
+    "resource_date": 1631779711,
+    "review_count": 11,
+    "tag_line": "Adds electric motors to different cars in BeamNG.drive",
+    "update_count": 4,
+    "path": "M1ECRUOHF\/34910\/",
+    "filename": "EV-Conversion_Pack.zip",
+    "title": "Electric Vehicle Conversion Pack",
+    "user_id": 452789,
+    "username": "AkaShaadow",
+    "tagid": "M1ECRUOHF",
+    "message": "This is a modpack for EV conversions of cars in BeamNG.drive.\n\nAt the moment it supports 9 different Cars.\n\nThe Gavril D-Series\n[ATTACH]839079[\/ATTACH]\nThe Gavril H-Series\n[ATTACH]839078[\/ATTACH]\nThe Gavril Roamer\n[ATTACH]839847[\/ATTACH]\nThe Hirochi Sunburst\n[ATTACH]839080[\/ATTACH]\nThe Wentward DT40L\n[ATTACH]839846[\/ATTACH]\nThe Autobello Picolina\n[ATTACH]839968[\/ATTACH]\nNote: to achieve this time, I had to turn the gravity up, because the Picolina would still do wheelies at over 200 kp\/h, with normal gravity the car can still go sub 9 secs\n \nThe ETK I-Series\n[ATTACH]839969[\/ATTACH]\nThe Soliad Wendover\n[ATTACH]840995[\/ATTACH]\nThe Ibishu Hopper\n[ATTACH]841418[\/ATTACH]\n\nThe mod is still using the normal transmissons and drivetrain of the cars.\n\n\nThere are 4 electric motors.\n\nThe \"eco\" one has the same torque as the front electric motor from the vivace.\n\nThe normal one outputs about 750 Nm or 550 lb-ft and 500 bhp.\n\nAnd the \"power\" one, which outputs about 1600 Nm or 1175 lb-ft and 2150 bhp.\n\nThe \"custom\" one, which allows you to set a custom torque curve in the tuning window. (Up to 2000Nm or 1470 lb-ft, 5500bhp and 20,000 rpm)\n\n\nSpeedlimiter:\n\nThe stock speed limiter is at 160 kp\/h or 100 mp\/h but there is an option for a speed limiter delete.\n\n\nTransmissons:\n\nFor the Gavril H&D-Series, there are 2 new transmissons. A 2-speed automatic and the standard 6-speed automatic with the \"M\" mode for manual gear selection. There is also a locking Torque Converter capable of more power and locking earlier.\n\nYou can use any transmisson you like, apart from dcts and the new transmissons with different engines.\n\n\nBatterie Packs:\n\nFor the H-Series there are 2 batterie packs (1 per frame type)\nFor the D-Series there are 4 batterie packs (1 per frame type)\nFor the Sunburst there is 1 batterie pack\n\nThe batterie packs vary in size according to what seemed realistic.\n\n\nPlans for the future:\n-Add more vehicles\n-Add configurations\n-Add regenerative braking (direct drive might be necessary)\n\nKnown issues:\n\n- If the gear ratio is too low (for example 15:1), the rpm is not smooth but jumpy and towards the rev limiter the rpm can get stuck, which can break parts of the car. Shifting into neutral can help with this but using higher gear ratios (8:1 works fine) is the only true solution to that, I've found.\n\n- Braking takes longer when in gear, this gets worse, the higher the motor rpm is. This is probably due to the inertia of the entire drive train an especially the transmission, motor, and torque converter. This is solved, by shifting in to neutral (or pressing the clutch, if you are using a manual transmission).\n\n- Also, the power takes a few seconds to fully go away, after you let off the throttle, after a wheelspin for example. This for the same reason, as the braking problems.\n\n\nThanks for reading this, if you have any questions, ideas, on how to improve the mod or requests for the next cars to add. I'll be glad to answer those.\n\n\nSpecial thanks to the team behind the great game of BeamNG.drive\n\n\nEnjoy!\n\nIf you are looking for more EV conversions, ChickenFeline0 has made a great one for the ETK 800 and K-Series: [URL]https:\/\/www.beamng.com\/resources\/etk-800-k-series-electric-aftermarket.19570\/[\/URL]",
+    "category_title": "",
+    "prefix_title": "Alpha",
+    "via": "packed by repo on Wed, 13 Oct 2021 22:00:25 GMT",
+    "hashes": [
+        [
+            "vehicles\/common\/pigeon\/pigeon_electric_transmission.jbeam",
+            "7a6330dfc2cb02dd"
+        ],
+        [
+            "vehicles\/common\/pigeon\/pigeon_electric_battery.jbeam",
+            "40131225e6012525"
+        ],
+        [
+            "vehicles\/common\/pigeon\/pigeon_engine_electric.jbeam",
+            "4d53b1bcdf81b1d0"
+        ],
+        [
+            "vehicles\/common\/pickup\/pickup_electric_battery.jbeam",
+            "5215a903daef2981"
+        ],
+        [
+            "vehicles\/common\/pickup\/pickup_electric_transmisson.jbeam",
+            "f9d5a729687197f4"
+        ],
+        [
+            "vehicles\/common\/pickup\/pickup_engine_electric.jbeam",
+            "4937a071ec8e087c"
+        ],
+        [
+            "vehicles\/van\/van_electric_battery.jbeam",
+            "a712953b31c44bed"
+        ],
+        [
+            "vehicles\/van\/van_engine_electric.jbeam",
+            "7e9caa5c35d99903"
+        ],
+        [
+            "vehicles\/van\/van_electric_transmisson.jbeam",
+            "55c8156fa73810d9"
+        ],
+        [
+            "vehicles\/citybus\/citybus_electric_battery.jbeam",
+            "5602cf0315ec4e67"
+        ],
+        [
+            "vehicles\/citybus\/citybus_electric_transmisson.jbeam",
+            "4f3f6b38f1e8aeeb"
+        ],
+        [
+            "vehicles\/citybus\/citybus_engine_electric.jbeam",
+            "fd99074da726a707"
+        ],
+        [
+            "vehicles\/autobello\/autobello_engine_electric.jbeam",
+            "58765c55e1ccc8b5"
+        ],
+        [
+            "vehicles\/autobello\/autobello_electric_battery.jbeam",
+            "5615a25757658279"
+        ],
+        [
+            "vehicles\/autobello\/autobello_electric_transmisson.jbeam",
+            "75ebd0fabb2ff9e2"
+        ],
+        [
+            "vehicles\/hopper\/hopper_electric_transmission.jbeam",
+            "a5c32c0ee9d9447b"
+        ],
+        [
+            "vehicles\/hopper\/hopper_electric_battery.jbeam",
+            "c1a3550fda47f696"
+        ],
+        [
+            "vehicles\/hopper\/hopper_engine_electric.jbeam",
+            "86dd378488ed3caa"
+        ],
+        [
+            "vehicles\/wendover\/wendover_electric_transmission.jbeam",
+            "c55bdb6c9db3080e"
+        ],
+        [
+            "vehicles\/wendover\/wendover_electric_differential_R.jbeam",
+            "e08622fd556a90fa"
+        ],
+        [
+            "vehicles\/wendover\/wendover_electric_differential_F.jbeam",
+            "85f0e78ed885925d"
+        ],
+        [
+            "vehicles\/wendover\/wendover_engine_electric.jbeam",
+            "871661a9b5e69ecd"
+        ],
+        [
+            "vehicles\/wendover\/wendover_electric_battery.jbeam",
+            "a690a5214082f25d"
+        ],
+        [
+            "vehicles\/sunburst\/sunburst_electric_battery.jbeam",
+            "be62845e1b9c7040"
+        ],
+        [
+            "vehicles\/sunburst\/sunburst_engine_electric.jbeam",
+            "61b7c8b406e78c84"
+        ],
+        [
+            "vehicles\/etki\/etki_electric_transmission.jbeam",
+            "436e3a9d2968ade3"
+        ],
+        [
+            "vehicles\/etki\/etki_engine_electric.jbeam",
+            "1dbceb4c6b1b20d3"
+        ],
+        [
+            "vehicles\/etki\/etki_electric_battery.jbeam",
+            "ca69f6a4ffe04cd2"
+        ],
+        [
+            "vehicles\/etki\/etki_electric_differential_F.jbeam",
+            "66bd7b16c1b1d0bf"
+        ]
+    ]
+}

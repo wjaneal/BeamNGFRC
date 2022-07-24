@@ -1,0 +1,149 @@
+{
+    "pigeon_battery_40": {
+        "information": {
+            "authors": "AkaShaadow",
+            "name": "40kWh Battery Pack",
+            "value": 8000
+        },
+        "slotType": "pigeon_fueltank",
+        "flexbodies": [
+            [ "mesh", "[group]:", "nonFlexMaterials" ],
+            [
+                "pigeon_fueltank",
+                [ "pigeon_frame", "pigeon_fueltank" ],
+                [],
+                {
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        ],
+        "energyStorage": [
+            [ "type", "name" ],
+            [ "electricBattery", "mainBattery" ]
+        ],
+        "variables": [
+            [ "name", "type", "unit", "category", "default", "min", "max", "title", "description" ],
+            [
+                "$fuel",
+                "range",
+                "kWh",
+                "Chassis",
+                100,
+                0,
+                100,
+                "Battery Level",
+                "Initial battery charge",
+                { "stepDis": 0.5 }
+            ]
+        ],
+        "mainBattery": {
+            "energyType": "electricEnergy",
+            "batteryCapacity": 100,
+            "startingCapacity": "$fuel"
+        },
+            "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //fuel tank particles
+         {"frictionCoef":1},
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":""},
+         {"nodeWeight":0.48},
+         {"engineGroup":["fuel"]},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"chemEnergy":40,"burnRate":0.3,"flashPoint":220,"vaporPoint":90,"specHeat":0.03,"selfIgnitionCoef":0.1,"smokePoint":220,"containerBeam":"fuelTank"},
+         ["ft2l", -0.12, 0.17, 0.23],
+         ["ft2r", -0.34, 0.17, 0.26],
+         {"selfIgnitionCoef":false},
+         ["ft1l", -0.12, -0.06, 0.23],
+         ["ft1r", -0.34, -0.06, 0.26],
+         {"engineGroup":""},
+         {"group":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"vaporPoint":false,"specHeat":false,"selfIgnitionCoef":false,"smokePoint":false,"containerBeam":false},
+
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":0.5},
+         {"group":"pigeon_fueltank"},
+         ["ft3l", -0.11, 0.3, 0.21],
+         //rigidifier
+         ["ft4l", -0.2, 0.1, 0.5, {"collision":false, "selfCollision":false}],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //fuel tank beams
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+
+          //connect fuel particles to tank
+          {"beamSpring":500000,"beamDamp":200},
+          {"beamDeform":5000,"beamStrength":"FLT_MAX"},
+          {"breakGroupType":1},
+          {"breakGroup":"fueltank"},
+          {"deformLimitExpansion":""},
+          ["ft1l","ft4l"],
+          ["ft1l","ft3l"],
+          ["ft1l","f9r"],
+
+          {"breakGroup":"fueltank"},
+          ["ft1r","f3"],
+          ["ft1r","ft3l"],
+          ["ft1r","ft4l"],
+          {"breakGroup":""},
+
+
+          {"beamDeform":5000,"beamStrength":50000},
+          ["ft2l","ft4l"],
+          ["ft2l","ft3l"],
+          ["ft2l","f9r"],
+
+          ["ft2r","ft4l"],
+          ["ft2r","ft3l"],
+          ["ft2r","f9r"],
+
+          //tank structure
+          {"beamSpring":501000,"beamDamp":20},
+          {"beamDeform":2500,"beamStrength":"FLT_MAX"},
+          {"breakGroupType":0},
+          ["ft3l", "f4r"],
+          ["ft3l", "f10r"],
+          ["ft3l", "f3"],
+          ["ft3l", "f9"],
+          ["ft3l", "f3r"],
+          //rigidifier
+          ["ft4l", "ft3l"],
+          ["ft4l", "f3"],
+          ["ft4l", "f3r"],
+          ["ft4l", "f4r"],
+          ["ft4l", "f9"],
+          ["ft4l", "f9r"],
+          ["ft4l", "f10r"]
+
+          {"beamSpring":80,"beamDamp":10},
+          {"beamDeform":"FLT_MAX","beamStrength":100},
+          {"breakGroup":"fueltank"},
+          {"optional":true},
+          ["ft3l", "f3r", {"name":"fuelTank","containerBeam": "fuelTank"}],
+          ["f4r", "f3"],
+          ["ft3l", "f9r"],
+          ["ft3l", "f3r"],
+          {"optional":false},
+          {"deformLimitExpansion":1.2},
+          {"breakGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"pigeon_fueltank"},
+            {"triangleType":"NONCOLLIDABLE"},
+            ["ft3l", "f3", "f3r"],
+            ["f3r", "f4r", "ft3l"],
+            {"triangleType":"NORMALTYPE"},
+            {"group":""},
+    ],
+},
+}

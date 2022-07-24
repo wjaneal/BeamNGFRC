@@ -1,0 +1,150 @@
+{
+"autobello_transaxle_4A": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4-Speed Automatic Transaxle",
+        "value":2100,
+    },
+
+    "slotType" : "autobello_transaxle",
+
+    "slots": [
+        ["type", "default", "description"],
+        [
+                "autobello_converter",
+                "autobello_converter_electric",
+                "Torque Converter",
+                { "coreSlot": true }
+            ],
+        ["autobello_differential_R","autobello_differential_R", "Rear Differential"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        [ "torqueConverter", "torqueConverter", "mainEngine", 1 ],
+            [ "automaticGearbox", "gearbox", "torqueConverter", 1 ]
+    ],
+    "gearbox": {
+        "uiName": "Gearbox",
+        "gearRatios": [ -3.88, 0, 3.8, 2.06, 1.32, 0.86 ],
+        "friction": 0.56,
+        "dynamicFriction": 0.00062,
+        "torqueLossCoef": 0.0155,
+        "gearboxNode:": [ "tra1" ],
+        "parkLockTorque": 2500,
+        "gearWhineCoefsInput": [ 0.56, 0.00, 0.25, 0.23, 0.21, 0.19 ],
+        "gearWhineCoefsOutput": [ 0.00, 0.00, 0.17, 0.17, 0.17, 0.19 ],
+        "gearWhineInputEvent": "event:>Vehicle>Transmission>helical_01>twine_in_tuned",
+        "gearWhineOutputEvent": "event:>Vehicle>Transmission>helical_01>twine_out_tuned",
+
+        "forwardInputPitchCoef": 1.05
+        //"forwardOutputPitchCoef":1
+        //"reverseInputPitchCoef":0.7
+        //"reverseOutputPitchCoef":0.7
+
+        //"gearWhineInputPitchCoefSmoothing":50
+        //"gearWhineOutputPitchCoefSmoothing":50
+        //"gearWhineInputVolumeCoefSmoothing":10
+        //"gearWhineOutputVolumeCoefSmoothing":10
+
+        //"gearWhineFixedCoefOutput": 0.7
+        //"gearWhineFixedCoefInput": 0.4
+    },
+    "vehicleController": {
+    "automaticModes": "PRNDM",
+        "calculateOptimalLoadShiftPoints": true,
+        "shiftDownRPMOffsetCoef":1.3,
+        "lowShiftDownRPM":[0,0,0,1500,1400,1300],
+        "lowShiftUpRPM":[0,0,2800,2700,2600],
+        //"wheelSlipUpThreshold":10000,
+    },
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["autobello_gearbox", ["engine","transaxle"]],
+        ["autobello_shifter_4M", ["floor"]],
+    ],
+    "props": [
+        ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",          "rotation",                 "translation",        "min", "max", "offset", "multiplier"],
+        //pedals
+        ["clutch",    "autobello_clutchpedal", "b1l","b1ll","b1rr", {"x":0, "y":-90, "z":0}, {"x":20, "y":0, "z":0}, {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes":[
+        ["id", "posX", "posY", "posZ"],
+        //--4 Speed Manual Transaxle--
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.7},
+        {"group":"transaxle"},
+        {"nodeWeight":7},
+        ["tra1", 0.0, 0.76, 0.31],
+        {"selfCollision":false},
+        {"collision":false},
+        {"nodeWeight":6},
+        ["tra2r",-0.12, 1.07, 0.31],
+        ["tra2l", 0.12, 1.07, 0.31],
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":10001000,"beamDamp":250},
+        {"beamDeform":150000,"beamStrength":"FLT_MAX"},
+        ["e1l", "tra1"],
+        ["e1r", "tra1"],
+        ["e2l", "tra1"],
+        ["e2r", "tra1"],
+        ["tra2l", "tra2r"],
+        ["tra2l", "e1l"],
+        ["tra2r", "e1r"],
+        ["tra2l", "e2l"],
+        ["tra2r", "e2r"],
+        ["tra2l", "e2r"],
+        ["tra2r", "e2l"],
+        ["tra2l", "e1r"],
+        ["tra2r", "e1l"],
+        ["tra2l", "tra1"],
+        ["tra2r", "tra1"],
+        //transmission mounts
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":801000,"beamDamp":2500},
+        {"beamDeform":12000,"beamStrength":35000},
+        ["tra1", "k3", {"dampCutoffHz":500}],
+        {"beamSpring":401000,"beamDamp":2500},
+        ["tra1", "k1r", {"dampCutoffHz":500}],
+        ["tra1", "k1l", {"dampCutoffHz":500}],
+        ["tra1", "k3r", {"dampCutoffHz":500}],
+        ["tra1", "k3l", {"dampCutoffHz":500}],
+        ["tra1", "b4l", {"dampCutoffHz":500}],
+        ["tra1", "b4r", {"dampCutoffHz":500}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":5},
+        ["tra1", "e1l", "e2l"],
+        ["e2l", "e2r", "tra1"],
+        ["e2r", "e1r", "tra1"],
+        ["e1r", "e1l", "tra1"],
+    ],
+},
+    "autobello_converter_electric": {
+        "information": {
+            "authors": "AkaShaadow",
+            "name": "Electric Locking Torque Converter",
+            "value": 250
+        },
+        "slotType": "autobello_converter",
+        "torqueConverter": {
+            "uiName": "Torque Converter Electric",
+            "converterDiameter": 0.3,
+            "converterStiffness": 8,
+            "couplingAVRatio": 0.85,
+            "stallTorqueRatio": 2.2,
+            "lockupClutchTorque": 5000,
+            "additionalEngineInertia": 0.001
+        },
+        "vehicleController": {
+            "torqueConverterLockupRPM": 1,
+            "torqueConverterLockupMinGear": 1
+        }
+    }
+}
