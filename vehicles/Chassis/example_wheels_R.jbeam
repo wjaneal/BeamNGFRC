@@ -5,20 +5,22 @@
 		"name":"Example Car Rear Wheels",
 	}
     "slotType" : "beamng_Wheel_R",
+    "slots": [
+    	["type:","default:","description:"],
+	    ["beamng_Wheel_BL", "Wheel_BL", "Back Left Wheel"],
+	    ["beamng_Wheel_BR", "Wheel_BR", "Back Right Wheel"],
+	   	],
+	"flexbodies": [
+		 ["mesh", "[group]:", "nonFlexMaterials"],
+		 ["Wheel_BL", ["beamng_Wheel_BL"],"WheelMaterial"],
+		 ["Wheel_BR", ["beamng_Wheel_BR"],"WheelMaterial"],
+	],
+
 	"scalebeamSpring":0.84,
 	"scalebeamDamp":1.3,
 	"scalebeamDeform":1.5,
 	"scalebeamStrength":1.78,
-	"flexbodies": [
-		 ["mesh", "[group]:", "nonFlexMaterials"],
-		 ["Wheel_BL", ["Wheel_BL"],"WheelMaterial"],
-		 ["Wheel_BR", ["Wheel_BR"],"WheelMaterial"],
-	],
-	"slots": [
-    	["type:","default:","description:"],
-	    ["Wheel_BL", "Wheel_BL", "Back Left Wheel"],
-	    ["Wheel_BR", "Wheel_BR", "Back Right Wheel"],
-	   	],
+	
 
 	"pressureWheels": [
 	   ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -30,10 +32,13 @@
         {"numRays":12}, 
         {"hasTire":"false"},
       
-         ["Wheel_BR", "Wheel_BR", "9999", "a2", "a7", 9999,  "b2t", -1,  {"speedo":true, "nodeCoupling:":"b2", "torqueArm:":"t2", "torqueCoupling:":"t2t"}],
-         ["Wheel_BL", "Wheel_BL", "9999", "a17", "a13", 9999,  "b17t", 1,  {"speedo":"false","nodeCoupling:":"b12", "torqueArm:":"t12", "torqueCoupling:":"t12t"}],
+         ["beamng_Wheel_BR", "beamng_Wheel_BR", "9999", "a2", "a7", 9999,  "b2t", -1,  {"speedo":true, "nodeCoupling:":"b2", "torqueArm:":"t2", "torqueCoupling:":"t2t"}],
+         ["beamng_Wheel_BL", "beamng_Wheel_BL", "9999", "a17", "a13", 9999,  "b17t", 1,  {"speedo":"false","nodeCoupling:":"b12", "torqueArm:":"t12", "torqueCoupling:":"t12t"}],
 
     ],
+    }
+}
 
-}
-}
+
+
+

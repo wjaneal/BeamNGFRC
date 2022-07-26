@@ -10,8 +10,7 @@
         //Slot for transmission
         [ "FRC_Power_Source", "FRC_Power_Source", "battery pack" ],
         [ "FRC_Transmission", "FRC_Transmission", "Transmission" ],
-        ["differential","beamng_diff_F", "Front Differential"],
-        ["differential","beamng_diff_R", "Rear Differential"],
+        
     ],
     "controller": [
         ["fileName"],
@@ -21,16 +20,7 @@
     "powertrain": [
         ["type", "name", "inputName", "inputIndex"],
         ["electricMotor", "mainEngine", "dummy", 0],
-        //["torqueConverter",  "FRCTorqueConverter", "frontMotor",1],
-        //["automaticGearbox", "FRCGearbox", "FRCTorqueConverter", 1],
-        //["shaft",            "FRCDriveshaft",      "FRCGearbox", 1],
-        //["differential",     "beamng_diff_F",        "FRCDriveshaft", 1],
-        //["shaft",            "frontAxleShaft1",      "beamng_diff_F", 1,{"connectedWheel":"Wheel_FL"}],
-        //["shaft",            "frontAxleShaft2",      "beamng_diff_F", 2,{"connectedWheel":"Wheel_FR"}],
-        //["differential",     "beamng_diff_R",        "myDriveshaft",      1           ]
-        //["shaft",            "backAxleShaft1",      "beamng_diff_R",        1,          {"connectedWheel":"BL"}]
-        //["shaft",            "backAxleShaft2",      "beamng_diff_R",        2,          {"connectedWheel":"BR"}]
-    ],
+        ],
     "mainEngine": {
 			"torque": [
 				[ "rpm", "torque" ],
@@ -39,96 +29,30 @@
 				[ 6000, 250 ],
 				[ 20000, 20 ],
 			],
-	"maxRPM":20100, //Max RPM before overrev damage is likely
-	"inertia":0.2, //(kg*m/s^2)
-	"friction":4, //Constant friction torque (Nm)
-	"dynamicFriction":0.0005, //Friction torque that increases with engine speed (Nm/rad/s)
-    "energyStorage": "mainBattery", //Name of the fuel tank
-	"requiredEnergyType":"battery", //Type of fuel required
-	"burnEfficiency": [ //How much fuel energy is converted to work in the cylinders (does not account for engine friction losses)
-				[0.00, 0.14],
-				[0.05, 0.29],
-				[0.40, 0.38],
-				[0.70, 0.47],
-				[1.00, 0.32],
-
+	    "maxRPM":20100, //Max RPM before overrev damage is likely
+	    "inertia":0.2, //(kg*m/s^2)
+	    "friction":4, //Constant friction torque (Nm)
+	    "dynamicFriction":0.0005, //Friction torque that increases with engine speed (Nm/rad/s)
+        "energyStorage": "FRC_Power_Source", //Name of the fuel tank
+	    "requiredEnergyType":"battery", //Type of fuel required
+	    "burnEfficiency": [ //How much fuel energy is converted to work in the cylinders (does not account for engine friction losses)
+			[0.00, 0.14],
+			[0.05, 0.29],
+			[0.40, 0.38],
+			[0.70, 0.47],
+			[1.00, 0.32],
 			],	
 	}
+	
     "vehicleController":{
-       "shiftLogicName":"electricMotor",
-        "motorNames": ["frontMotor"],
+       //"shiftLogicName":"FRCMotor",
+        "motorNames": ["FRCMotor"],
         "topSpeedLimitReverse": 15,
         "automaticModes":"PRND",
         },  		
 	
-
-	
-	/*		
-    "FRCTorqueConverter": {
-        "converterDiameter": 0.252,
-        "converterStiffness":10,
-        "couplingAVRatio":0.9,
-        "stallTorqueRatio":1.8,
-        "lockupClutchTorque":400,
-    },
-    "FRCGearbox": {
-      "gearRatios":[-2.27, 0, 2.79, 1.54, 1.00, 0.695],
-      //"parkLockTorque":2000,
-      "oneWayViscousCoef":8,
-      "friction": 1,
-    },
-    "FRCDriveshaft": {gearRatio:1}, 
-    "frontAxleShaft1": {gearRatio:1}, 
-    "frontAxleShaft2": {gearRatio:1}, 
-    "frontMotor":{
-        "torque":[
-            ["rpm", "torque"],
-            [0, 580],
-            [500, 580],
-            [1000, 580],
-            [1500, 580],
-            [2000, 580],
-            [3000, 560],
-            [4000, 520],
-            [5000, 500],
-            [6000, 483],
-            [7000, 475],
-            [8000, 458],
-            [9000, 423],
-            [10000, 400],
-			[11000, 385],
-			[12000, 369],
-			[13000, 358],
-			[14000, 347],
-            [15000, 330],
-            [16000, 305],
-            [17000, 277],
-			[18000, 243],
-			[19000, 190],
-			[20000, 70],
-        ],
-
-        "maxRPM":11000,
-        "inertia":0.10,
-        "friction":1,
-        "dynamicFriction":0.00025,
-        "electricalEfficiency":0.96,
-        //"torqueReactionNodes:":["fem4l","fem4r","fem1r"],
-        "energyStorage": "mainBattery",
-        //"electricsThrottleFactorName": "throttleFactorFront",
-        //"maximumWantedRegenTorque": 300
-
-        
-        //node beam interface
-        //"waterDamage": {"[engineGroup]:":["front_motor_waterdamage"]},
-        //"engineBlock": {"[engineGroup]:":["front_motor_block"]},
-        //"breakTriggerBeam":"front_motor",
-        //"uiName":"Front Motor",
-        //"soundConfig": "soundConfigFront",
-    },
-    */
     
-    "FRCDriveshaft": {gearRatio:1}, 
+    //"FRCDriveshaft": {gearRatio:1}, 
     "frontAxleShaft1": {gearRatio:1}, 
     "frontAxleShaft2": {gearRatio:1},
     
@@ -138,25 +62,37 @@
     },
     "FRC_Transmission":{
         "information":{
-        
-        
-        
         }
-     "slotType" : "FRC_Transmission",
-     
-		"slots": [
-			["type", "default", "description"]
+    "slotType" : "FRC_Transmission",
+	"slots": [
+			["type", "default", "description"],
 			
 		],
-
-		"gearbox": {
+		"vehicleController":{
+		     //manual transmission useful values
+			//"clutchLaunchStartRPM":1.70427651004, //RPM where launching behavior starts
+			//"clutchLaunchTargetRPM":1.70427651, //RPM it tries to maintain while launching
+			//"transmissionShiftDelay":0.1, //Time taken in between clutching actions
+			//"revMatchThrottle":0.47894759012197, //Controls shift rev matching assist. Reduce this value to as much as 0.25 for high powered engines
+			//"clutchInRate":10, //Controls shift assist clutching speed (value of 5 will be take 1/5 seconds to complete)
+			//"clutchOutRate":10, //Controls shift assist clutching speed (value of 5 will be take 1/5 seconds to complete)
+		},
+		"powertrain" : [
+		["type", "name", "inputName", "inputIndex"],
+		["frictionClutch", "clutch", "mainEngine", 1],
+		["automaticGearbox", "gearbox", "clutch", 1],
+        ["differential",     "beamng_diff_F",        "gearbox", 1],
+        ["shaft",            "frontAxleShaft1",      "beamng_diff_F", 1,{"connectedWheel":"beamng_Wheel_FL"}],
+        ["shaft",            "frontAxleShaft2",      "beamng_diff_F", 2,{"connectedWheel":"beamng_Wheel_FR"}],
+	    ],
+    "gearbox": {
 			//https://wiki.beamng.com/ManualGearbox
 			//"gearDamageThreshold":3000, //Multiplier for tolerance to smashing gears (no clutch + mismatched rpm)
 			"gearRatios":[-3.65, 0, 3],
 			"friction": 0, //Constant friction torque on input shaft
-			"gearboxNode:":["engine0"], //node used to play gear damage sound
+			"gearboxNode:":["n8"], //node used to play gear damage sound
 		},
-		"clutch": {
+	"clutch": {
 			//"thermalsEnabled":true
 			//"clutchMass":10, //Thermal mass representing clutch disc and PP/Clutch surfaces
 			//"coolingCoef":1, //Multiplier to tweak how fast it cools
@@ -165,35 +101,7 @@
 			//"clutchOverheatRange":100, //Additional temp before clutch is pretty wrecked and won't recover much
 			//"maxClutchTemp":500, //Clutch will never recover at all if it hits this temp
 		},
-
-
-		"vehicleController":
-		{
-		     //manual transmission useful values
-			"clutchLaunchStartRPM":1.70427651004, //RPM where launching behavior starts
-			"clutchLaunchTargetRPM":1.70427651, //RPM it tries to maintain while launching
-			"transmissionShiftDelay":0.1, //Time taken in between clutching actions
-			"revMatchThrottle":0.47894759012197, //Controls shift rev matching assist. Reduce this value to as much as 0.25 for high powered engines
-			"clutchInRate":10, //Controls shift assist clutching speed (value of 5 will be take 1/5 seconds to complete)
-			"clutchOutRate":10, //Controls shift assist clutching speed (value of 5 will be take 1/5 seconds to complete)
-		},
-
-
-		"powertrain" : [
-		["type", "name", "inputName", "inputIndex"],
-		["frictionClutch", "clutch", "mainEngine", 1],
-		["manualGearbox", "gearbox", "clutch", 1],
-        //["automaticGearbox", "FRCGearbox", "FRCTorqueConverter", 1],
-        ["shaft",            "FRCDriveshaft",      "FRCGearbox", 1],
-        ["differential",     "beamng_diff_F",        "FRCDriveshaft", 1],
-        ["shaft",            "frontAxleShaft1",      "beamng_diff_F", 1,{"connectedWheel":"Wheel_FL"}],
-        ["shaft",            "frontAxleShaft2",      "beamng_diff_F", 2,{"connectedWheel":"Wheel_FR"}],
-      
-		
-	],
-	},
-    
-    
+    },
     "nodes": [
          ["id", "posX", "posY", "posZ"],
          {"frictionCoef":0.5},
@@ -333,8 +241,8 @@
           //{"beamSpring":51000,"beamDamp":8000},
           ["fem4l", "n18"],
           ["fem4r", "n28"],
-          ["fem4r", "n9"],
-          ["fem4l", "n8"],
+          //["fem4r", "n9"],
+          //["fem4l", "n8"],
           //{"dampCutoffHz":""},
 
           //prevent unrealistic motor ejection
@@ -344,7 +252,7 @@
           ["fem3l", "n4"],
           ["fem3r", "n14"],
           ["fem4r", "n14"],
-          ["fem3l", "n2"],
+          //["fem3l", "n2"],
           ["fem3r", "n26"],
           //{"beamSpring":7000,"beamDamp":300},
           ["fem4l", "n28"],
@@ -370,7 +278,6 @@
           ["fem1l", "n12"],
           ["fem3l", "n7"],
           ["fem1r", "n24"],
-          ["fem3r", "n26"],
           ["fem1r", "n12"],
           ["fem1l", "n24"],
           ["fem3r", "n2"],
@@ -428,7 +335,7 @@
     "beamng_diff_F": {
 	"differentials": [
 			["wheelName1", 	"wheelName2", "type", "state", "closedTorque", "engineTorqueCoef"],
-			["Wheel_FL","Wheel_FR", "lsd", "closed", 500, 1],
+			["beamng_Wheel_FL","beamng_Wheel_FR", "lsd", "closed", 500, 1],
 		
 	],
 	"engine":{
@@ -445,7 +352,7 @@
 	"differentials": [
 	    //Changed to 0 engineTorqueCoef
 		["wheelName1", 	"wheelName2", "type", "state", "closedTorque", "engineTorqueCoef"],
-    	["Wheel_BL","Wheel_BR", "lsd", "closed", 500, 0],		
+    	["beamng_Wheel_BL","beamng_Wheel_BR", "lsd", "closed", 500, 0],		
 	],
 	"engine":{
 		"differential":7.00,
@@ -458,4 +365,5 @@
     },
 },
 }
+
 

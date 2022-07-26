@@ -10,13 +10,10 @@
          ["Chassis", "ChassisBeams", []],
     ],
     "slots":[
-            ["type:","default:","description:"],
+            ["type", "default", "description"],
             ["beamng_Wheel_R", "beamng_Wheel_R","Wheels - Rear"],
             ["beamng_Wheel_F", "beamng_Wheel_F","Wheels - Front"],
             ["FRCMotor","FRCMotor","FRC Electric Motors"],
-            //["FRC_Power_Source", "FRC_Power_Source", "Battery"],
-            //["beamng_diff_F","beamng_diff_F","Example Car Front Differential"],
-            //["beamng_diff_R","beamng_diff_R","Example Car Front Differential"],
             ],
     "refNodes":[
     ["ref:", "back:", "left:", "up:", "leftCorner:", "rightCorner:"]
